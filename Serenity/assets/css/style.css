@@ -685,6 +685,7 @@ section {
   margin-bottom: 40px;
 }
 .testimonials .testimonials-carousel, .testimonials .testimonials-slider {
+  margin-top: 30px;
   overflow: hidden;
 }
 .testimonials .testimonial-item {
@@ -741,6 +742,7 @@ section {
   position: relative;
 }
 .testimonials .swiper-pagination .swiper-pagination-bullet {
+  margin-top: 50px;
   width: 12px;
   height: 12px;
   background-color:#6C7BA1;
@@ -749,6 +751,9 @@ section {
 .testimonials .swiper-pagination .swiper-pagination-bullet-active {
   background-color: #12334E;
   opacity: 1;
+}
+.testimonials .card-img-top{
+  width: 200px;
 }
 @media (min-width: 992px) {
   .testimonials .testimonial-item p {
@@ -903,6 +908,7 @@ section {
 .departments .details p:last-child {
   margin-bottom: 0;
 }
+
 @media (max-width: 992px) {
   .departments .nav-link {
     border: 0;
@@ -1498,7 +1504,7 @@ section {
   border-radius: 4px;
 }
 .contact .php-email-form input:focus, .contact .php-email-form textarea:focus {
-  border-color: #47b2e4;
+  border-color: #6C7BA1;
 }
 .contact .php-email-form input {
   height: 44px;
@@ -1931,7 +1937,7 @@ section {
   font-size: 16px;
   padding: 0 15px;
   margin: -1px;
-  background: #12334E;
+  background: #6C7BA1;
   color: #fff;
   transition: 0.3s;
   border-radius: 0 4px 4px 0;
@@ -1941,7 +1947,7 @@ section {
   line-height: 0;
 }
 .blog .sidebar .search-form form button:hover {
-  background: #9dc554;
+  background: #12334E;
 }
 .blog .sidebar .categories ul {
   list-style: none;
