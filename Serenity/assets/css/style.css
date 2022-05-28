@@ -1078,6 +1078,16 @@ section {
 .features .card:hover .read-more a, .features .card:hover .card-title, .features .card:hover .card-title a, .features .card:hover .card-text {
   color: #fff;
 }
+.features .btn{
+  background-color: #6C7BA1;
+  color: #FFFFFF;
+}
+.features .btn:hover{
+  background-color: #12334E;
+}
+.features a{
+  color: #FFFFFF;
+}
 
 /*--------------------------------------------------------------
 # Portfolio
@@ -2022,6 +2032,51 @@ section {
   padding-left: 5px;
   color: #d5d8ce;
   font-size: 14px;
+}
+
+/*--------------------------------------------------------------
+# Services
+--------------------------------------------------------------*/
+.services .icon-box {
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  margin: 0 10px 40px 10px;
+  background: #fff;
+  box-shadow: 0 2px 29px 0 rgba(68, 88, 144, 0.12);
+  transition: all 0.3s ease-in-out;
+}
+.services .icon-box:hover {
+  transform: translateY(-5px);
+}
+.services .icon {
+  position: absolute;
+  left: 10px;
+  top: calc(50% - 30px);
+}
+.services .icon i {
+  font-size: 64px;
+  line-height: 1;
+  transition: 0.5s;
+}
+.services .title {
+  margin-left: 70px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+.services .title a {
+  color: #111;
+}
+.services .icon-box:hover .title a {
+  color: #6C7BA1;
+}
+.services .description {
+  font-size: 14px;
+  margin-left: 70px;
+  line-height: 24px;
+  margin-bottom: 0;
 }
 
 /*--------------------------------------------------------------
