@@ -19,8 +19,10 @@
         <div class="container mt-5 mb-5 shadow p-3 bg-body rounded text-center">
             <img src="{{ asset('assets/img/sayur1.jpeg') }}" width="50%">
             <h1>HIDROPONIK UNGGUL BUATAN PONPES MIFTAHUL FALAH</h1>
-            <h3>ENAK NIH SAYURAN. MAU GA WOI? BELI LAH</h3>
-            <a href="#" class="btn btn-outline-primary mt-5">P BELI!!!!!!!!!!!!!</a>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt sunt enim maiores vero ratione cupiditate,
+                autem hic quisquam doloremque officia sit perspiciatis nostrum deleniti aspernatur molestias provident quo
+                quaerat repellat!</p>
+            <a href="#" class="btn btn-outline-primary mt-5">BELI SEKARANG</a>
         </div>
         <!-- ======= Services Section ======= -->
 
