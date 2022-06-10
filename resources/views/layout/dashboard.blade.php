@@ -55,11 +55,22 @@
             <div class="sidebar-heading">
                 Interface
             </div>
-            <!-- Nav Item - Tables -->
+
+            <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('konten') }}">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#artikel"
+                    aria-expanded="true" aria-controls="artikel">
                     <i class="fas fa-fw fa-table"></i>
-                    <span>Artikel</span></a>
+                    <span>Artikel</span>
+                </a>
+                <div id="artikel" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Galeri:</h6>
+                        <a class="collapse-item" href="{{ route('editfoto') }}">Data Artikel</a>
+                        <a class="collapse-item" href="{{ route('editvideo') }}">Tambah Artikel</a>
+                    </div>
+                </div>
             </li>
 
             <!-- Nav Item - Pages Collapse Menu -->
