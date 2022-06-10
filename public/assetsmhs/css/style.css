@@ -5124,7 +5124,7 @@ textarea.form-control-lg {
   border: 0;
   border-radius: 0.25rem; }
 
-.nav-pills .nav-link.active,
+.nav-pills .nav-link,
 .nav-pills .show > .nav-link {
   color: #fff;
   background-color: #0d6efd; }
