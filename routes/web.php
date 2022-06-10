@@ -36,5 +36,5 @@ Route::get('/blog/artikel',function () {
     return view('artikel');
 })->name('artikel');
 
-Route::get('/dashboard',[DashboardController::class,'index'])->name('ds');
+Route::get('/dashboard/home',[DashboardController::class,'index'])->name('ds');
 Route::get('/dashboard/konten',[DashboardController::class,'konten'])->name('konten');
