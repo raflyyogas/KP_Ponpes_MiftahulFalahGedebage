@@ -73,35 +73,60 @@
                                     magni. Vel magnam quod et tempora deleniti error rerum nihil tempora.
                                 </p>
 
-                                <h3>Et quae iure vel ut odit alias.</h3>
-                                <p>
-                                    Officiis animi maxime nulla quo et harum eum quis a. Sit hic in qui quos fugit ut rerum
-                                    atque. Optio provident dolores atque voluptatem rem excepturi molestiae qui. Voluptatem
-                                    laborum omnis ullam quibusdam perspiciatis nulla nostrum. Voluptatum est libero eum
-                                    nesciunt aliquid qui.
-                                    Quia et suscipit non sequi. Maxime sed odit. Beatae nesciunt nesciunt accusamus quia aut
-                                    ratione aspernatur dolor. Sint harum eveniet dicta exercitationem minima. Exercitationem
-                                    omnis asperiores natus aperiam dolor consequatur id ex sed. Quibusdam rerum dolores sint
-                                    consequatur quidem ea.
-                                    Beatae minima sunt libero soluta sapiente in rem assumenda. Et qui odit voluptatem. Cum
-                                    quibusdam voluptatem voluptatem accusamus mollitia aut atque aut.
-                                </p>
-                                <img src="assets/img/blog/blog-inside-post.jpg" class="img-fluid" alt="">
+                                <<<<<<< HEAD <h3>Et quae iure vel ut odit alias.</h3>
+                                    <p>
+                                        Officiis animi maxime nulla quo et harum eum quis a. Sit hic in qui quos fugit ut
+                                        rerum
+                                        atque. Optio provident dolores atque voluptatem rem excepturi molestiae qui.
+                                        Voluptatem
+                                        laborum omnis ullam quibusdam perspiciatis nulla nostrum. Voluptatum est libero eum
+                                        nesciunt aliquid qui.
+                                        Quia et suscipit non sequi. Maxime sed odit. Beatae nesciunt nesciunt accusamus quia
+                                        aut
+                                        ratione aspernatur dolor. Sint harum eveniet dicta exercitationem minima.
+                                        Exercitationem
+                                        omnis asperiores natus aperiam dolor consequatur id ex sed. Quibusdam rerum dolores
+                                        sint
+                                        consequatur quidem ea.
+                                        Beatae minima sunt libero soluta sapiente in rem assumenda. Et qui odit voluptatem.
+                                        Cum
+                                        quibusdam voluptatem voluptatem accusamus mollitia aut atque aut.
+                                    </p>
+                                    <img src="assets/img/blog/blog-inside-post.jpg" class="img-fluid" alt="">
+                                    =======
+                                    <h3>Et quae iure vel ut odit alias.</h3>
+                                    <p>
+                                        Officiis animi maxime nulla quo et harum eum quis a. Sit hic in qui quos fugit ut
+                                        rerum atque. Optio provident dolores atque voluptatem rem excepturi molestiae qui.
+                                        Voluptatem laborum omnis ullam quibusdam perspiciatis nulla nostrum. Voluptatum est
+                                        libero eum nesciunt aliquid qui.
+                                        Quia et suscipit non sequi. Maxime sed odit. Beatae nesciunt nesciunt accusamus quia
+                                        aut ratione aspernatur dolor. Sint harum eveniet dicta exercitationem minima.
+                                        Exercitationem omnis asperiores natus aperiam dolor consequatur id ex sed. Quibusdam
+                                        rerum dolores sint consequatur quidem ea.
+                                        Beatae minima sunt libero soluta sapiente in rem assumenda. Et qui odit voluptatem.
+                                        Cum quibusdam voluptatem voluptatem accusamus mollitia aut atque aut.
+                                    </p>
+                                    <img src="{{ asset('assets/img/blog/blog-inside-post.jpg') }}" class="img-fluid"
+                                        alt="">
+                                    >>>>>>> 487a09933580ac9360c66542fb1928fc15ce5945
 
-                                <h3>Ut repellat blanditiis est dolore sunt dolorum quae.</h3>
-                                <p>
-                                    Rerum ea est assumenda pariatur quasi et quam. Facilis nam porro amet nostrum. In
-                                    assumenda quia quae a id praesentium. Quos deleniti libero sed occaecati aut porro
-                                    autem. Consectetur sed excepturi sint non placeat quia repellat incidunt labore. Autem
-                                    facilis hic dolorum dolores vel.
-                                    Consectetur quasi id et optio praesentium aut asperiores eaque aut. Explicabo omnis
-                                    quibusdam esse. Ex libero illum iusto totam et ut aut blanditiis. Veritatis numquam ut
-                                    illum ut a quam vitae.
-                                </p>
-                                <p>
-                                    Alias quia non aliquid. Eos et ea velit. Voluptatem maxime enim omnis ipsa voluptas
-                                    incidunt. Nulla sit eaque mollitia nisi asperiores est veniam.
-                                </p>
+                                    <h3>Ut repellat blanditiis est dolore sunt dolorum quae.</h3>
+                                    <p>
+                                        Rerum ea est assumenda pariatur quasi et quam. Facilis nam porro amet nostrum. In
+                                        assumenda quia quae a id praesentium. Quos deleniti libero sed occaecati aut porro
+                                        autem. Consectetur sed excepturi sint non placeat quia repellat incidunt labore.
+                                        Autem
+                                        facilis hic dolorum dolores vel.
+                                        Consectetur quasi id et optio praesentium aut asperiores eaque aut. Explicabo omnis
+                                        quibusdam esse. Ex libero illum iusto totam et ut aut blanditiis. Veritatis numquam
+                                        ut
+                                        illum ut a quam vitae.
+                                    </p>
+                                    <p>
+                                        Alias quia non aliquid. Eos et ea velit. Voluptatem maxime enim omnis ipsa voluptas
+                                        incidunt. Nulla sit eaque mollitia nisi asperiores est veniam.
+                                    </p>
 
                             </div>
 
@@ -158,10 +183,56 @@
 
                     </div><!-- End blog sidebar -->
 
-                </div>
+                    <<<<<<< HEAD </div>
 
-            </div>
+                </div>
         </section><!-- End Blog Single Section -->
 
     </main><!-- End #main -->
 @endsection
+=======
+<h3 class="sidebar-title">Recent Posts</h3>
+<div class="sidebar-item recent-posts">
+    <div class="post-item clearfix">
+        <img src="{{ asset('assets/img/blog/blog-recent-1.jpg') }}" alt="">
+        <h4><a href="blog-single.html">Nihil blanditiis at in nihil autem</a></h4>
+        <time datetime="2020-01-01">Jan 1, 2020</time>
+    </div>
+
+    <div class="post-item clearfix">
+        <img src="{{ asset('assets/img/blog/blog-recent-2.jpg') }}" alt="">
+        <h4><a href="blog-single.html">Quidem autem et impedit</a></h4>
+        <time datetime="2020-01-01">Jan 1, 2020</time>
+    </div>
+
+    <div class="post-item clearfix">
+        <img src="{{ asset('assets/img/blog/blog-recent-3.jpg') }}" alt="">
+        <h4><a href="blog-single.html">Id quia et et ut maxime similique occaecati ut</a></h4>
+        <time datetime="2020-01-01">Jan 1, 2020</time>
+    </div>
+
+    <div class="post-item clearfix">
+        <img src="{{ asset('assets/img/blog/blog-recent-4.jpg') }}" alt="">
+        <h4><a href="blog-single.html">Laborum corporis quo dara net para</a></h4>
+        <time datetime="2020-01-01">Jan 1, 2020</time>
+    </div>
+
+    <div class="post-item clearfix">
+        <img src="{{ asset('assets/img/blog/blog-recent-5.jpg') }}" alt="">
+        <h4><a href="blog-single.html">Et dolores corrupti quae illo quod dolor</a></h4>
+        <time datetime="2020-01-01">Jan 1, 2020</time>
+    </div>
+
+</div><!-- End sidebar recent posts-->
+</div><!-- End sidebar -->
+
+</div><!-- End blog sidebar -->
+
+</div>
+
+</div>
+</section><!-- End Blog Single Section -->
+
+</main><!-- End #main -->
+@endsection
+>>>>>>> 487a09933580ac9360c66542fb1928fc15ce5945
