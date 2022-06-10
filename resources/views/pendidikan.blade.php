@@ -36,7 +36,6 @@
                         <div class="text-grey mb-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla
                             distinctio corrupti asperiores vero
                             animi neque pariatur illo velit molestiae in!</div>
-                        <li class="text-decoration-underline fw-bold"><i>Her Anjim</i></li>
                     </ol>
                 </div>
                 <div class="col ">
@@ -57,7 +56,6 @@
                         <div class="text-grey mb-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla
                             distinctio corrupti asperiores vero
                             animi neque pariatur illo velit molestiae in!</div>
-                        <li class="text-decoration-underline fw-bold"><i>Her Memegh</i></li>
                     </ol>
                 </div>
             </div>

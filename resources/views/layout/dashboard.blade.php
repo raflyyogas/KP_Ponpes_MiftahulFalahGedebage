@@ -34,7 +34,7 @@
                     <li class="nav-item nav-profile">
                         <a class="nav-link" id="profile" href="#" aria-expanded="false">
                             <div class="nav-profile-img">
-                                <img src="assetsmhs/images/faces/face1.jpg" alt="image">
+                                <img src="{{ asset('assetsmhs/images/faces/face1.jpg') }}" alt="image">
                             </div>
                             <div class="nav-profile-text">
                                 <p class="mb-1 text-black">Darma Putra</p>
@@ -77,7 +77,7 @@
                         </a>
                     </li>
                     <li class="nav-item" style="margin-top: 140%;">
-                        <a class="nav-link" href="{{ route('konten') }}">
+                        <a class="nav-link" href="/logout">
                             <span class="menu-title">Logout</span>
                             <i class="mdi mdi-logout menu-icon"></i>
                         </a>
