@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\galericontroller;
+use App\Http\Controllers\DashboardController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -34,3 +35,6 @@ Route::get('/blog',function () {
 Route::get('/blog/artikel',function () {
     return view('artikel');
 })->name('artikel');
+
+Route::get('/dashboard',[DashboardController::class,'index'])->name('ds');
+Route::get('/dashboard/konten',[DashboardController::class,'konten'])->name('konten');
