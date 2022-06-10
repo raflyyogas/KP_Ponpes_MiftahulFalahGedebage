@@ -48,5 +48,18 @@ Route::get('/blog/artikel',function () {
     return view('artikel');
 })->name('artikel');
 
+//Admin area
+// lOGIN AREA AND REGIST AREA
+Route::get('/admin',function (){
+    return view('tampilan.login');
+})->name('login');
+Route::get('/admin/register',function (){
+    return view('tampilan.register');
+})->name('register');
+
+
+Route::get('/dashboard',[DashboardController::class,'notfound']); // Antisipasi jika ada user yang coba coba masuk url ini
 Route::get('/dashboard/home',[DashboardController::class,'index'])->name('ds');
 Route::get('/dashboard/konten',[DashboardController::class,'konten'])->name('konten');
+Route::get('/dashboard/foto',[DashboardController::class,'foto'])->name('editfoto');
+Route::get('/dashboard/video',[DashboardController::class,'video'])->name('editvideo');
