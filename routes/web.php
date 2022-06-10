@@ -24,9 +24,13 @@ Route::get('/contact',function () {
     return view('contact');
 })->name('contact');
 
-Route::get('/akademik',function () {
-    return view('akademik');
-})->name('akademik');
+Route::get('/fasilitas',function () {
+    return view('fasilitas');
+})->name('fasilitas');
+
+Route::get('/kegiatan',function () {
+    return view('kegiatan');
+})->name('kegiatan');
 
 Route::get('/blog',function () {
     return view('blog');
