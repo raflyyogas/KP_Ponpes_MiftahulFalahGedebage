@@ -248,7 +248,7 @@
                         <h5>Mifafarm merupakan kebun Hidroponik Miftahul Falah yang berlokasi di Pondok Pesantren Miftahul
                             Falah JI. Gedebage Selatan No.115, Derwati, Bandung</h5>
                         <div class="text-center">
-                            <div class="btn">Telusuri</div>
+                            <a href="{{ route('hidroponik') }}" class="btn">BELI SEKARANG</a>
                         </div>
                     </div>
 

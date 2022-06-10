@@ -32,6 +32,14 @@ Route::get('/kegiatan',function () {
     return view('kegiatan');
 })->name('kegiatan');
 
+Route::get('/pendidikan',function () {
+    return view('pendidikan');
+})->name('didik');
+
+Route::get('/hidroponik',function () {
+    return view('shopping');
+})->name('hidroponik');
+
 Route::get('/blog',function () {
     return view('blog');
 })->name('blog');

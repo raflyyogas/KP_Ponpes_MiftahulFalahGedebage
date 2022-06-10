@@ -47,7 +47,7 @@
                     <li class="dropdown"><a href="#"><span>Tentang PONPES</span> <i
                                 class="bi bi-chevron-down"></i></a>
                         <ul>
-                            <li><a href="{{ route('foto') }}">Pendidikan</a></li>
+                            <li><a href="{{ route('didik') }}">Pendidikan</a></li>
                             <li><a href="{{ route('fasilitas') }}">Fasilitas</a></li>
                             <li><a href="{{ route('kegiatan') }}">Ekstrakurikuler</a></li>
                         </ul>
@@ -66,7 +66,9 @@
 
         </div>
     </header><!-- End Header -->
-    @yield('data')
+    <div class="min-vh-100">
+        @yield('data')
+    </div>
     <!-- ======= Footer ======= -->
     <footer id="footer">
         <div class="footer-top">
