@@ -10,6 +10,14 @@
             <h6 class="m-0 font-weight-bold text-primary">Artikel</h6>
         </div>
         <div class="card-body">
+
+            @if (session('success'))
+                {{-- <div class="sent-message">{{ session('success') }}</div> --}}
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    {{ session('success') }}
+                    <div type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></div>
+                </div>
+            @endif
             <div class="table-responsive">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
@@ -32,24 +40,30 @@
                         </tr>
                     </tfoot> --}}
                     <tbody>
-                        <tr>
-                            <td>Tiger Nixon</td>
-                            <td>System Architect</td>
-                            <td>Edinburgh</td>
-                            <td>61</td>
-                            <td>
-                                <a href="#" class="btn btn-info btn-icon-split">
-                                    <span class="icon text-white-50">
-                                        <i class="fas fa-pencil-alt"></i>
-                                    </span>
-                                </a>
-                                <a href="#" class="btn btn-danger btn-icon-split">
-                                    <span class="icon text-white-50">
-                                        <i class="fas fa-trash"></i>
-                                    </span>
-                                </a>
-                            </td>
-                        </tr>
+                        @foreach ($artikel as $item)
+                            <tr>
+                                <td>{{ $item->id }}</td>
+                                <td>
+                                    <img src="{{ asset('upload/thumbnail/' . $item->foto) }}" alt=""
+                                        class="rounded-circle-profile">
+                                </td>
+                                <td>{{ $item->judul }}</td>
+                                <td>{{ $mamang }}</td>
+                                <td></td>
+                                <td>
+                                    <a href="#" class="btn btn-info btn-icon-split">
+                                        <span class="icon text-white-50">
+                                            <i class="fas fa-pencil-alt"></i>
+                                        </span>
+                                    </a>
+                                    <a href="#" class="btn btn-danger btn-icon-split">
+                                        <span class="icon text-white-50">
+                                            <i class="fas fa-trash"></i>
+                                        </span>
+                                    </a>
+                                </td>
+                            </tr>
+                        @endforeach
                     </tbody>
                 </table>
             </div>

@@ -10,14 +10,23 @@
             <h6 class="m-0 font-weight-bold text-primary">Artikel</h6>
         </div>
         <div class="card-body">
-            <form action="" method="post" enctype="multipart/form-data">
+            <form action="{{ route('store') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="row mb-3">
                     <div class="col-md-2">
                         <label for="judul" class="form-label">Judul Artikel</label>
                     </div>
                     <div class="col">
-                        <input type="text" name="judul" id="judul" class="form-control">
+                        <input type="text" name="judul" id="judul" class="form-control" required>
+                    </div>
+                </div>
+                <div class="row mb-3" hidden>
+                    <div class="col-md-2">
+                        <label for="slug" class="form-label">Slug</label>
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control" id="slug" name="slug" required>
+                        <input type="text" name="admin" id="admin" value="Admin">
                     </div>
                 </div>
                 <div class="row mb-3">
@@ -25,7 +34,7 @@
                         <label for="foto" class="form-label">Foto Artikel</label>
                     </div>
                     <div class="col">
-                        <input type="file" name="foto" id="foto" class="form-control" onchange="previewImg()">
+                        <input type="file" name="pic" id="foto" class="form-control" onchange="previewImg()" required>
                         <div class="d-flex justify-content-center mt-2">
                             <img id="preview" style="max-width:50%">
                         </div>
@@ -37,8 +46,11 @@
                         <label for="editor">Isi Artikel</label>
                     </div>
                     <div class="col">
-                        <textarea id="summernote" name="editordata"></textarea>
+                        <textarea id="summernote" name="editordata" required></textarea>
                     </div>
+                </div>
+                <div class="text-end">
+                    <button type="submit" class="btn btn-success">Post Artikel</button>
                 </div>
             </form>
         </div>
@@ -46,6 +58,15 @@
 
 
     <script>
+        const judul = document.querySelector('#judul');
+        const slug = document.querySelector('#slug');
+
+        judul.addEventListener('change', function() {
+            fetch('/admin/dashboard/addartikel/checkSlug?judul=' + judul.value)
+                .then(response => response.json())
+                .then(data => slug.value = data.slug)
+        });
+
         function previewImg() {
             const image = document.querySelector('#foto');
             const preview = document.querySelector('#preview');
@@ -69,7 +90,7 @@
         //     } );
 
         $('#summernote').summernote({
-            placeholder: 'Hello stand alone ui',
+            placeholder: 'Inputkan artikel',
             tabsize: 2,
             height: 500,
             toolbar: [
@@ -84,36 +105,3 @@
         });
     </script>
 @endsection
-{{-- <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <title>without bootstrap</title>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
-    </script>
-    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
-</head>
-
-<body>
-    <textarea id="summernote"></textarea>
-    <script>
-        $('#summernote').summernote({
-            placeholder: 'Hello stand alone ui',
-            tabsize: 2,
-            height: 500,
-            toolbar: [
-                ['style', ['style']],
-                ['font', ['bold', 'underline', 'clear']],
-                ['color', ['color']],
-                ['para', ['ul', 'ol', 'paragraph']],
-                ['table', ['table']],
-                ['insert', ['link', 'picture', 'video']],
-                ['view', ['fullscreen', 'codeview', 'help']]
-            ]
-        });
-    </script>
-</body>
-
-</html> --}}
