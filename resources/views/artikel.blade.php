@@ -183,9 +183,9 @@
 
                     </div><!-- End blog sidebar -->
 
-                    <<<<<<< HEAD </div>
-
                 </div>
+
+            </div>
         </section><!-- End Blog Single Section -->
 
     </main><!-- End #main -->
