@@ -73,60 +73,59 @@
                                     magni. Vel magnam quod et tempora deleniti error rerum nihil tempora.
                                 </p>
 
-                                <<<<<<< HEAD <h3>Et quae iure vel ut odit alias.</h3>
-                                    <p>
-                                        Officiis animi maxime nulla quo et harum eum quis a. Sit hic in qui quos fugit ut
-                                        rerum
-                                        atque. Optio provident dolores atque voluptatem rem excepturi molestiae qui.
-                                        Voluptatem
-                                        laborum omnis ullam quibusdam perspiciatis nulla nostrum. Voluptatum est libero eum
-                                        nesciunt aliquid qui.
-                                        Quia et suscipit non sequi. Maxime sed odit. Beatae nesciunt nesciunt accusamus quia
-                                        aut
-                                        ratione aspernatur dolor. Sint harum eveniet dicta exercitationem minima.
-                                        Exercitationem
-                                        omnis asperiores natus aperiam dolor consequatur id ex sed. Quibusdam rerum dolores
-                                        sint
-                                        consequatur quidem ea.
-                                        Beatae minima sunt libero soluta sapiente in rem assumenda. Et qui odit voluptatem.
-                                        Cum
-                                        quibusdam voluptatem voluptatem accusamus mollitia aut atque aut.
-                                    </p>
-                                    <img src="assets/img/blog/blog-inside-post.jpg" class="img-fluid" alt="">
-                                    =======
-                                    <h3>Et quae iure vel ut odit alias.</h3>
-                                    <p>
-                                        Officiis animi maxime nulla quo et harum eum quis a. Sit hic in qui quos fugit ut
-                                        rerum atque. Optio provident dolores atque voluptatem rem excepturi molestiae qui.
-                                        Voluptatem laborum omnis ullam quibusdam perspiciatis nulla nostrum. Voluptatum est
-                                        libero eum nesciunt aliquid qui.
-                                        Quia et suscipit non sequi. Maxime sed odit. Beatae nesciunt nesciunt accusamus quia
-                                        aut ratione aspernatur dolor. Sint harum eveniet dicta exercitationem minima.
-                                        Exercitationem omnis asperiores natus aperiam dolor consequatur id ex sed. Quibusdam
-                                        rerum dolores sint consequatur quidem ea.
-                                        Beatae minima sunt libero soluta sapiente in rem assumenda. Et qui odit voluptatem.
-                                        Cum quibusdam voluptatem voluptatem accusamus mollitia aut atque aut.
-                                    </p>
-                                    <img src="{{ asset('assets/img/blog/blog-inside-post.jpg') }}" class="img-fluid"
-                                        alt="">
-                                    >>>>>>> 487a09933580ac9360c66542fb1928fc15ce5945
+                                <h3>Et quae iure vel ut odit alias.</h3>
+                                <p>
+                                    Officiis animi maxime nulla quo et harum eum quis a. Sit hic in qui quos fugit ut
+                                    rerum
+                                    atque. Optio provident dolores atque voluptatem rem excepturi molestiae qui.
+                                    Voluptatem
+                                    laborum omnis ullam quibusdam perspiciatis nulla nostrum. Voluptatum est libero eum
+                                    nesciunt aliquid qui.
+                                    Quia et suscipit non sequi. Maxime sed odit. Beatae nesciunt nesciunt accusamus quia
+                                    aut
+                                    ratione aspernatur dolor. Sint harum eveniet dicta exercitationem minima.
+                                    Exercitationem
+                                    omnis asperiores natus aperiam dolor consequatur id ex sed. Quibusdam rerum dolores
+                                    sint
+                                    consequatur quidem ea.
+                                    Beatae minima sunt libero soluta sapiente in rem assumenda. Et qui odit voluptatem.
+                                    Cum
+                                    quibusdam voluptatem voluptatem accusamus mollitia aut atque aut.
+                                </p>
+                                <img src="assets/img/blog/blog-inside-post.jpg" class="img-fluid" alt="">
 
-                                    <h3>Ut repellat blanditiis est dolore sunt dolorum quae.</h3>
-                                    <p>
-                                        Rerum ea est assumenda pariatur quasi et quam. Facilis nam porro amet nostrum. In
-                                        assumenda quia quae a id praesentium. Quos deleniti libero sed occaecati aut porro
-                                        autem. Consectetur sed excepturi sint non placeat quia repellat incidunt labore.
-                                        Autem
-                                        facilis hic dolorum dolores vel.
-                                        Consectetur quasi id et optio praesentium aut asperiores eaque aut. Explicabo omnis
-                                        quibusdam esse. Ex libero illum iusto totam et ut aut blanditiis. Veritatis numquam
-                                        ut
-                                        illum ut a quam vitae.
-                                    </p>
-                                    <p>
-                                        Alias quia non aliquid. Eos et ea velit. Voluptatem maxime enim omnis ipsa voluptas
-                                        incidunt. Nulla sit eaque mollitia nisi asperiores est veniam.
-                                    </p>
+                                <h3>Et quae iure vel ut odit alias.</h3>
+                                <p>
+                                    Officiis animi maxime nulla quo et harum eum quis a. Sit hic in qui quos fugit ut
+                                    rerum atque. Optio provident dolores atque voluptatem rem excepturi molestiae qui.
+                                    Voluptatem laborum omnis ullam quibusdam perspiciatis nulla nostrum. Voluptatum est
+                                    libero eum nesciunt aliquid qui.
+                                    Quia et suscipit non sequi. Maxime sed odit. Beatae nesciunt nesciunt accusamus quia
+                                    aut ratione aspernatur dolor. Sint harum eveniet dicta exercitationem minima.
+                                    Exercitationem omnis asperiores natus aperiam dolor consequatur id ex sed. Quibusdam
+                                    rerum dolores sint consequatur quidem ea.
+                                    Beatae minima sunt libero soluta sapiente in rem assumenda. Et qui odit voluptatem.
+                                    Cum quibusdam voluptatem voluptatem accusamus mollitia aut atque aut.
+                                </p>
+                                <img src="{{ asset('assets/img/blog/blog-inside-post.jpg') }}" class="img-fluid"
+                                    alt="">
+
+                                <h3>Ut repellat blanditiis est dolore sunt dolorum quae.</h3>
+                                <p>
+                                    Rerum ea est assumenda pariatur quasi et quam. Facilis nam porro amet nostrum. In
+                                    assumenda quia quae a id praesentium. Quos deleniti libero sed occaecati aut porro
+                                    autem. Consectetur sed excepturi sint non placeat quia repellat incidunt labore.
+                                    Autem
+                                    facilis hic dolorum dolores vel.
+                                    Consectetur quasi id et optio praesentium aut asperiores eaque aut. Explicabo omnis
+                                    quibusdam esse. Ex libero illum iusto totam et ut aut blanditiis. Veritatis numquam
+                                    ut
+                                    illum ut a quam vitae.
+                                </p>
+                                <p>
+                                    Alias quia non aliquid. Eos et ea velit. Voluptatem maxime enim omnis ipsa voluptas
+                                    incidunt. Nulla sit eaque mollitia nisi asperiores est veniam.
+                                </p>
 
                             </div>
 
@@ -183,9 +182,9 @@
 
                     </div><!-- End blog sidebar -->
 
-                    <<<<<<< HEAD </div>
-
                 </div>
+
+            </div>
         </section><!-- End Blog Single Section -->
 
     </main><!-- End #main -->

@@ -30,7 +30,7 @@
                             <img id="preview" style="max-width:50%">
                         </div>
                     </div>
-                    
+
                 </div>
                 <div class="row mb-3">
                     <div class="col-md-2">
@@ -61,12 +61,11 @@
 
 
         }
-        
+
         ClassicEditor
-            .create( document.querySelector( '#editor' ) )
-            .catch( error => {
-                console.error( error );
-            } );
+            .create(document.querySelector('#editor'))
+            .catch(error => {
+                console.error(error);
+            });
     </script>
-    
 @endsection
