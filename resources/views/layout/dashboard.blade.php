@@ -33,9 +33,9 @@
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
                 <div class="sidebar-brand-icon rotate-n-15">
-                    <i class="fas fa-laugh-wink"></i>
+                    <i class="fas fa-school"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
+                <div class="sidebar-brand-text mx-3">Miftahul Falah</div>
             </a>
 
             <!-- Divider -->
@@ -67,8 +67,8 @@
 
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Galeri:</h6>
-                        <a class="collapse-item" href="{{ route('editfoto') }}">Data Artikel</a>
-                        <a class="collapse-item" href="{{ route('editvideo') }}">Tambah Artikel</a>
+                        <a class="collapse-item" href="{{ route('admartikel') }}">Data Artikel</a>
+                        <a class="collapse-item" href="{{ route('addartikel') }}">Tambah Artikel</a>
                     </div>
                 </div>
             </li>
@@ -89,6 +89,12 @@
                         <a class="collapse-item" href="{{ route('editvideo') }}">Data Video</a>
                     </div>
                 </div>
+            </li>
+            <!-- Nav Item - Charts -->
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('contacts') }}">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>Kontak</span></a>
             </li>
 
             {{-- <!-- Nav Item - Pages Collapse Menu -->

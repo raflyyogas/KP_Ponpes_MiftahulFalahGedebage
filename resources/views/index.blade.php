@@ -334,13 +334,13 @@
             <div class="container" data-aos="fade-up">
 
                 <div class="section-title">
-                    <h2>Contact</h2>
-                    <p>Silahkan hubungi kami.</p>
+                    <h2>Kontak</h2>
+                    <p>Silahkan hubungi kami</p>
                 </div>
 
                 <div class="row">
 
-                    <div class="col-lg-5 d-flex align-items-stretch">
+                    <div class="col-lg-6 d-flex align-items-stretch mt-3">
                         <div class="info">
                             <div class="address">
                                 <i class="bi bi-geo-alt"></i>
@@ -367,32 +367,38 @@
 
                     </div>
 
-                    <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-                        <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                    <div class="col-xl-6 mt-3">
+                        @if (session('success'))
+                            {{-- <div class="sent-message">{{ session('success') }}</div> --}}
+                            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                {{ session('success') }}
+                                <div type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></div>
+                            </div>
+                        @endif
+                        <form action="{{ route('pesan') }}" method="POST">
+                            @csrf
                             <div class="row">
                                 <div class="form-group col-md-6">
-                                    <label for="name">Your Name</label>
+                                    <label for="name">Nama Lengkap</label>
                                     <input type="text" name="name" class="form-control" id="name" required>
                                 </div>
                                 <div class="form-group col-md-6">
-                                    <label for="name">Your Email</label>
-                                    <input type="email" class="form-control" name="email" id="email" required>
+                                    <label for="name">NO HP</label>
+                                    <input type="number" class="form-control" name="nohp" id="nohp" required>
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <label for="name">Subject</label>
+                            <div class="form-group mt-4 mb-4">
+                                <label for="name">Subjek</label>
                                 <input type="text" class="form-control" name="subject" id="subject" required>
                             </div>
-                            <div class="form-group">
-                                <label for="name">Message</label>
+                            <div class="form-group mt-4 mb-4">
+                                <label for="name">Pesan</label>
                                 <textarea class="form-control" name="message" rows="10" required></textarea>
                             </div>
-                            <div class="my-3">
-                                <div class="loading">Loading</div>
-                                <div class="error-message"></div>
-                                <div class="sent-message">Your message has been sent. Thank you!</div>
+                            <div class="text-center mt-2">
+                                <button type="submit" class="btn text-white rounded-pill mx-5"
+                                    style="background:#6c7ba1;">Send Message</button>
                             </div>
-                            <div class="text-center"><button type="submit">Send Message</button></div>
                         </form>
                     </div>
 
