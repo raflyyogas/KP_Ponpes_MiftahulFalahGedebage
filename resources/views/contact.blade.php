@@ -7,10 +7,8 @@
             <div class="breadcrumb-hero">
                 <div class="container">
                     <div class="breadcrumb-hero">
-                        <h2>Contact</h2>
-                        <p>Est dolorum ut non facere possimus quibusdam eligendi voluptatem. Quia id aut similique quia
-                            voluptas sit quaerat debitis. Rerum omnis ipsam aperiam consequatur laboriosam nemo harum
-                            praesentium. </p>
+                        <h2>Kontak</h2>
+                        <p>Silahkan kontak kami. Berikut terlampir maps, email, dan no telp. Serta anda dapat mengirimkan pesan dengan mengisi form dibawah </p>
                     </div>
                 </div>
             </div>
@@ -39,13 +37,13 @@
                             <div class="email">
                                 <i class="bi bi-envelope"></i>
                                 <h4>Email:</h4>
-                                <p>-</p>
+                                <p>mifa@gmail.com</p>
                             </div>
 
                             <div class="phone">
                                 <i class="bi bi-phone"></i>
                                 <h4>Call:</h4>
-                                <p>-</p>
+                                <p> 0813-2189-7725</p>
                             </div>
 
                         </div>
