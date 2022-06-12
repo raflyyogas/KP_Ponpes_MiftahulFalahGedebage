@@ -17,7 +17,7 @@
                         <span class="icon text-white-50">
                             <i class="bi bi-plus-square-fill"></i>
                         </span>
-                        <span class="text">Tambah Video</span>
+                        <span class="text">Tambah Foto</span>
                     </button>
                 </div>
             </div>
@@ -45,24 +45,27 @@
                         </tr>
                     </tfoot> --}}
                     <tbody>
-                        <tr>
-                            <td>Tiger Nixon</td>
-                            <td>System Architect</td>
-                            <td>Edinburgh</td>
-                            <td>61</td>
-                            <td>
-                                <a href="#" class="btn btn-info btn-icon-split">
-                                    <span class="icon text-white-50">
-                                        <i class="fas fa-pencil-alt"></i>
-                                    </span>
-                                </a>
-                                <a href="#" class="btn btn-danger btn-icon-split">
-                                    <span class="icon text-white-50">
-                                        <i class="fas fa-trash"></i>
-                                    </span>
-                                </a>
-                            </td>
-                        </tr>
+                        @foreach ($foto as $data)
+                            <tr>
+                                <td>{{ $data->id }}</td>
+                                <td><img src="{{ asset('upload/gallery-foto/' . $data->foto) }}" alt=""
+                                    class="rounded-circle-profile" width="300px"></td>
+                                <td>{{ $data->judul }}</td>
+                                <td>{{ $data->deskripsi }}</td>
+                                <td>
+                                    <a href="#" class="btn btn-info btn-icon-split">
+                                        <span class="icon text-white-50">
+                                            <i class="fas fa-pencil-alt"></i>
+                                        </span>
+                                    </a>
+                                    <a href="{{ route('deletefoto', ['id' => $data->id])  }}" class="btn btn-danger btn-icon-split">
+                                        <span class="icon text-white-50">
+                                            <i class="fas fa-trash"></i>
+                                        </span>
+                                    </a>
+                                </td>
+                            </tr>
+                        @endforeach
                     </tbody>
                 </table>
             </div>
@@ -76,38 +79,53 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="staticBackdropLabel">Tambah Video</h5>
+                    <h5 class="modal-title" id="staticBackdropLabel">Tambah Foto</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <form action="" method="post">
+                <form action="{{ route('tambahfoto') }}" method="post" enctype="multipart/form-data">
                     @csrf
                     <div class="modal-body">
                         <div class="mb-3">
-                            <label for="judul">Judul Video</label>
+                            <label for="judul">Judul Foto</label>
                             <input type="text" name="judul" id="judul" class="form-control">
                         </div>
                         <div class="mb-3">
-                            <label for="link">Link Video</label>
-                            <div class="mb-2 d-flex">
-                                <input type="text" name="link" id="link" class="form-control me-2">
-                                <button type="button" class="btn btn-success" onclick="prevVideo()">Generate</button>
+                            <label for="link">Link Foto</label>
+                            <input type="file" name="foto" id="foto" class="form-control mb-2" onchange="previewImg()">
+                            <div class="d-flex justify-content-center">
+                                <img id="preview" style="width: 300px">
                             </div>
-                            <iframe width="280" height="158" id="previewVideo"
-                                title="YouTube video player" frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen></iframe>
                         </div>
                         <div class="mb-3">
-                            <label for="deskripsi">Deskripsi Video</label>
+                            <label for="deskripsi">Deskripsi Foto</label>
                             <textarea name="deskripsi" id="deskripsi" rows="5" class="form-control"></textarea>
                         </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Understood</button>
+                        <button type="submit" class="btn btn-primary">Understood</button>
                     </div>
                 </form>
             </div>
         </div>
     </div>
+
+
+    <script>
+        function previewImg() {
+            const image = document.querySelector('#foto');
+            const preview = document.querySelector('#preview');
+
+            preview.style.display = 'block';
+
+            const oFReader = new FileReader();
+            oFReader.readAsDataURL(image.files[0]);
+
+            oFReader.onload = function(oFREvent) {
+                preview.src = oFREvent.target.result;
+            }
+
+
+        }
+    </script>
 @endsection
