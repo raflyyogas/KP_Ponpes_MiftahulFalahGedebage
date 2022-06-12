@@ -45,24 +45,31 @@
                         </tr>
                     </tfoot> --}}
                     <tbody>
-                        <tr>
-                            <td>Tiger Nixon</td>
-                            <td>System Architect</td>
-                            <td>Edinburgh</td>
-                            <td>61</td>
-                            <td>
-                                <a href="#" class="btn btn-info btn-icon-split">
-                                    <span class="icon text-white-50">
-                                        <i class="fas fa-pencil-alt"></i>
-                                    </span>
-                                </a>
-                                <a href="#" class="btn btn-danger btn-icon-split">
-                                    <span class="icon text-white-50">
-                                        <i class="fas fa-trash"></i>
-                                    </span>
-                                </a>
-                            </td>
-                        </tr>
+                        @foreach ($video as $data)
+                            <tr>
+                                <td>{{ $data->id }}</td>
+                                <td>
+                                    <iframe width="280" height="158" src="https://www.youtube.com/embed/{{ substr($data->link, -11) }}"
+                                        title="YouTube video player" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen></iframe>
+                                </td>
+                                <td>{{ $data->judul }}</td>
+                                <td>{{ $data->deskripsi }}</td>
+                                <td>
+                                    <a href="#" class="btn btn-info btn-icon-split">
+                                        <span class="icon text-white-50">
+                                            <i class="fas fa-pencil-alt"></i>
+                                        </span>
+                                    </a>
+                                    <a href="#" class="btn btn-danger btn-icon-split">
+                                        <span class="icon text-white-50">
+                                            <i class="fas fa-trash"></i>
+                                        </span>
+                                    </a>
+                                </td>
+                            </tr>
+                        @endforeach
                     </tbody>
                 </table>
             </div>
@@ -80,7 +87,7 @@
                     <h5 class="modal-title" id="staticBackdropLabel">Tambah Video</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <form action="" method="post">
+                <form action="{{ route('tambahvideo') }}" method="post">
                     @csrf
                     <div class="modal-body">
                         <div class="mb-3">
@@ -93,8 +100,7 @@
                                 <input type="text" name="link" id="link" class="form-control me-2">
                                 <button type="button" class="btn btn-success" onclick="prevVideo()">Generate</button>
                             </div>
-                            <iframe width="280" height="158" id="previewVideo"
-                                title="YouTube video player" frameborder="0"
+                            <iframe width="280" height="158" id="previewVideo" title="YouTube video player" frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                 allowfullscreen></iframe>
                         </div>
@@ -105,7 +111,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Understood</button>
+                        <button type="submit" class="btn btn-primary">Understood</button>
                     </div>
                 </form>
             </div>
@@ -113,16 +119,15 @@
     </div>
 
     <script>
-
         $("iframe#previewVideo").hide();
 
-        
-        function prevVideo(){
+
+        function prevVideo() {
             var x = document.getElementById("link").value;
             var last3 = x.slice(-11);
             $("iframe#previewVideo").show();
-            document.getElementById("previewVideo").src = "https://www.youtube.com/embed/"+last3;
-           
+            document.getElementById("previewVideo").src = "https://www.youtube.com/embed/" + last3;
+
         }
     </script>
 @endsection

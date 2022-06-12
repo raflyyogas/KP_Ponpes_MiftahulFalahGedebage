@@ -76,6 +76,7 @@ Route::post('/admin/dashboard/foto',[DashboardController::class,'storefoto'])->n
 Route::get('/admin/dashboard/hapusfoto/{id}',[DashboardController::class,'delfoto'])->name('deletefoto');
 
 Route::get('/admin/dashboard/video',[DashboardController::class,'video'])->name('editvideo');
+Route::post('/admin/dashboard/video',[DashboardController::class,'storevideo'])->name('tambahvideo');
 
 //Kontak Kami Area
 Route::get('/admin/dashboard/contact',[DashboardController::class,'contact'])->name('contacts');

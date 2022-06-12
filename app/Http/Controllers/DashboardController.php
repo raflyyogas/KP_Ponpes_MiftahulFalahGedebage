@@ -6,6 +6,7 @@ use Cviebrock\EloquentSluggable\Services\SlugService;
 use Illuminate\Http\Request;
 use App\Models\Artikel;
 use App\Models\GalleryFoto;
+use App\Models\GalleryVideo;
 use Illuminate\Support\Facades\File;
 
 class DashboardController extends Controller
@@ -128,7 +129,20 @@ class DashboardController extends Controller
     }
 
     public function video(){
-        return view('tampilan.video');
+        $video = GalleryVideo::all();
+        return view('tampilan.video', compact('video'));
+    }
+
+    public function storevideo(Request $request)
+    {
+        $video = new GalleryVideo();
+
+        $video->judul = $request->judul;
+        $video->link = $request->link;
+        $video->deskripsi = $request->deskripsi;
+
+        $video->save();
+       return redirect(route('editvideo'));
     }
     public function contact(){
         $kontak = Contact::all();
