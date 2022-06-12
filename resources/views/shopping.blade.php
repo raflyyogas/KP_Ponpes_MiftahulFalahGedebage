@@ -8,9 +8,7 @@
                 <div class="container">
                     <div class="breadcrumb-hero">
                         <h2>HIDROPONIK UNGGUL</h2>
-                        <p>Est dolorum ut non facere possimus quibusdam eligendi voluptatem. Quia id aut similique quia
-                            voluptas sit quaerat debitis. Rerum omnis ipsam aperiam consequatur laboriosam nemo harum
-                            praesentium. </p>
+                        <p>Hidroponik Hasil Karya Pesantren Miftahul Falah. Sehat, Bergizi, Tanpa Zat Kimia</p>
                     </div>
                 </div>
             </div>
@@ -18,11 +16,9 @@
 
         <div class="container mt-5 mb-5 shadow p-3 bg-body rounded text-center">
             <img src="{{ asset('assets/img/sayur1.jpeg') }}" width="50%">
-            <h1>HIDROPONIK UNGGUL BUATAN PONPES MIFTAHUL FALAH</h1>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt sunt enim maiores vero ratione cupiditate,
-                autem hic quisquam doloremque officia sit perspiciatis nostrum deleniti aspernatur molestias provident quo
-                quaerat repellat!</p>
-            <a href="#" class="btn btn-outline-primary mt-5">BELI SEKARANG</a>
+            <h1 class="mt-5">HIDROPONIK UNGGUL BUATAN PONPES MIFTAHUL FALAH</h1>
+            <p>Penanaman yang dipantau dengan ketat sehingga menghasilkan sayuran yang berkualitas dan bergizi tinggi. Ramah lingkungan serta tidak menggunakan zat kimia</p>
+            <a href="#" class="btn text-white rounded-pill mt-4" style="background-color: #6c7ba1">BELI SEKARANG</a>
         </div>
         <!-- ======= Services Section ======= -->
 
