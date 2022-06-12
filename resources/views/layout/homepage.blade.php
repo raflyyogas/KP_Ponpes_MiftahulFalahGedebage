@@ -43,7 +43,7 @@
 
             <nav id="navbar" class="navbar">
                 <ul>
-                    <li><a class="active" href="{{ route('home') }}">Beranda</a></li>
+                    <li><a href="{{ route('home') }}">Beranda</a></li>
                     <li class="dropdown"><a href="#"><span>Tentang PONPES</span> <i
                                 class="bi bi-chevron-down"></i></a>
                         <ul>
