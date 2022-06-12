@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 use App\Models\Contact;
-use \Cviebrock\EloquentSluggable\Services\SlugService;
+use Cviebrock\EloquentSluggable\Services\SlugService;
 use Illuminate\Http\Request;
 use App\Models\Artikel;
+use App\Models\GalleryFoto;
+use App\Models\GalleryVideo;
+use Illuminate\Support\Facades\File;
 
 class DashboardController extends Controller
 {
@@ -70,6 +73,12 @@ class DashboardController extends Controller
 
     public function delartikel($id){
         $del = Artikel::find($id);
+        $file_path = public_path('upload/thumbnail/'.$del->foto);
+
+        if (File::exists($file_path)) {
+            //File::delete($image_path);
+            unlink($file_path);
+        }
         $del->delete();
         return redirect()->back()->with('success','Artikel berhasil dihapus');
     }
@@ -80,10 +89,60 @@ class DashboardController extends Controller
         return view('errors.404');
     }
     public function foto(){
-        return view('tampilan.foto');
+        $foto = GalleryFoto::all();
+        return view('tampilan.foto', compact('foto'));
     }
+
+    public function storefoto(Request $request)
+    {
+        $this->validate($request, [
+            'judul' => 'required',
+            'foto' => 'required|image|mimes:jpeg,png,jpg|max:10000',
+            'deskripsi' => 'required'
+       ]);
+
+       $Name = $request->foto->getClientOriginalName() . '-' . time()
+       . '.' . $request->foto->extension();
+       $request->foto->move(public_path('upload/gallery-foto'),$Name);
+
+       $foto = new GalleryFoto();
+       $foto->judul = $request->judul;
+       $foto->foto = $Name;
+       $foto->deskripsi = $request->deskripsi;
+       $foto->save();
+
+       return redirect(route('editfoto'));
+
+
+    }
+
+    public function delfoto($id){
+        $del = GalleryFoto::find($id);
+        $file_path = public_path('upload/gallery-foto/'.$del->foto);
+
+        if (File::exists($file_path)) {
+            //File::delete($image_path);
+            unlink($file_path);
+        }
+        $del->delete();
+        return redirect()->back()->with('success','Foto berhasil dihapus');
+    }
+
     public function video(){
-        return view('tampilan.video');
+        $video = GalleryVideo::all();
+        return view('tampilan.video', compact('video'));
+    }
+
+    public function storevideo(Request $request)
+    {
+        $video = new GalleryVideo();
+
+        $video->judul = $request->judul;
+        $video->link = $request->link;
+        $video->deskripsi = $request->deskripsi;
+
+        $video->save();
+       return redirect(route('editvideo'));
     }
     public function contact(){
         $kontak = Contact::all();
