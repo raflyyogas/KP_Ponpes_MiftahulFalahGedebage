@@ -49,7 +49,8 @@
                                 <td>{{ $item->judul }}</td>
                                 <td> {!! Str::limit($item->deskripsi, 250) !!}</td>
                                 <td>
-                                    <a href="#" class="btn btn-info btn-icon-split">
+                                    <a href="{{ route('editartikel', ['id' => $item->id]) }}"
+                                        class="btn btn-info btn-icon-split">
                                         <span class="icon text-white-50">
                                             <i class="fas fa-pencil-alt"></i>
                                         </span>

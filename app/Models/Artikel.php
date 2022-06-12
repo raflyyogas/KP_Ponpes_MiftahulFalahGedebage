@@ -9,6 +9,7 @@ use Cviebrock\EloquentSluggable\Sluggable;
 class Artikel extends Model
 {
     use Sluggable, HasFactory;
+    protected $guarded = ['id'];
 
     public function scopeFilter($query, array $filters){
           

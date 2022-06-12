@@ -9,7 +9,8 @@ use App\Models\Artikel;
 class HalamanController extends Controller
 {
     public function index() {
-        return view('index');
+        return view('index',[
+            "blog" => Artikel::latest()->paginate(3)]);
     }
 
     public function blog(){

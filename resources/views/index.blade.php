@@ -259,6 +259,7 @@
             </div>
         </section><!-- End Clients Section -->
 
+
         <!-- ======= Recent Blog Posts Section ======= -->
         <section id="recent-blog-posts" class="recent-blog-posts">
 
@@ -271,56 +272,24 @@
 
                 <div class="row">
 
-                    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-                        <div class="post-box">
-                            <div class="post-img"><img src="assets/img/blog/blog-1.jpg" class="img-fluid" alt="">
+                    @foreach ($blog as $item)
+                        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                            <div class="post-box">
+                                <div class="post-img"><img src="{{ asset('upload/thumbnail/' . $item->foto) }}"
+                                        alt="{{ $item->judul }}" class=" img-fluid">
+                                </div>
+                                <div class="meta">
+                                    <span
+                                        class="post-date">{{ \Carbon\Carbon::parse($item->created_at)->format('j F Y') }}</span>
+                                </div>
+                                <h3 class="post-title">{{ $item->judul }}</h3>
+                                <p>{!! Str::limit($item->deskripsi, 250) !!}</p>
+                                <a href="{{ route('slug', ['slug' => $item->slug]) }}"
+                                    class="readmore stretched-link"><span>Read More</span><i
+                                        class="bi bi-arrow-right"></i></a>
                             </div>
-                            <div class="meta">
-                                <span class="post-date">Tue, December 12</span>
-                            </div>
-                            <h3 class="post-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia,
-                                eligendi.</h3>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt sunt enim maiores vero
-                                ratione cupiditate, autem hic quisquam doloremque officia sit perspiciatis nostrum deleniti
-                                aspernatur molestias provident quo quaerat repellat!</p>
-                            <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i
-                                    class="bi bi-arrow-right"></i></a>
                         </div>
-                    </div>
-
-                    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="400">
-                        <div class="post-box">
-                            <div class="post-img"><img src="assets/img/blog/blog-2.jpg" class="img-fluid"
-                                    alt=""></div>
-                            <div class="meta">
-                                <span class="post-date">Fri, September 05</span>
-                            </div>
-                            <h3 class="post-title">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore,
-                                ut.</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo, unde delectus eius tenetur
-                                inventore quasi repellendus debitis. Aut ad, expedita ut possimus consequuntur cum
-                                consequatur nam dicta sed debitis tempore!</p>
-                            <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i
-                                    class="bi bi-arrow-right"></i></a>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="600">
-                        <div class="post-box">
-                            <div class="post-img"><img src="assets/img/blog/blog-3.jpg" class="img-fluid"
-                                    alt=""></div>
-                            <div class="meta">
-                                <span class="post-date">Tue, July 27</span>
-                            </div>
-                            <h3 class="post-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero,
-                                nostrum?</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate aspernatur temporibus
-                                provident facilis aliquam corrupti enim optio fugit eveniet totam voluptatem nisi ex
-                                quibusdam, explicabo veniam aperiam in iure consequatur?</p>
-                            <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i
-                                    class="bi bi-arrow-right"></i></a>
-                        </div>
-                    </div>
+                    @endforeach
 
                 </div>
 

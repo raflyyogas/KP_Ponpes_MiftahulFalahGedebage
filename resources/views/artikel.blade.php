@@ -34,7 +34,8 @@
 
                             <div class="entry-meta">
                                 <ul>
-                                    <li class="d-flex align-items-center"><i class="bi bi-person"></i>John Doe</li>
+                                    <li class="d-flex align-items-center"><i
+                                            class="bi bi-person"></i>{{ $item->penulis }}</li>
                                     <li class="d-flex align-items-center"><i
                                             class="bi bi-clock"></i>{{ \Carbon\Carbon::parse($item->created_at)->format('j F Y') }}
                                     </li>

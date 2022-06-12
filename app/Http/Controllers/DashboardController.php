@@ -8,11 +8,35 @@ use App\Models\Artikel;
 use App\Models\GalleryFoto;
 use App\Models\GalleryVideo;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Auth;
 
 class DashboardController extends Controller
 {
+    public function otentikasi(Request $request){
+        $credentials = $request->validate([
+            'email' => 'required|email:dns|exists:users',
+            'password' => 'required|min:6'
+        ]);
+        if (Auth::attempt($credentials)) {
+            $request->session()->regenerate();
+ 
+            return redirect()->intended('/admin/dashboard');
+        }
+        return back()->with('loginError','Login failed!');
+
+    }
+    public function logout(Request $request) {
+        Auth::logout();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+        return redirect ('/admin');
+    }
+
     public function index(){
-        return view('tampilan.home');
+        $artikel = Artikel::all()->count();
+        $foto = GalleryFoto::all()->count();
+        $video = GalleryVideo::all()->count();
+        return view('tampilan.home',compact('artikel','foto','video'));
     }
 
     //Area Konten
@@ -81,6 +105,12 @@ class DashboardController extends Controller
         }
         $del->delete();
         return redirect()->back()->with('success','Artikel berhasil dihapus');
+    }
+
+    public function editartikel($id)
+    {
+        $artikel = Artikel::find($id);
+        return view('tampilan.editartikel', compact('artikel'));
     }
     
     //---------------------------------------------------
