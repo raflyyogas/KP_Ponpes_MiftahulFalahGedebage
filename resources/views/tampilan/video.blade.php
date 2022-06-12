@@ -2,7 +2,7 @@
 @section('main')
     <!-- Page Heading -->
     <h1 class="h3 mb-2 text-gray-800">Video</h1>
-    <p class="mb-4">Jika tidak mengerti dalam pengisian Video. Silahkan download Video ini</a>.</p>
+    <p class="mb-4">Jika tidak mengerti dalam pengisian Video. Silahkan download file ini</a>.</p>
 
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
