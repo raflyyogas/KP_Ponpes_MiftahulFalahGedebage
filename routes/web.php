@@ -68,6 +68,7 @@ Route::get('/admin/dashboard/artikel',[DashboardController::class,'artikel'])->n
 Route::get('/admin/dashboard/addartikel',[DashboardController::class,'addartikel'])->name('addartikel');
 Route::get('/admin/dashboard/addartikel/checkSlug',[DashboardController::class,'checkSlug']);
 Route::post('/admin/dashboard/addartikel',[DashboardController::class,'storearitkel'])->name('store');
+Route::get('/admin/dashboard/hapusartikel/{id}',[DashboardController::class,'delartikel'])->name('delartikel');
 
 
 Route::get('/admin/dashboard/foto',[DashboardController::class,'foto'])->name('editfoto');

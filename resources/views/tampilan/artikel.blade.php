@@ -45,18 +45,18 @@
                                 <td>{{ $item->id }}</td>
                                 <td>
                                     <img src="{{ asset('upload/thumbnail/' . $item->foto) }}" alt=""
-                                        class="rounded-circle-profile">
+                                        class="rounded-circle-profile" width="70%">
                                 </td>
                                 <td>{{ $item->judul }}</td>
-                                <td>{{ $mamang }}</td>
-                                <td></td>
+                                <td> {!! Str::limit($item->deskripsi, 250) !!}</td>
                                 <td>
                                     <a href="#" class="btn btn-info btn-icon-split">
                                         <span class="icon text-white-50">
                                             <i class="fas fa-pencil-alt"></i>
                                         </span>
                                     </a>
-                                    <a href="#" class="btn btn-danger btn-icon-split">
+                                    <a href="{{ route('delartikel', ['id' => $item->id]) }}"
+                                        class="btn btn-danger btn-icon-split">
                                         <span class="icon text-white-50">
                                             <i class="fas fa-trash"></i>
                                         </span>

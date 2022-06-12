@@ -15,8 +15,7 @@ class DashboardController extends Controller
     //Area Konten
     public function artikel(){
         $artikel = Artikel::all();
-        $mamang = "<p><b>Testing</b></p>";
-        return view('tampilan.artikel',compact('artikel','mamang'));
+        return view('tampilan.artikel',compact('artikel'));
     }
     public function addartikel(){
         return view('tampilan.addartikel');
@@ -67,6 +66,12 @@ class DashboardController extends Controller
     //   $post = Artikel::create([
     //   ]);
       return redirect()->route('admartikel')->with('success','Artikel berhasil diposting');
+    }
+
+    public function delartikel($id){
+        $del = Artikel::find($id);
+        $del->delete();
+        return redirect()->back()->with('success','Artikel berhasil dihapus');
     }
     
     //---------------------------------------------------
