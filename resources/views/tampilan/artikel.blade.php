@@ -43,8 +43,8 @@
                             <tr>
                                 <td style="max-width:20px">{{ $item->id }}</td>
                                 <td style="max-width:200px">
-                                    <img src="{{ asset('upload/thumbnail/' . $item->foto) }}" alt=""
-                                        class="rounded-circle-profile" width="70%">
+                                    <img src="{{ asset('storage/' . $item->foto) }}" alt="" class="rounded-circle-profile"
+                                        width="70%">
                                 </td>
                                 <td>{{ $item->judul }}</td>
                                 <td style="max-width:400px"> {!! Str::limit($item->deskripsi, 250) !!}</td>

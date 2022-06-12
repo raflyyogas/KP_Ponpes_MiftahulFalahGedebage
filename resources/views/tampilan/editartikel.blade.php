@@ -38,8 +38,7 @@
                     <div class="col">
                         <input type="file" name="pic" id="foto" class="form-control" onchange="previewImg()">
                         <div class="d-flex justify-content-center mt-2">
-                            <img id="preview" style="max-width:50%"
-                                src="{{ asset('upload/thumbnail/' . $artikel->foto) }}">
+                            <img id="preview" style="max-width:50%" src="{{ asset('storage/' . $artikel->foto) }}">
                         </div>
                     </div>
 

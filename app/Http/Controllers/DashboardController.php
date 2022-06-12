@@ -10,6 +10,7 @@ use App\Models\GalleryFoto;
 use App\Models\GalleryVideo;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 
 class DashboardController extends Controller
 {
@@ -66,9 +67,6 @@ class DashboardController extends Controller
             'editordata' => 'required'
         ]);
 
-        $Name = $request->pic->getClientOriginalName() . '-' . time()
-            . '.' . $request->pic->extension();
-        $request->pic->move(public_path('upload/thumbnail'), $Name);
 
         $content = $request->editordata;
         $dom = new \DomDocument();
@@ -91,7 +89,7 @@ class DashboardController extends Controller
         $content = $dom->saveHTML();
 
         $data = new Artikel();
-        $data->foto = $Name;
+        $data->foto = $request->file('pic')->store('upload/thumbnail');
         $data->judul = $request->judul;
         $data->slug = $request->slug;
         $data->penulis = $request->admin;
@@ -105,12 +103,7 @@ class DashboardController extends Controller
     public function delartikel($id)
     {
         $del = Artikel::find($id);
-        $file_path = public_path('upload/thumbnail/' . $del->foto);
-
-        if (File::exists($file_path)) {
-            //File::delete($image_path);
-            unlink($file_path);
-        }
+        Storage::delete($del->foto);
         $del->delete();
         return redirect()->back()->with('success', 'Artikel berhasil dihapus');
     }
@@ -131,18 +124,9 @@ class DashboardController extends Controller
 
         $artikel = Artikel::find($id);
         if ($request->pic) {
-            $file_path = public_path('upload/thumbnail/' . $artikel->foto);
+            Storage::delete($artikel->foto);
 
-            if (File::exists($file_path)) {
-                //File::delete($image_path);
-                unlink($file_path);
-            }
-
-            $Name = $request->pic->getClientOriginalName() . '-' . time()
-                . '.' . $request->pic->extension();
-            $request->pic->move(public_path('upload/thumbnail'), $Name);
-
-            $artikel->foto = $Name;
+            $artikel->foto = $request->file('pic')->store('upload/thumbnail');
         }
 
         $content = $request->editordata;
@@ -197,13 +181,11 @@ class DashboardController extends Controller
             'deskripsi' => 'required'
         ]);
 
-        $Name = $request->foto->getClientOriginalName() . '-' . time()
-            . '.' . $request->foto->extension();
-        $request->foto->move(public_path('upload/gallery-foto'), $Name);
+
 
         $foto = new GalleryFoto();
         $foto->judul = $request->judul;
-        $foto->foto = $Name;
+        $foto->foto = $request->file('foto')->store('upload/gallery-foto');
         $foto->deskripsi = $request->deskripsi;
         $foto->save();
 
@@ -213,12 +195,7 @@ class DashboardController extends Controller
     public function delfoto($id)
     {
         $del = GalleryFoto::find($id);
-        $file_path = public_path('upload/gallery-foto/' . $del->foto);
-
-        if (File::exists($file_path)) {
-            //File::delete($image_path);
-            unlink($file_path);
-        }
+        Storage::delete($del->foto);
         $del->delete();
         return redirect()->back()->with('success', 'Foto berhasil dihapus');
     }
