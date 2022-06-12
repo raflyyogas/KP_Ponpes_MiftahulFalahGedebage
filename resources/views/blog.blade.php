@@ -16,8 +16,8 @@
             </div>
             <div class="container">
                 <ol>
-                    <li><a href="index.html">Home</a></li>
-                    <li>Artikel</li>
+                    <li><a class="text-primary" href="{{ route('home') }}">Home</a></li>
+                    <li><a class="text-primary" href="{{ route('blog') }}">Artikel</a></li>
                 </ol>
             </div>
         </section><!-- End Breadcrumbs -->
@@ -29,159 +29,46 @@
                 <div class="row">
 
                     <div class="col-lg-8 entries">
+                        @foreach ($blog as $item)
+                            <article class="entry">
 
-                        <article class="entry">
-
-                            <div class="entry-img">
-                                <img src="assets/img/blog/blog-1.jpg" alt="" class="img-fluid">
-                            </div>
-
-                            <h2 class="entry-title">
-                                <a href="{{ route('artikel') }}">Dolorum optio tempore voluptas dignissimos cumque fuga
-                                    qui quibusdam quia</a>
-                            </h2>
-
-                            <div class="entry-meta">
-                                <ul>
-                                    <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a
-                                            href="{{ route('artikel') }}">John Doe</a></li>
-                                    <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a
-                                            href="{{ route('artikel') }}"><time datetime="2020-01-01">Jan 1,
-                                                2020</time></a></li>
-                                </ul>
-                            </div>
-
-                            <div class="entry-content">
-                                <p>
-                                    Similique neque nam consequuntur ad non maxime aliquam quas. Quibusdam animi
-                                    praesentium. Aliquam et laboriosam eius aut nostrum quidem aliquid dicta.
-                                    Et eveniet enim. Qui velit est ea dolorem doloremque deleniti aperiam unde soluta. Est
-                                    cum et quod quos aut ut et sit sunt. Voluptate porro consequatur assumenda perferendis
-                                    dolore.
-                                </p>
-                                <div class="read-more">
-                                    <a href="{{ route('artikel') }}">Read More</a>
+                                <div class="entry-img">
+                                    <img src="{{ asset('upload/thumbnail/' . $item->foto) }}" alt=""
+                                        class="img-fluid" style="min-width:100px">
                                 </div>
-                            </div>
 
-                        </article><!-- End blog entry -->
+                                <h2 class="entry-title">{{ $item->judul }}
+                                </h2>
 
-                        <article class="entry">
-
-                            <div class="entry-img">
-                                <img src="assets/img/blog/blog-2.jpg" alt="" class="img-fluid">
-                            </div>
-
-                            <h2 class="entry-title">
-                                <a href="{{ route('artikel') }}">Nisi magni odit consequatur autem nulla dolorem</a>
-                            </h2>
-
-                            <div class="entry-meta">
-                                <ul>
-                                    <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a
-                                            href="{{ route('artikel') }}">John Doe</a></li>
-                                    <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a
-                                            href="{{ route('artikel') }}"><time datetime="2020-01-01">Jan 1,
-                                                2020</time></a></li>
-                                </ul>
-                            </div>
-
-                            <div class="entry-content">
-                                <p>
-                                    Incidunt voluptate sit temporibus aperiam. Quia vitae aut sint ullam quis illum
-                                    voluptatum et. Quo libero rerum voluptatem pariatur nam.
-                                    Ad impedit qui officiis est in non aliquid veniam laborum. Id ipsum qui aut. Sit aliquam
-                                    et quia molestias laboriosam. Tempora nam odit omnis eum corrupti qui aliquid excepturi
-                                    molestiae. Facilis et sint quos sed voluptas. Maxime sed tempore enim omnis non alias
-                                    odio quos distinctio.
-                                </p>
-                                <div class="read-more">
-                                    <a href="{{ route('artikel') }}">Read More</a>
+                                <div class="entry-meta">
+                                    <ul>
+                                        <li class="d-flex align-items-center"><i
+                                                class="bi bi-person"></i>{{ $item->penulis }}</li>
+                                        <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <time
+                                                datetime="2020-01-01">{{ \Carbon\Carbon::parse($item->created_at)->format('j F Y') }}</time>
+                                        </li>
+                                    </ul>
                                 </div>
-                            </div>
 
-                        </article><!-- End blog entry -->
-
-                        <article class="entry">
-
-                            <div class="entry-img">
-                                <img src="assets/img/blog/blog-3.jpg" alt="" class="img-fluid">
-                            </div>
-
-                            <h2 class="entry-title">
-                                <a href="{{ route('artikel') }}">Possimus soluta ut id suscipit ea ut. In quo quia et
-                                    soluta libero sit sint.</a>
-                            </h2>
-
-                            <div class="entry-meta">
-                                <ul>
-                                    <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a
-                                            href="{{ route('artikel') }}">John Doe</a></li>
-                                    <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a
-                                            href="{{ route('artikel') }}"><time datetime="2020-01-01">Jan 1,
-                                                2020</time></a></li>
-                                </ul>
-                            </div>
-
-                            <div class="entry-content">
-                                <p>
-                                    Aut iste neque ut illum qui perspiciatis similique recusandae non. Fugit autem dolorem
-                                    labore omnis et. Eum temporibus fugiat voluptate enim tenetur sunt omnis.
-                                    Doloremque est saepe laborum aut. Ipsa cupiditate ex harum at recusandae nesciunt. Ut
-                                    dolores velit.
-                                </p>
-                                <div class="read-more">
-                                    <a href="{{ route('artikel') }}">Read More</a>
+                                <div class="entry-content">
+                                    {!! Str::limit($item->deskripsi, 250) !!}
                                 </div>
-                            </div>
-
-                        </article><!-- End blog entry -->
-
-                        <article class="entry">
-
-                            <div class="entry-img">
-                                <img src="assets/img/blog/blog-4.jpg" alt="" class="img-fluid">
-                            </div>
-
-                            <h2 class="entry-title">
-                                <a href="{{ route('artikel') }}">Non rem rerum nam cum quo minus. Dolor distinctio
-                                    deleniti explicabo eius exercitationem.</a>
-                            </h2>
-
-                            <div class="entry-meta">
-                                <ul>
-                                    <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a
-                                            href="{{ route('artikel') }}">John Doe</a></li>
-                                    <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a
-                                            href="{{ route('artikel') }}"><time datetime="2020-01-01">Jan 1,
-                                                2020</time></a></li>
-                                </ul>
-                            </div>
-
-                            <div class="entry-content">
-                                <p>
-                                    Aspernatur rerum perferendis et sint. Voluptates cupiditate voluptas atque quae. Rem
-                                    veritatis rerum enim et autem. Saepe atque cum eligendi eaque iste omnis a qui.
-                                    Quia sed sunt. Ea asperiores expedita et et delectus voluptates rerum. Id saepe ut
-                                    itaque quod qui voluptas nobis porro rerum. Quam quia nesciunt qui aut est non omnis.
-                                    Inventore occaecati et quaerat magni itaque nam voluptas. Voluptatem ducimus sint id
-                                    earum ut nesciunt sed corrupti nemo.
-                                </p>
-                                <div class="read-more">
-                                    <a href="{{ route('artikel') }}">Read More</a>
+                                <div class="text-end">
+                                    <a href="{{ route('slug', ['slug' => $item->slug]) }}" style="
+                                                                        display: inline-block;
+                                                                        background: #6c7ba1;
+                                                                        color: #fff;
+                                                                        padding: 6px 20px;
+                                                                        transition: 0.3s;
+                                                                        font-size: 14px;
+                                                                        border-radius: 4px;">Read More
+                                    </a>
                                 </div>
-                            </div>
-
-                        </article><!-- End blog entry -->
-
-                        <div class="blog-pagination">
-                            <ul class="justify-content-center">
-                                <li class="active"><a href="#">1</a></li>
-                                <li><a href="#">2</a></li>
-                                <li><a href="#">3</a></li>
-                            </ul>
+                            </article><!-- End blog entry -->
+                        @endforeach
+                        <div class="d-flex justify-content-center">
+                            {{ $blog->links() }}
                         </div>
-
                     </div><!-- End blog entries list -->
 
                     <div class="col-lg-4">
@@ -190,56 +77,42 @@
 
                             <h3 class="sidebar-title">Search</h3>
                             <div class="sidebar-item search-form">
-                                <form action="">
-                                    <input type="text">
+                                <form action="/blog">
+                                    <input type="text" placeholder="Cari artikel" name="search"
+                                        value="{{ request('search') }}">
                                     <button type="submit"><i class="bi bi-search"></i></button>
                                 </form>
                             </div><!-- End sidebar search formn-->
 
                             <h3 class="sidebar-title">Recent Posts</h3>
                             <div class="sidebar-item recent-posts">
-                                <div class="post-item clearfix">
-                                    <img src="assets/img/blog/blog-recent-1.jpg" alt="">
-                                    <h4><a href="{{ route('artikel') }}">Nihil blanditiis at in nihil autem</a></h4>
-                                    <time datetime="2020-01-01">Jan 1, 2020</time>
-                                </div>
 
-                                <div class="post-item clearfix">
-                                    <img src="assets/img/blog/blog-recent-2.jpg" alt="">
-                                    <h4><a href="{{ route('artikel') }}">Quidem autem et impedit</a></h4>
-                                    <time datetime="2020-01-01">Jan 1, 2020</time>
-                                </div>
+                                @foreach ($latest as $data)
+                                    <div class="post-item clearfix">
 
-                                <div class="post-item clearfix">
-                                    <img src="assets/img/blog/blog-recent-3.jpg" alt="">
-                                    <h4><a href="{{ route('artikel') }}">Id quia et et ut maxime similique occaecati
-                                            ut</a></h4>
-                                    <time datetime="2020-01-01">Jan 1, 2020</time>
-                                </div>
+                                        <img src="{{ asset('upload/thumbnail/' . $data->foto) }}"
+                                            alt="{{ $data->judul }}">
+                                        <h4><a
+                                                href="{{ route('slug', ['slug' => $data->slug]) }}">{{ $data->judul }}</a>
+                                        </h4>
+                                        <time
+                                            datetime="2020-01-01">{{ \Carbon\Carbon::parse($data->created_at)->format('j F Y') }}</time>
+                                    </div>
+                                    <?php $i++; ?>
+                                    @if ($i > 4)
+                                    @break
+                                @endif
+                            @endforeach
+                        </div><!-- End sidebar recent posts-->
 
-                                <div class="post-item clearfix">
-                                    <img src="assets/img/blog/blog-recent-4.jpg" alt="">
-                                    <h4><a href="{{ route('artikel') }}">Laborum corporis quo dara net para</a></h4>
-                                    <time datetime="2020-01-01">Jan 1, 2020</time>
-                                </div>
+                    </div><!-- End sidebar -->
 
-                                <div class="post-item clearfix">
-                                    <img src="assets/img/blog/blog-recent-5.jpg" alt="">
-                                    <h4><a href="{{ route('artikel') }}">Et dolores corrupti quae illo quod dolor</a>
-                                    </h4>
-                                    <time datetime="2020-01-01">Jan 1, 2020</time>
-                                </div>
-
-                            </div><!-- End sidebar recent posts-->
-
-                        </div><!-- End sidebar -->
-
-                    </div><!-- End blog sidebar -->
-
-                </div>
+                </div><!-- End blog sidebar -->
 
             </div>
-        </section><!-- End Blog Section -->
 
-    </main><!-- End #main -->
+        </div>
+    </section><!-- End Blog Section -->
+
+</main><!-- End #main -->
 @endsection

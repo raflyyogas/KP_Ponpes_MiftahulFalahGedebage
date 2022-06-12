@@ -15,9 +15,7 @@ use App\Http\Controllers\HalamanController;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-})->name('home');
+Route::get('/', [HalamanController::class,'index'])->name('home');
 
 Route::get('/foto',[galericontroller::class,'foto'])->name('foto');
 Route::get('/video',[galericontroller::class,'video'])->name('video');
@@ -44,13 +42,9 @@ Route::get('/hidroponik',function () {
     return view('shopping');
 })->name('hidroponik');
 
-Route::get('/blog',function () {
-    return view('blog');
-})->name('blog');
+Route::get('/blog',[HalamanController::class,'blog'])->name('blog');
 
-Route::get('/blog/artikel',function () {
-    return view('artikel');
-})->name('artikel');
+Route::get('/blog/artikel/{slug}',[HalamanController::class,'slug'])->name('slug');
 
 //Admin area
 // lOGIN AREA AND REGIST AREA
