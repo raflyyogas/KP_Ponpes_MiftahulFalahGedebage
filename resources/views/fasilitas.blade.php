@@ -8,9 +8,8 @@
                 <div class="container">
                     <div class="breadcrumb-hero">
                         <h2>Fasilitas Sekolah</h2>
-                        <p>Est dolorum ut non facere possimus quibusdam eligendi voluptatem. Quia id aut similique quia
-                            voluptas sit quaerat debitis. Rerum omnis ipsam aperiam consequatur laboriosam nemo harum
-                            praesentium. </p>
+                        <p>Berikut adalah fasitas - fasilitas yang ada pada PONPES Miftahul Falah yang berfungsi sebagai
+                            penunjang primer dalam sehari-hari baik kegiatan ektrakulikuler maupun akademik. </p>
                     </div>
                 </div>
             </div>
@@ -55,7 +54,8 @@
                     </div>
                     <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
                         <div class="icon-box">
-                            <div class="icon"><i class="fas fa-hand-holding-usd" style="color:#4680ff ;"></i></div>
+                            <div class="icon"><i class="fas fa-hand-holding-usd" style="color:#4680ff ;"></i>
+                            </div>
                             <h4 class="title mt-2"><a>Ruang TU</a></h4>
                         </div>
                     </div>
@@ -67,7 +67,8 @@
                     </div>
                     <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
                         <div class="icon-box">
-                            <div class="icon"><i class="fas fa-briefcase-medical" style="color: #ff4646;"></i></div>
+                            <div class="icon"><i class="fas fa-briefcase-medical" style="color: #ff4646;"></i>
+                            </div>
                             <h4 class="title mt-2"><a>UKS</a></h4>
                         </div>
                     </div>
