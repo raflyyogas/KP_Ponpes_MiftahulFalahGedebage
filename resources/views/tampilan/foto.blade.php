@@ -49,16 +49,12 @@
                             <tr>
                                 <td>{{ $data->id }}</td>
                                 <td><img src="{{ asset('upload/gallery-foto/' . $data->foto) }}" alt=""
-                                    class="rounded-circle-profile" width="300px"></td>
+                                        class="rounded-circle-profile" width="300px"></td>
                                 <td>{{ $data->judul }}</td>
                                 <td>{{ $data->deskripsi }}</td>
                                 <td>
-                                    <a href="#" class="btn btn-info btn-icon-split">
-                                        <span class="icon text-white-50">
-                                            <i class="fas fa-pencil-alt"></i>
-                                        </span>
-                                    </a>
-                                    <a href="{{ route('deletefoto', ['id' => $data->id])  }}" class="btn btn-danger btn-icon-split">
+                                    <a href="{{ route('deletefoto', ['id' => $data->id]) }}"
+                                        class="btn btn-danger btn-icon-split">
                                         <span class="icon text-white-50">
                                             <i class="fas fa-trash"></i>
                                         </span>

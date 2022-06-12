@@ -49,7 +49,8 @@
                             <tr>
                                 <td>{{ $data->id }}</td>
                                 <td>
-                                    <iframe width="280" height="158" src="https://www.youtube.com/embed/{{ substr($data->link, -11) }}"
+                                    <iframe width="280" height="158"
+                                        src="https://www.youtube.com/embed/{{ substr($data->link, -11) }}"
                                         title="YouTube video player" frameborder="0"
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                         allowfullscreen></iframe>
@@ -57,12 +58,8 @@
                                 <td>{{ $data->judul }}</td>
                                 <td>{{ $data->deskripsi }}</td>
                                 <td>
-                                    <a href="#" class="btn btn-info btn-icon-split">
-                                        <span class="icon text-white-50">
-                                            <i class="fas fa-pencil-alt"></i>
-                                        </span>
-                                    </a>
-                                    <a href="#" class="btn btn-danger btn-icon-split">
+                                    <a href="{{ route('delvid', ['id' => $data->id]) }}"
+                                        class="btn btn-danger btn-icon-split">
                                         <span class="icon text-white-50">
                                             <i class="fas fa-trash"></i>
                                         </span>

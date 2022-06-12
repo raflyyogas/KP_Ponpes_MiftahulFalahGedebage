@@ -41,13 +41,13 @@
                     <tbody>
                         @foreach ($artikel as $item)
                             <tr>
-                                <td>{{ $item->id }}</td>
-                                <td>
+                                <td style="max-width:20px">{{ $item->id }}</td>
+                                <td style="max-width:200px">
                                     <img src="{{ asset('upload/thumbnail/' . $item->foto) }}" alt=""
                                         class="rounded-circle-profile" width="70%">
                                 </td>
                                 <td>{{ $item->judul }}</td>
-                                <td> {!! Str::limit($item->deskripsi, 250) !!}</td>
+                                <td style="max-width:400px"> {!! Str::limit($item->deskripsi, 250) !!}</td>
                                 <td>
                                     <a href="{{ route('editartikel', ['id' => $item->id]) }}"
                                         class="btn btn-info btn-icon-split">

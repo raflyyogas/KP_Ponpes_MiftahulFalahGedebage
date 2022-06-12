@@ -8,9 +8,7 @@
                 <div class="container">
                     <div class="breadcrumb-hero">
                         <h2>Artikel</h2>
-                        <p>Est dolorum ut non facere possimus quibusdam eligendi voluptatem. Quia id aut similique quia
-                            voluptas sit quaerat debitis. Rerum omnis ipsam aperiam consequatur laboriosam nemo harum
-                            praesentium. </p>
+                        <p>Sekumpulan artikel yang diposting oleh Admin Miftahul Falah</p>
                     </div>
                 </div>
             </div>
@@ -55,13 +53,13 @@
                                 </div>
                                 <div class="text-end">
                                     <a href="{{ route('slug', ['slug' => $item->slug]) }}" style="
-                                                                        display: inline-block;
-                                                                        background: #6c7ba1;
-                                                                        color: #fff;
-                                                                        padding: 6px 20px;
-                                                                        transition: 0.3s;
-                                                                        font-size: 14px;
-                                                                        border-radius: 4px;">Read More
+                                                                            display: inline-block;
+                                                                            background: #6c7ba1;
+                                                                            color: #fff;
+                                                                            padding: 6px 20px;
+                                                                            transition: 0.3s;
+                                                                            font-size: 14px;
+                                                                            border-radius: 4px;">Read More
                                     </a>
                                 </div>
                             </article><!-- End blog entry -->

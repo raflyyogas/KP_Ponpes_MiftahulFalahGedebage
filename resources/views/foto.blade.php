@@ -8,9 +8,8 @@
                 <div class="container">
                     <div class="breadcrumb-hero">
                         <h2>Galeri Foto</h2>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea quos illum repellat nemo, nulla
-                            laboriosam molestiae enim exercitationem molestias perferendis accusamus dolorum, ut asperiores
-                            aliquam.</p>
+                        <p>Galeri foto ini merupakan kumpulan foto dokumentasi mengenai kegiatan yang dilaukan di Pesantren
+                            Miftahul Falah</p>
                     </div>
                 </div>
             </div>
@@ -39,10 +38,11 @@
                                 <img src="{{ asset('upload/gallery-foto/' . $data->foto) }}" class="img-fluid" alt="">
                                 <div class="portfolio-info">
                                     <h4>{{ $data->judul }}</h4>
-                                    <p>{{ Str::limit($data->deskripsi, 10)}}</p>
+                                    <p>{{ Str::limit($data->deskripsi, 10) }}</p>
                                     <div class="portfolio-links">
-                                        <a href="{{ asset('upload/gallery-foto/' . $data->foto) }}" data-gallery="portfolioGallery"
-                                            class="portfolio-lightbox" title="{{ $data->deskripsi }}"><i class="bx bx-plus"></i></a>
+                                        <a href="{{ asset('upload/gallery-foto/' . $data->foto) }}"
+                                            data-gallery="portfolioGallery" class="portfolio-lightbox"
+                                            title="{{ $data->deskripsi }}"><i class="bx bx-plus"></i></a>
                                         {{-- <a href="portfolio-details.html" title="More Details"><i
                                                 class="bx bx-link"></i></a> --}}
                                     </div>

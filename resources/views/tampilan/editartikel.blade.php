@@ -10,7 +10,8 @@
             <h6 class="m-0 font-weight-bold text-primary">Artikel</h6>
         </div>
         <div class="card-body">
-            <form action="#" method="POST" enctype="multipart/form-data">
+            <form action="{{ route('updateartikel', ['id' => $artikel->id]) }}" method="POST"
+                enctype="multipart/form-data">
                 @csrf
                 <div class="row mb-3">
                     <div class="col-md-2">
@@ -26,7 +27,7 @@
                         <label for="slug" class="form-label">Slug</label>
                     </div>
                     <div class="col">
-                        <input type="text" class="form-control" id="slug" name="slug" required>
+                        <input type="text" class="form-control" id="slug" name="slug">
                         <input type="text" name="admin" id="admin" value="Admin">
                     </div>
                 </div>
@@ -35,7 +36,7 @@
                         <label for="foto" class="form-label">Foto Artikel</label>
                     </div>
                     <div class="col">
-                        <input type="file" name="pic" id="foto" class="form-control" onchange="previewImg()" required>
+                        <input type="file" name="pic" id="foto" class="form-control" onchange="previewImg()">
                         <div class="d-flex justify-content-center mt-2">
                             <img id="preview" style="max-width:50%"
                                 src="{{ asset('upload/thumbnail/' . $artikel->foto) }}">
@@ -48,7 +49,7 @@
                         <label for="editor">Isi Artikel</label>
                     </div>
                     <div class="col">
-                        <textarea id="summernote" name="editordata" required>{{ $artikel->deskripsi }}</textarea>
+                        <textarea id="summernote" name="editordata">{{ $artikel->deskripsi }}</textarea>
                     </div>
                 </div>
                 <div class="text-end">
