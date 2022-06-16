@@ -35,14 +35,15 @@
                     @foreach ($foto as $data)
                         <div class="col-lg-4 col-md-6 portfolio-item filter-app">
                             <div class="portfolio-wrap">
-                                <img src="{{ asset('storage/' . $data->foto) }}" class="img-fluid" alt="">
+                                <img src="{{ asset('upload/gallery-foto/' . $data->foto) }}" class="img-fluid"
+                                    alt="">
                                 <div class="portfolio-info">
                                     <h4>{{ $data->judul }}</h4>
                                     <p>{{ Str::limit($data->deskripsi, 10) }}</p>
                                     <div class="portfolio-links">
-                                        <a href="{{ asset('storage/' . $data->foto) }}" data-gallery="portfolioGallery"
-                                            class="portfolio-lightbox" title="{{ $data->deskripsi }}"><i
-                                                class="bx bx-plus"></i></a>
+                                        <a href="{{ asset('upload/gallery-foto/' . $data->foto) }}"
+                                            data-gallery="portfolioGallery" class="portfolio-lightbox"
+                                            title="{{ $data->deskripsi }}"><i class="bx bx-plus"></i></a>
                                         {{-- <a href="portfolio-details.html" title="More Details"><i
                                                 class="bx bx-link"></i></a> --}}
                                     </div>

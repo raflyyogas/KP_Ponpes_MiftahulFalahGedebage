@@ -20,32 +20,28 @@
                             <div class="col-lg-3 col-md-5 col-6 d-md-flex align-items-md-stretch">
                                 <div class="count-box py-5">
                                     <i class="bi bi-people"></i>
-                                    <span data-purecounter-start="0" data-purecounter-end="65"
-                                        class="purecounter">0</span>
+                                    <span data-purecounter-start="0" data-purecounter-end="65" class="purecounter">0</span>
                                     <p>Santri MI</p>
                                 </div>
                             </div>
                             <div class="col-lg-3 col-md-5 col-6 d-md-flex align-items-md-stretch">
                                 <div class="count-box py-5">
                                     <i class="bi bi-people"></i>
-                                    <span data-purecounter-start="0" data-purecounter-end="65"
-                                        class="purecounter">0</span>
+                                    <span data-purecounter-start="0" data-purecounter-end="65" class="purecounter">0</span>
                                     <p>Santri MTs</p>
                                 </div>
                             </div>
                             <div class="col-lg-3 col-md-5 col-6 d-md-flex align-items-md-stretch">
                                 <div class="count-box py-5">
                                     <i class="bi bi-people"></i>
-                                    <span data-purecounter-start="0" data-purecounter-end="65"
-                                        class="purecounter">0</span>
+                                    <span data-purecounter-start="0" data-purecounter-end="65" class="purecounter">0</span>
                                     <p>Santri MA</p>
                                 </div>
                             </div>
                             <div class="col-lg-3 col-md-5 col-6 d-md-flex align-items-md-stretch">
                                 <div class="count-box pb-5 pt-0 pt-lg-5">
                                     <i class="bi bi-award"></i>
-                                    <span data-purecounter-start="0" data-purecounter-end="22"
-                                        class="purecounter">0</span>
+                                    <span data-purecounter-start="0" data-purecounter-end="22" class="purecounter">0</span>
                                     <p>Total Prestasi</p>
                                 </div>
                             </div>
@@ -105,12 +101,10 @@
                                         class="ms-2">Sejarah</span></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" data-bs-toggle="tab" href="#tab-2"><span
-                                        class="ms-2">Visi</span></a>
+                                <a class="nav-link" data-bs-toggle="tab" href="#tab-2"><span class="ms-2">Visi</span></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" data-bs-toggle="tab" href="#tab-3"><span
-                                        class="ms-2">Misi</span></a>
+                                <a class="nav-link" data-bs-toggle="tab" href="#tab-3"><span class="ms-2">Misi</span></a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" data-bs-toggle="tab" href="#tab-4"><span
@@ -388,7 +382,7 @@
                     @foreach ($blog as $item)
                         <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
                             <div class="post-box">
-                                <div class="post-img"><img src="{{ asset('storage/' . $item->foto) }}"
+                                <div class="post-img"><img src="{{ asset('upload/thumbnail/' . $item->foto) }}"
                                         alt="{{ $item->judul }}" class=" img-fluid">
                                 </div>
                                 <div class="meta">

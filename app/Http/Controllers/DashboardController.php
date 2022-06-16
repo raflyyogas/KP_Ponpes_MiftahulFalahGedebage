@@ -67,6 +67,9 @@ class DashboardController extends Controller
             'editordata' => 'required'
         ]);
 
+        $Name = $request->pic->getClientOriginalName() . '-' . time()
+            . '.' . $request->pic->extension();
+        $request->pic->move(public_path('upload/thumbnail'), $Name);
 
         $content = $request->editordata;
         $dom = new \DomDocument();
@@ -89,7 +92,7 @@ class DashboardController extends Controller
         $content = $dom->saveHTML();
 
         $data = new Artikel();
-        $data->foto = $request->file('pic')->store('upload/thumbnail');
+        $data->foto = $Name;
         $data->judul = $request->judul;
         $data->slug = $request->slug;
         $data->penulis = $request->admin;
@@ -128,21 +131,21 @@ class DashboardController extends Controller
             'editordata' => 'required'
         ]);
 
+
         $artikel = Artikel::find($id);
+
         if ($request->pic) {
-            Storage::delete($artikel->foto);
+            $file_path = public_path('upload/gallery-foto/' . $artikel->foto);
 
             if (File::exists($file_path)) {
                 File::delete($file_path);
                 // unlink($file_path);
             }
+            Storage::delete($artikel->foto);
 
             $Name = $request->pic->getClientOriginalName() . '-' . time()
                 . '.' . $request->pic->extension();
             $request->pic->move(public_path('upload/thumbnail'), $Name);
-
-            $artikel->foto = $Name;
-            $artikel->foto = $request->file('pic')->store('upload/thumbnail');
         }
 
         $content = $request->editordata;
@@ -166,9 +169,9 @@ class DashboardController extends Controller
 
 
         $content = $dom->saveHTML();
-
         $artikel->judul = $request->judul;
         $artikel->slug = $request->slug;
+        $artikel->pic = $Name;
         $artikel->penulis = $request->admin;
         $artikel->deskripsi = $content;
         $artikel->save();
@@ -198,12 +201,13 @@ class DashboardController extends Controller
             'foto' => 'required|image|mimes:jpeg,png,jpg',
             'deskripsi' => 'required'
         ]);
-
-
+        $Name = $request->foto->getClientOriginalName() . '-' . time()
+            . '.' . $request->foto->extension();
+        $request->foto->move(public_path('upload/gallery-foto'), $Name);
 
         $foto = new GalleryFoto();
         $foto->judul = $request->judul;
-        $foto->foto = $request->file('foto')->store('upload/gallery-foto');
+        $foto->foto = $Name;
         $foto->deskripsi = $request->deskripsi;
         $foto->save();
 

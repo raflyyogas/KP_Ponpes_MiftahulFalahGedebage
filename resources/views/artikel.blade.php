@@ -24,7 +24,7 @@
                         <article class="entry entry-single">
 
                             <div class="entry-img">
-                                <img src="{{ asset('storage/' . $item->foto) }}" alt="" class="img-fluid"
+                                <img src="{{ asset('upload/thumbnail/' . $item->foto) }}" alt="" class="img-fluid"
                                     style="min-width:100px">
                             </div>
 
@@ -34,8 +34,8 @@
 
                             <div class="entry-meta">
                                 <ul>
-                                    <li class="d-flex align-items-center"><i
-                                            class="bi bi-person"></i>{{ $item->penulis }}</li>
+                                    <li class="d-flex align-items-center"><i class="bi bi-person"></i>{{ $item->penulis }}
+                                    </li>
                                     <li class="d-flex align-items-center"><i
                                             class="bi bi-clock"></i>{{ \Carbon\Carbon::parse($item->created_at)->format('j F Y') }}
                                     </li>
@@ -70,7 +70,8 @@
                                 @foreach ($latest as $data)
                                     <div class="post-item clearfix">
 
-                                        <img src="{{ asset('storage/' . $data->foto) }}" alt="{{ $data->judul }}">
+                                        <img src="{{ asset('upload/thumbnail/' . $item->foto) }}"
+                                            alt="{{ $data->judul }}">
                                         <h4><a
                                                 href="{{ route('slug', ['slug' => $data->slug]) }}">{{ $data->judul }}</a>
                                         </h4>

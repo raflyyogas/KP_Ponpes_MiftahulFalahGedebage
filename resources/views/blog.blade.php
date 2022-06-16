@@ -31,8 +31,8 @@
                             <article class="entry">
 
                                 <div class="entry-img">
-                                    <img src="{{ asset('storage/' . $item->foto) }}" alt="" class="img-fluid"
-                                        style="min-width:100px">
+                                    <img src="{{ asset('upload/thumbnail/' . $item->foto) }}" alt=""
+                                        class="img-fluid" style="min-width:100px">
                                 </div>
 
                                 <h2 class="entry-title">{{ $item->judul }}
@@ -52,14 +52,16 @@
                                     {!! Str::limit($item->deskripsi, 250) !!}
                                 </div>
                                 <div class="text-end">
-                                    <a href="{{ route('slug', ['slug' => $item->slug]) }}" style="
+                                    <a href="{{ route('slug', ['slug' => $item->slug]) }}"
+                                        style="
                                                                                 display: inline-block;
                                                                                 background: #6c7ba1;
                                                                                 color: #fff;
                                                                                 padding: 6px 20px;
                                                                                 transition: 0.3s;
                                                                                 font-size: 14px;
-                                                                                border-radius: 4px;">Read More
+                                                                                border-radius: 4px;">Read
+                                        More
                                     </a>
                                 </div>
                             </article><!-- End blog entry -->
@@ -88,7 +90,8 @@
                                 @foreach ($latest as $data)
                                     <div class="post-item clearfix">
 
-                                        <img src="{{ asset('storage/' . $data->foto) }}" alt="{{ $data->judul }}">
+                                        <img src="{{ asset('upload/thumbnail/' . $data->foto) }}"
+                                            alt="{{ $data->judul }}">
                                         <h4><a
                                                 href="{{ route('slug', ['slug' => $data->slug]) }}">{{ $data->judul }}</a>
                                         </h4>

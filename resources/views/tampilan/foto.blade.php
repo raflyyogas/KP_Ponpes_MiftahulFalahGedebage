@@ -48,8 +48,8 @@
                         @foreach ($foto as $data)
                             <tr>
                                 <td>{{ $data->id }}</td>
-                                <td><img src="{{ asset('storage/' . $data->foto) }}" alt="" class="rounded-circle-profile"
-                                        width="300px"></td>
+                                <td><img src="{{ asset('upload/gallery-foto/' . $data->foto) }}" alt=""
+                                        class="rounded-circle-profile" width="300px"></td>
                                 <td>{{ $data->judul }}</td>
                                 <td>{{ $data->deskripsi }}</td>
                                 <td>
@@ -87,7 +87,8 @@
                         </div>
                         <div class="mb-3">
                             <label for="link">Link Foto</label>
-                            <input type="file" name="foto" id="foto" class="form-control mb-2" onchange="previewImg()">
+                            <input type="file" name="foto" id="foto" class="form-control mb-2"
+                                onchange="previewImg()">
                             <div class="d-flex justify-content-center">
                                 <img id="preview" style="width: 300px">
                             </div>
