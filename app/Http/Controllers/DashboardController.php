@@ -10,6 +10,7 @@ use App\Models\GalleryFoto;
 use App\Models\GalleryVideo;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 
 class DashboardController extends Controller
 {
@@ -66,9 +67,6 @@ class DashboardController extends Controller
             'editordata' => 'required'
         ]);
 
-        $Name = $request->pic->getClientOriginalName() . '-' . time()
-            . '.' . $request->pic->extension();
-        $request->pic->move(public_path('upload/thumbnail'), $Name);
 
         $content = $request->editordata;
         $dom = new \DomDocument();
@@ -91,7 +89,7 @@ class DashboardController extends Controller
         $content = $dom->saveHTML();
 
         $data = new Artikel();
-        $data->foto = $Name;
+        $data->foto = $request->file('pic')->store('upload/thumbnail');
         $data->judul = $request->judul;
         $data->slug = $request->slug;
         $data->penulis = $request->admin;
@@ -111,6 +109,7 @@ class DashboardController extends Controller
             File::delete($file_path);
             // unlink($file_path);
         }
+        Storage::delete($del->foto);
         $del->delete();
         return redirect()->back()->with('success', 'Artikel berhasil dihapus');
     }
@@ -131,7 +130,7 @@ class DashboardController extends Controller
 
         $artikel = Artikel::find($id);
         if ($request->pic) {
-            $file_path = public_path('upload/thumbnail/' . $artikel->foto);
+            Storage::delete($artikel->foto);
 
             if (File::exists($file_path)) {
                 File::delete($file_path);
@@ -163,6 +162,8 @@ class DashboardController extends Controller
             $image->setAttribute('src', $image_name);
         }
 
+
+
         $content = $dom->saveHTML();
 
         $artikel->judul = $request->judul;
@@ -193,17 +194,15 @@ class DashboardController extends Controller
     {
         $this->validate($request, [
             'judul' => 'required',
-            'foto' => 'required|image|mimes:jpeg,png,jpg|max:10000',
+            'foto' => 'required|image|mimes:jpeg,png,jpg',
             'deskripsi' => 'required'
         ]);
 
-        $Name = $request->foto->getClientOriginalName() . '-' . time()
-            . '.' . $request->foto->extension();
-        $request->foto->move(public_path('upload/gallery-foto'), $Name);
+
 
         $foto = new GalleryFoto();
         $foto->judul = $request->judul;
-        $foto->foto = $Name;
+        $foto->foto = $request->file('foto')->store('upload/gallery-foto');
         $foto->deskripsi = $request->deskripsi;
         $foto->save();
 

@@ -24,7 +24,7 @@
                         <article class="entry entry-single">
 
                             <div class="entry-img">
-                                <img src="{{ asset('upload/thumbnail/' . $item->foto) }}" alt="" class="img-fluid"
+                                <img src="{{ asset('storage/' . $item->foto) }}" alt="" class="img-fluid"
                                     style="min-width:100px">
                             </div>
 
@@ -70,8 +70,7 @@
                                 @foreach ($latest as $data)
                                     <div class="post-item clearfix">
 
-                                        <img src="{{ asset('upload/thumbnail/' . $data->foto) }}"
-                                            alt="{{ $data->judul }}">
+                                        <img src="{{ asset('storage/' . $data->foto) }}" alt="{{ $data->judul }}">
                                         <h4><a
                                                 href="{{ route('slug', ['slug' => $data->slug]) }}">{{ $data->judul }}</a>
                                         </h4>
