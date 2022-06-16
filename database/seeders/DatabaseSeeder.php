@@ -23,8 +23,8 @@ class DatabaseSeeder extends Seeder
 
         User::create([
             'name' => 'Admin',
-            'email' => 'miftahulfalah@ponpesbdg.id',
-            'password' => Hash::make('M1FT4HVL+')
+            'email' => 'admin@ponpesbdg.id',
+            'password' => Hash::make('password123')
         ]);
     }
 }

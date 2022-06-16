@@ -108,8 +108,8 @@ class DashboardController extends Controller
         $file_path = public_path('upload/thumbnail/' . $del->foto);
 
         if (File::exists($file_path)) {
-            //File::delete($image_path);
-            unlink($file_path);
+            File::delete($file_path);
+            // unlink($file_path);
         }
         $del->delete();
         return redirect()->back()->with('success', 'Artikel berhasil dihapus');
@@ -134,8 +134,8 @@ class DashboardController extends Controller
             $file_path = public_path('upload/thumbnail/' . $artikel->foto);
 
             if (File::exists($file_path)) {
-                //File::delete($image_path);
-                unlink($file_path);
+                File::delete($file_path);
+                // unlink($file_path);
             }
 
             $Name = $request->pic->getClientOriginalName() . '-' . time()
@@ -216,8 +216,8 @@ class DashboardController extends Controller
         $file_path = public_path('upload/gallery-foto/' . $del->foto);
 
         if (File::exists($file_path)) {
-            //File::delete($image_path);
-            unlink($file_path);
+            File::delete($file_path);
+            // unlink($file_path);
         }
         $del->delete();
         return redirect()->back()->with('success', 'Foto berhasil dihapus');
