@@ -148,7 +148,9 @@
                                 <div class="row gy-4">
                                     <div class="details order-2 order-lg-1">
                                         <h3>Visi</h3>
-                                        <p class="text-dark" style="text-align:justify;">"Terwujudnya lulusan MA Miftahul Falah yang memiliki kepribadian unggul, berprestasi, berkarakter dan berwawasan lingkungan"
+                                        <p class="text-dark" style="text-align:justify;">"Terwujudnya lulusan MA
+                                            Miftahul Falah yang memiliki kepribadian unggul, berprestasi, berkarakter dan
+                                            berwawasan lingkungan"
                                         </p>
                                     </div>
                                 </div>
@@ -159,12 +161,15 @@
                                         <h3>Misi</h3>
                                         <p class="text-dark" style="text-align:justify;">
                                         <ol>
-                                            <li>Menyelenggarakan pendidikan yang mendalam terhadap pengetahuan, sikap, dan perilaku islami.</li>
+                                            <li>Menyelenggarakan pendidikan yang mendalam terhadap pengetahuan, sikap, dan
+                                                perilaku islami.</li>
                                             <li>Meningkatkan profesionalisme pendidik dan tenaga kependidikan madrasah.</li>
                                             <li>Melaksanakan pembelajaran yang efektif, kreatif dan inovatif.</li>
                                             <li>Melaksanakan pembelajaran melalui pendekatan HOTS.</li>
                                             <li>Menciptakan lingkungan madrasah yang berbudaya sehat dan bersih.</li>
-                                            <li>Menjalin komunikasi dan koordinasi dengan pendidik, tenaga kependidikan, orang tua, masyarakat, dan komite madrasah guna meningkatkan kualitas mutu lulusan.</li>
+                                            <li>Menjalin komunikasi dan koordinasi dengan pendidik, tenaga kependidikan,
+                                                orang tua, masyarakat, dan komite madrasah guna meningkatkan kualitas mutu
+                                                lulusan.</li>
                                         </ol>
                                         </p>
                                     </div>
@@ -174,7 +179,12 @@
                                 <div class="row gy-4">
                                     <div class="details order-2 order-lg-1">
                                         <h3>IRMA (Ikatan Remaja Masjid)</h3>
-                                        <p class="text-dark" style="text-align:justify;">Selain membersihkan masjid, IRMA juga mengadakan acara-acara yang berkaitan di dalam masjid. Seperti pengajian dan kegiatan Islami lainnya. Irma MA Miftahul Falah dibentuk pada tanggal 22 November 2017 bertempat di Madrasah, yang dimana terdiri dari pengurus inti dan sekbid-sekbidnya seperti bidang majelis dan dakwah , bidang humas, bidang peralatan dan kebersihan.</p>
+                                        <p class="text-dark" style="text-align:justify;">Selain membersihkan masjid,
+                                            IRMA juga mengadakan acara-acara yang berkaitan di dalam masjid. Seperti
+                                            pengajian dan kegiatan Islami lainnya. Irma MA Miftahul Falah dibentuk pada
+                                            tanggal 22 November 2017 bertempat di Madrasah, yang dimana terdiri dari
+                                            pengurus inti dan sekbid-sekbidnya seperti bidang majelis dan dakwah , bidang
+                                            humas, bidang peralatan dan kebersihan.</p>
                                     </div>
                                 </div>
                             </div>
@@ -185,160 +195,160 @@
             </div>
         </section><!-- End Departments Section -->
 
-         <!-- ======= Testimonials Section ======= -->
-    <section id="testimonials" class="testimonials">
-      <div class="container" data-aos="fade-up">
+        <!-- ======= Testimonials Section ======= -->
+        <section id="testimonials" class="testimonials">
+            <div class="container" data-aos="fade-up">
 
-        <div class="section-title">
-          <h2>Fasilitas Sekolah</h2>
-          <p>Segala Fasilitas yang Tersedia di PONPES Miftahul Falah</p>
-        </div>
-
-        <div class="testimonials-slider swiper">
-          <div class="swiper-wrapper">
-
-            <div class="swiper-slide">
-              <div class="d-flex justify-content-center">
-                <div class="row row-cols-1 row-cols-md-3 g-5 justify-content-center">
-                    <div class="col shadow p-3 mb-1 bg-body rounded mx-5">
-                        <div class="row">
-                            <div class="col-md-1"><i class="fas fa-mosque w-100 mt-2"
-                                    style="color: #3a5eed; font-size:50px"></i></div>
-                            <div class="col">
-                                <h4 class="mx-5 mt-4"><a class="text-black"
-                                        href="{{ route('fasilitas') }}">Masjid</a></h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col shadow p-3 mb-1 bg-body rounded mx-5">
-                        <div class="row">
-                            <div class="col-md-1"><i class="fas fa-utensils w-100 mt-2"
-                                    style="color: #e9bf06; font-size:50px"></i></div>
-                            <div class="col">
-                                <h4 class="mx-5 mt-4"><a class="text-black"
-                                        href="{{ route('fasilitas') }}">Koperasi</a></h4>
-                            </div>
-                        </div>
-                    </div>
+                <div class="section-title">
+                    <h2>Fasilitas Sekolah</h2>
+                    <p>Segala Fasilitas yang Tersedia di PONPES Miftahul Falah</p>
                 </div>
-              </div>
-            </div><!-- End testimonial item -->
 
-            <div class="swiper-slide">
-                <div class="d-flex justify-content-center">
-                    <div class="row row-cols-1 row-cols-md-3 g-5 justify-content-center">
-                        <div class="col shadow p-3 mb-1 bg-body rounded mx-5">
-                            <div class="row">
-                                <div class="col-md-1"><i class="fas fa-hotel w-100 mt-3"
-                                        style="color: #3fcdc7; font-size:50px"></i></div>
-                                <div class="col">
-                                    <h4 class="mx-5 mt-3"><a class="text-black"
-                                            href="{{ route('fasilitas') }}">Gedung Asrama Putra</a></h4>
+                <div class="testimonials-slider swiper">
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide">
+                            <div class="d-flex justify-content-center">
+                                <div class="row row-cols-1 row-cols-md-3 g-5 justify-content-center">
+                                    <div class="col shadow p-3 mb-1 bg-body rounded mx-5">
+                                        <div class="row">
+                                            <div class="col-md-1"><i class="fas fa-mosque w-100 mt-2"
+                                                    style="color: #3a5eed; font-size:50px"></i></div>
+                                            <div class="col">
+                                                <h4 class="mx-5 mt-4"><a class="text-black"
+                                                        href="{{ route('fasilitas') }}">Masjid</a></h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col shadow p-3 mb-1 bg-body rounded mx-5">
+                                        <div class="row">
+                                            <div class="col-md-1"><i class="fas fa-utensils w-100 mt-2"
+                                                    style="color: #e9bf06; font-size:50px"></i></div>
+                                            <div class="col">
+                                                <h4 class="mx-5 mt-4"><a class="text-black"
+                                                        href="{{ route('fasilitas') }}">Koperasi</a></h4>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col shadow p-3 mb-1 bg-body rounded mx-5">
-                            <div class="row">
-                                <div class="col-md-1"><i class="fas fa-hotel w-100 mt-3"
-                                        style="color: #41cf2e; font-size:50px"></i></div>
-                                <div class="col">
-                                    <h4 class="mx-5 mt-3"><a class="text-black"
-                                            href="{{ route('fasilitas') }}">Gedung Asrama Putri</a></h4>
+                        </div><!-- End testimonial item -->
+
+                        <div class="swiper-slide">
+                            <div class="d-flex justify-content-center">
+                                <div class="row row-cols-1 row-cols-md-3 g-5 justify-content-center">
+                                    <div class="col shadow p-3 mb-1 bg-body rounded mx-5">
+                                        <div class="row">
+                                            <div class="col-md-1"><i class="fas fa-hotel w-100 mt-3"
+                                                    style="color: #3fcdc7; font-size:50px"></i></div>
+                                            <div class="col">
+                                                <h4 class="mx-5 mt-3"><a class="text-black"
+                                                        href="{{ route('fasilitas') }}">Gedung Asrama Putra</a></h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col shadow p-3 mb-1 bg-body rounded mx-5">
+                                        <div class="row">
+                                            <div class="col-md-1"><i class="fas fa-hotel w-100 mt-3"
+                                                    style="color: #41cf2e; font-size:50px"></i></div>
+                                            <div class="col">
+                                                <h4 class="mx-5 mt-3"><a class="text-black"
+                                                        href="{{ route('fasilitas') }}">Gedung Asrama Putri</a></h4>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        </div><!-- End testimonial item -->
+
+                        <div class="swiper-slide">
+                            <div class="d-flex justify-content-center">
+                                <div class="row row-cols-1 row-cols-md-3 g-5 justify-content-center">
+                                    <div class="col shadow p-3 mb-1 bg-body rounded mx-5">
+                                        <div class="row">
+                                            <div class="col-md-1"><i class="fas fa-restroom w-100 mt-3"
+                                                    style="color: #f822ff; font-size:50px"></i></div>
+                                            <div class="col">
+                                                <h4 class="mx-5 mt-4"><a class="text-black"
+                                                        href="{{ route('fasilitas') }}">Toilet</a></h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col shadow p-3 mb-1 bg-body rounded mx-5">
+                                        <div class="row">
+                                            <div class="col-md-1"><i class="fas fa-hand-holding-usd w-100 mt-3"
+                                                    style="color: #4680ff; font-size:50px"></i></div>
+                                            <div class="col">
+                                                <h4 class="mx-5 mt-3"><a class="text-black"
+                                                        href="{{ route('fasilitas') }}">Ruang TU</a></h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- End testimonial item -->
+
+                        <div class="swiper-slide">
+                            <div class="d-flex justify-content-center">
+                                <div class="row row-cols-1 row-cols-md-3 g-5 justify-content-center">
+                                    <div class="col shadow p-3 mb-1 bg-body rounded mx-5">
+                                        <div class="row">
+                                            <div class="col-md-1"><i class="fas fa-desktop w-100 mt-3"
+                                                    style="color: #6c7a00; font-size:50px"></i></div>
+                                            <div class="col">
+                                                <h4 class="mx-5 mt-4"><a class="text-black"
+                                                        href="{{ route('fasilitas') }}">Lab Komputer</a></h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col shadow p-3 mb-1 bg-body rounded mx-5">
+                                        <div class="row">
+                                            <div class="col-md-1"><i class="fas fa-briefcase-medical w-100 mt-3"
+                                                    style="color: #ff4646; font-size:50px"></i></div>
+                                            <div class="col">
+                                                <h4 class="mx-5 mt-4"><a class="text-black"
+                                                        href="{{ route('fasilitas') }}">UKS</a></h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- End testimonial item -->
+
+                        <div class="swiper-slide">
+                            <div class="d-flex justify-content-center">
+                                <div class="row row-cols-1 row-cols-md-3 g-5 justify-content-center">
+                                    <div class="col shadow p-3 mb-1 bg-body rounded mx-5">
+                                        <div class="row">
+                                            <div class="col-md-1"><i class="fas fa-futbol w-100 mt-3"
+                                                    style="color: #000000; font-size:50px"></i></div>
+                                            <div class="col">
+                                                <h4 class="mx-5 mt-4"><a class="text-black"
+                                                        href="{{ route('fasilitas') }}">Lapangan</a></h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col shadow p-3 mb-1 bg-body rounded mx-5">
+                                        <div class="row">
+                                            <div class="col-md-2"><i class="fas fa-book-open w-100 mt-3"
+                                                    style="color: #6df48c; font-size:50px"></i></div>
+                                            <div class="col">
+                                                <h4 class="mx-3 mt-4"><a class="text-black"
+                                                        href="{{ route('fasilitas') }}">Perpustakaan</a></h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- End testimonial item -->
+
+
                     </div>
+                    <div class="swiper-pagination"></div>
                 </div>
-            </div><!-- End testimonial item -->
 
-            <div class="swiper-slide">
-                <div class="d-flex justify-content-center">
-                    <div class="row row-cols-1 row-cols-md-3 g-5 justify-content-center">
-                        <div class="col shadow p-3 mb-1 bg-body rounded mx-5">
-                            <div class="row">
-                                <div class="col-md-1"><i class="fas fa-restroom w-100 mt-3"
-                                        style="color: #f822ff; font-size:50px"></i></div>
-                                <div class="col">
-                                    <h4 class="mx-5 mt-4"><a class="text-black"
-                                            href="{{ route('fasilitas') }}">Toilet</a></h4>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col shadow p-3 mb-1 bg-body rounded mx-5">
-                            <div class="row">
-                                <div class="col-md-1"><i class="fas fa-hand-holding-usd w-100 mt-3"
-                                        style="color: #4680ff; font-size:50px"></i></div>
-                                <div class="col">
-                                    <h4 class="mx-5 mt-3"><a class="text-black"
-                                            href="{{ route('fasilitas') }}">Ruang TU</a></h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-                <div class="d-flex justify-content-center">
-                    <div class="row row-cols-1 row-cols-md-3 g-5 justify-content-center">
-                        <div class="col shadow p-3 mb-1 bg-body rounded mx-5">
-                            <div class="row">
-                                <div class="col-md-1"><i class="fas fa-desktop w-100 mt-3"
-                                        style="color: #6c7a00; font-size:50px"></i></div>
-                                <div class="col">
-                                    <h4 class="mx-5 mt-4"><a class="text-black"
-                                            href="{{ route('fasilitas') }}">Lab Komputer</a></h4>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col shadow p-3 mb-1 bg-body rounded mx-5">
-                            <div class="row">
-                                <div class="col-md-1"><i class="fas fa-briefcase-medical w-100 mt-3"
-                                        style="color: #ff4646; font-size:50px"></i></div>
-                                <div class="col">
-                                    <h4 class="mx-5 mt-4"><a class="text-black"
-                                            href="{{ route('fasilitas') }}">UKS</a></h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-                <div class="d-flex justify-content-center">
-                    <div class="row row-cols-1 row-cols-md-3 g-5 justify-content-center">
-                        <div class="col shadow p-3 mb-1 bg-body rounded mx-5">
-                            <div class="row">
-                                <div class="col-md-1"><i class="fas fa-futbol w-100 mt-3"
-                                        style="color: #000000; font-size:50px"></i></div>
-                                <div class="col">
-                                    <h4 class="mx-5 mt-4"><a class="text-black"
-                                            href="{{ route('fasilitas') }}">Lapangan</a></h4>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col shadow p-3 mb-1 bg-body rounded mx-5">
-                            <div class="row">
-                                <div class="col-md-2"><i class="fas fa-book-open w-100 mt-3"
-                                        style="color: #6df48c; font-size:50px"></i></div>
-                                <div class="col">
-                                    <h4 class="mx-3 mt-4"><a class="text-black"
-                                            href="{{ route('fasilitas') }}">Perpustakaan</a></h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div><!-- End testimonial item -->
-
-
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-
-      </div>
-    </section><!-- End Testimonials Section -->
+            </div>
+        </section><!-- End Testimonials Section -->
 
         <!-- ======= Hidroponik Section ======= -->
         <section class="hidroponik">
@@ -378,7 +388,7 @@
                     @foreach ($blog as $item)
                         <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
                             <div class="post-box">
-                                <div class="post-img"><img src="{{ asset('upload/thumbnail/' . $item->foto) }}"
+                                <div class="post-img"><img src="{{ asset('storage/' . $item->foto) }}"
                                         alt="{{ $item->judul }}" class=" img-fluid">
                                 </div>
                                 <div class="meta">
