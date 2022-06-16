@@ -124,7 +124,7 @@ class DashboardController extends Controller
     {
         $this->validate($request, [
             'judul' => 'required',
-            // 'pic' => 'required|image|mimes:jpeg,png,jpg|max:10000',
+            'pic' => 'required|image|mimes:jpeg,png,jpg|max:10000',
             'editordata' => 'required'
         ]);
 
@@ -142,6 +142,7 @@ class DashboardController extends Controller
             $request->pic->move(public_path('upload/thumbnail'), $Name);
 
             $artikel->foto = $Name;
+            $artikel->foto = $request->file('pic')->store('upload/thumbnail');
         }
 
         $content = $request->editordata;
@@ -218,6 +219,7 @@ class DashboardController extends Controller
             File::delete($file_path);
             // unlink($file_path);
         }
+        Storage::delete($del->foto);
         $del->delete();
         return redirect()->back()->with('success', 'Foto berhasil dihapus');
     }
