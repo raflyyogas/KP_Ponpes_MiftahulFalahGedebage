@@ -20,12 +20,12 @@
                         <input type="text" name="judul" id="judul" class="form-control" required>
                     </div>
                 </div>
-                <div class="row mb-3" hidden>
+                <div class="row mb-3">
                     <div class="col-md-2">
                         <label for="slug" class="form-label">Slug</label>
                     </div>
                     <div class="col">
-                        <input type="text" class="form-control" id="slug" name="slug" required>
+                        <input type="text" class="form-control" id="slug" name="slug">
                         <input type="text" name="admin" id="admin" value="Admin">
                     </div>
                 </div>

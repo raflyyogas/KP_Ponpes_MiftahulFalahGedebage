@@ -6,10 +6,10 @@
             <div class="breadcrumb-hero">
                 <div class="container">
                     <div class="breadcrumb-hero">
-                        <h2>Galeri Video</h2>
-                        <p>Galeri video ini merupakan kumpulan video dokumentasi mengenai kegiatan yang dilaukan di
-                            Pesantren
-                            Miftahul Falah. </p>
+                        <h2>Video</h2>
+                        <p>Est dolorum ut non facere possimus quibusdam eligendi voluptatem. Quia id aut similique quia
+                            voluptas sit quaerat debitis. Rerum omnis ipsam aperiam consequatur laboriosam nemo harum
+                            praesentium. </p>
                     </div>
                 </div>
             </div>
@@ -23,8 +23,8 @@
                     @foreach ($video as $data)
                         <div class="col-6">
                             <p class="text-center"><iframe width="560" height="340"
-                                    src="https://www.youtube.com/embed/{{ substr($data->link, -11) }}"
-                                    title="Youtube Video Player" frameborder="0"
+                                    src="https://www.youtube.com/embed/{{ substr($data->link, -11) }}" title="Youtube Video Player"
+                                    frameborder="0"
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; picture-in-picture"
                                     allowfullscreen>
                                 </iframe></p>

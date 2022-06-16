@@ -35,7 +35,7 @@
                     @foreach ($foto as $data)
                         <div class="col-lg-4 col-md-6 portfolio-item filter-app">
                             <div class="portfolio-wrap">
-                                <img src="{{ asset('upload/gallery-foto/' . $data->foto) }}" class="img-fluid" alt="">
+                                <img src="assets/img/sayur1.jpeg" class="img-fluid" alt="">
                                 <div class="portfolio-info">
                                     <h4>{{ $data->judul }}</h4>
                                     <p>{{ Str::limit($data->deskripsi, 10) }}</p>

@@ -162,6 +162,8 @@ class DashboardController extends Controller
             $image->removeAttribute('src');
             $image->setAttribute('src', $image_name);
         }
+        
+        
 
         $content = $dom->saveHTML();
 
@@ -193,7 +195,7 @@ class DashboardController extends Controller
     {
         $this->validate($request, [
             'judul' => 'required',
-            'foto' => 'required|image|mimes:jpeg,png,jpg|max:10000',
+            'foto' => 'required|image|mimes:jpeg,png,jpg',
             'deskripsi' => 'required'
         ]);
 

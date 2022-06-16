@@ -48,7 +48,7 @@
                         @foreach ($foto as $data)
                             <tr>
                                 <td>{{ $data->id }}</td>
-                                <td><img src="{{ asset('upload/gallery-foto/' . $data->foto) }}" alt=""
+                                <td><img src="../assets/img/sayur1.jpeg" alt=""
                                         class="rounded-circle-profile" width="300px"></td>
                                 <td>{{ $data->judul }}</td>
                                 <td>{{ $data->deskripsi }}</td>
