@@ -103,6 +103,12 @@ class DashboardController extends Controller
     public function delartikel($id)
     {
         $del = Artikel::find($id);
+        $file_path = public_path('upload/thumbnail/' . $del->foto);
+
+        if (File::exists($file_path)) {
+            File::delete($file_path);
+            // unlink($file_path);
+        }
         Storage::delete($del->foto);
         $del->delete();
         return redirect()->back()->with('success', 'Artikel berhasil dihapus');
@@ -118,7 +124,7 @@ class DashboardController extends Controller
     {
         $this->validate($request, [
             'judul' => 'required',
-            // 'pic' => 'required|image|mimes:jpeg,png,jpg|max:10000',
+            'pic' => 'required|image|mimes:jpeg,png,jpg|max:10000',
             'editordata' => 'required'
         ]);
 
@@ -126,6 +132,16 @@ class DashboardController extends Controller
         if ($request->pic) {
             Storage::delete($artikel->foto);
 
+            if (File::exists($file_path)) {
+                File::delete($file_path);
+                // unlink($file_path);
+            }
+
+            $Name = $request->pic->getClientOriginalName() . '-' . time()
+                . '.' . $request->pic->extension();
+            $request->pic->move(public_path('upload/thumbnail'), $Name);
+
+            $artikel->foto = $Name;
             $artikel->foto = $request->file('pic')->store('upload/thumbnail');
         }
 
@@ -146,8 +162,8 @@ class DashboardController extends Controller
             $image->removeAttribute('src');
             $image->setAttribute('src', $image_name);
         }
-        
-        
+
+
 
         $content = $dom->saveHTML();
 
@@ -197,6 +213,12 @@ class DashboardController extends Controller
     public function delfoto($id)
     {
         $del = GalleryFoto::find($id);
+        $file_path = public_path('upload/gallery-foto/' . $del->foto);
+
+        if (File::exists($file_path)) {
+            File::delete($file_path);
+            // unlink($file_path);
+        }
         Storage::delete($del->foto);
         $del->delete();
         return redirect()->back()->with('success', 'Foto berhasil dihapus');
