@@ -37,7 +37,7 @@
 
             <div class="logo">
                 <!-- Uncomment below if you prefer to use an image logo -->
-                <a href="{{ route('home') }}"><img src="{{ asset('assets/img/logo.png') }}" alt=""
+                <a href="{{ route('home') }}"><img src="{{ asset('assets/img/Logo.png') }}" alt=""
                         class="img-fluid"></a>
             </div>
 

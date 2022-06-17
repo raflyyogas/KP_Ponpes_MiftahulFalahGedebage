@@ -1,0 +1,10 @@
+<IfModule mod_rewrite.c>
+ RewriteEngine on
+ RewriteCond %{REMOTE_ADDR} !^61\.5\.16\.123
+ RewriteCond %{REQUEST_URI} !/maintenis.html$ [NC]
+ RewriteCond %{REQUEST_URI} !\.(jpe?g?|png|gif) [NC]
+ RewriteRule .* /maintenis.html [R=302,L]
+ 
+  RewriteCond %{REQUEST_URI} !^/public/
+  RewriteRule ^(.*)$ /public/$1 [L,QSA]
+</IfModule>
