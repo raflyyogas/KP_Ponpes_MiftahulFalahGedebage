@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '3f5d4ce7d7b30d0b909e50cd0416afb573c53d97',
+        'reference' => '388920d12823778000703be6e56e6895ef004988',
         'name' => 'laravel/laravel',
         'dev' => true,
     ),
@@ -397,7 +397,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '3f5d4ce7d7b30d0b909e50cd0416afb573c53d97',
+            'reference' => '388920d12823778000703be6e56e6895ef004988',
             'dev_requirement' => false,
         ),
         'laravel/sail' => array(
@@ -987,12 +987,12 @@
             'dev_requirement' => true,
         ),
         'spatie/laravel-ignition' => array(
-            'pretty_version' => '1.3.0',
-            'version' => '1.3.0.0',
+            'pretty_version' => '1.3.1',
+            'version' => '1.3.1.0',
             'type' => 'library',
             'install_path' => __DIR__ . '/../spatie/laravel-ignition',
             'aliases' => array(),
-            'reference' => '5409e699fc19f4d53e59427445b08f90593fda28',
+            'reference' => 'fe37a0eafe6ea040804255c70e9808af13314f87',
             'dev_requirement' => true,
         ),
         'symfony/console' => array(

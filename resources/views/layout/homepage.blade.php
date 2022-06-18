@@ -52,7 +52,8 @@
                             <li><a href="{{ route('kegiatan') }}">Ekstrakurikuler</a></li>
                         </ul>
                     </li>
-                    <li class="dropdown"><a href="#"><span>Dokumentasi</span> <i class="bi bi-chevron-down"></i></a>
+                    <li class="dropdown"><a href="#"><span>Dokumentasi</span> <i
+                                class="bi bi-chevron-down"></i></a>
                         <ul>
                             <li><a href="{{ route('foto') }}">Galeri Foto</a></li>
                             <li><a href="{{ route('video') }}">Galeri Video</a></li>
@@ -78,10 +79,6 @@
                     &copy; Copyright <strong><span>2022</span></strong>. All Rights Reserved
                 </div>
                 <div class="credits">
-                    <!-- All the links in the footer should remain intact. -->
-                    <!-- You can delete the links only if you purchased the pro version. -->
-                    <!-- Licensing information: https://bootstrapmade.com/license/ -->
-                    <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/serenity-bootstrap-corporate-template/ -->
                     Made by 🍭🍭
                 </div>
             </div>

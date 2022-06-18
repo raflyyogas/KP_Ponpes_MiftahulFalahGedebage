@@ -5,7 +5,7 @@
 
     <h1 class="h3 mb-2 text-gray-800">Foto</h1>
 
-    <p class="mb-4">Jika tidak mengerti dalam pengisian Foto. Silahkan download file ini</a>.</p>
+    <p class="mb-4">Jika tidak mengerti dalam pengisian foto. Silahkan download instruksi ini</a>.</p>
 
 
 
@@ -53,12 +53,11 @@
                     <thead>
 
                         <tr>
-
-                            <th>ID Foto</th>
-
                             <th>Gambar Foto</th>
 
                             <th>Judul Foto</th>
+
+                            <th>Pendidikan</th>
 
                             <th>Deskripsi</th>
 
@@ -93,14 +92,13 @@
                         @foreach ($foto as $data)
                             <tr>
 
-                                <td>{{ $data->id }}</td>
-
                                 <td><img src="{{ asset('upload/gallery-foto/' . $data->foto) }}" alt=""
                                         class="rounded-circle-profile" width="300px"></td>
 
                                 <td>{{ $data->judul }}</td>
 
                                 <td>{{ $data->deskripsi }}</td>
+                                <td>{{ $data->kategori }}</td>
 
                                 <td>
 
@@ -161,16 +159,16 @@
 
                             <label for="judul">Judul Foto</label>
 
-                            <input type="text" name="judul" id="judul" class="form-control">
+                            <input type="text" name="judul" id="judul" class="form-control" required>
 
                         </div>
 
                         <div class="mb-3">
 
-                            <label for="link">Link Foto</label>
+                            <label for="link">Pilih Foto</label>
 
                             <input type="file" name="foto" id="foto" class="form-control mb-2"
-                                onchange="previewImg()">
+                                onchange="previewImg()" required>
 
                             <div class="d-flex justify-content-center">
 
@@ -181,10 +179,27 @@
                         </div>
 
                         <div class="mb-3">
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <label for="Kategori">Pilih pendidikan</label>
+                                </div>
+                                <div class="col">
+                                    <select class="form-select" aria-label="Default select example" id="kategori"
+                                        name="kategori" required>
+                                        <option name="kategori" value="Madrasah Ibtidaiyah">Madrasah Ibtidaiyah</option>
+                                        <option name="kategori" value="Madrasah Tsanawiyah">Madrasah Tsanawiyah</option>
+                                        <option name="kategori" value="Madrasah Aliyah">Madrasah Aliyah</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="mb-3">
 
                             <label for="deskripsi">Deskripsi Foto</label>
 
-                            <textarea name="deskripsi" id="deskripsi" rows="5" class="form-control"></textarea>
+                            <textarea name="deskripsi" id="deskripsi" rows="5" class="form-control" required></textarea>
 
                         </div>
 

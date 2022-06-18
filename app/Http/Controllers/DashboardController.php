@@ -190,7 +190,7 @@ class DashboardController extends Controller
 
     public function foto()
     {
-        $foto = GalleryFoto::all();
+        $foto = GalleryFoto::latest()->get();
         return view('tampilan.foto', compact('foto'));
     }
 
@@ -207,6 +207,7 @@ class DashboardController extends Controller
 
         $foto = new GalleryFoto();
         $foto->judul = $request->judul;
+        $foto->kategori = $request->kategori;
         $foto->foto = $Name;
         $foto->deskripsi = $request->deskripsi;
         $foto->save();
@@ -230,7 +231,7 @@ class DashboardController extends Controller
 
     public function video()
     {
-        $video = GalleryVideo::all();
+        $video = GalleryVideo::latest()->get();
         return view('tampilan.video', compact('video'));
     }
 
@@ -240,6 +241,7 @@ class DashboardController extends Controller
 
         $video->judul = $request->judul;
         $video->link = $request->link;
+        $video->kategori = $request->kategori;
         $video->deskripsi = $request->deskripsi;
 
         $video->save();
