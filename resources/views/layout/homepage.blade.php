@@ -44,12 +44,12 @@
             <nav id="navbar" class="navbar">
                 <ul>
                     <li><a href="{{ route('home') }}">Beranda</a></li>
-                    <li class="dropdown"><a href="#"><span>Tentang PONPES</span> <i
+                    <li class="dropdown"><a href="#"><span>Pendidikan</span> <i
                                 class="bi bi-chevron-down"></i></a>
                         <ul>
-                            <li><a href="{{ route('didik') }}">Pendidikan</a></li>
-                            <li><a href="{{ route('fasilitas') }}">Fasilitas</a></li>
-                            <li><a href="{{ route('kegiatan') }}">Ekstrakurikuler</a></li>
+                            <li><a href="{{ route('didik') }}">Madrasah Ibtidaiyah</a></li>
+                            <li><a href="{{ route('fasilitas') }}">Madrasah Tsanawiyah</a></li>
+                            <li><a href="{{ route('kegiatan') }}">Madrasah Aliyah</a></li>
                         </ul>
                     </li>
                     <li class="dropdown"><a href="#"><span>Dokumentasi</span> <i

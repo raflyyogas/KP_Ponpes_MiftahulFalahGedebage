@@ -122,25 +122,28 @@
 
                         <br>
 
-                        <p>
+                        <p style="text-align:justify;">
+                            Assalamualaikum warohmatullahi wabarokatuh.
+                            Tiada kata yang paling mulia kita ucapkan hanyalah Ucapan Puji Syukur yang tak terhingga kita
+                            panjatkan pada Allah SWT, yang selalu memberikan kesehatan dan keselamatan serta perlindungannya
+                            sehingga kita dapat menjalankan aktivitas sehari-hari.
+                            Begitu pula tak lupa kita sampaikan Salam dan Shalawat kepada Nabi Muhammad SAW beserta
+                            keluarga, sahabat dan kita semua selaku umatnya yang selalu setia mengamalkan ajaran-ajaran
+                            agama islam yang dapat memanusiakan manusia yang sampai saat ini kita rasakan mafaatnya.
+                            YPI MIFTAHUL FALAH BANDUNG adalah lembaga yang bergerak dalam bidang Sosial, Pendidikan dan
+                            Keagamaan untuk memberikan nilai dan manfaat kepada masyarakat. Dari dasar itu lahirlah
+                            program-program diantaranya adalah pembentukan lembaga pendidikan yaitu Pondok Pesantren, MI,
+                            Mts, MA, Diniyah dan Majlis Ta'lim guna melahirkan generasi muda Islam yang lebih cerah,
+                            memiliki rasa percaya diri, mandiri, saling menghargai, dan mempunyai jiwa sosial.
+                            Kami berusaha mengikuti perkembangan zaman dengan meningkatkan penggunaan teknologi informasi,
+                            salah satunya dengan memanfaatkan website secara optimal. Dengan demikian arus informasi akan
+                            menjadi lebih efektif dan efisien dengan adanya akses internet yang memadai. Akhir kata kami
+                            memberikan iringan do’a semoga website ini dapat
+                            menjadikan manfaat dan barokah untuk kita semua. Kepada Allah Swt kita bertawakal dan
+                            menyerahkan diri, semoga kita selalu dalam bimbinganNya serta diberi kekuatan, kesehatan dan
+                            kemampuan dalam mengemban amanah mulia ini dengan sebaik-baiknya. Aamiin Yaa Rabbalamiin.
+                            Wassalamu'alaikum warahmatullahi wa barakaatuh.
 
-                            Negara Kesatuan Republik Indonesia yang kuat sangat ditentukan oleh sumber daya manusia yang ada
-
-                            di dalamnya. Kekuatan iman,
-
-                            konsistensi ibadah, dan kemuliaan akhlak, ditambah keluasan ilmu dan keahlian dalam berbagai
-
-                            bidang kehidupan,
-
-                            adalah faktor-faktor penting yang harus dimiliki manusia Indonesia.
-
-                            Maka pendidikan Islam yang profesional adalah sebuah keniscayaan untuk melahirkan generasi ideal
-
-                            harapan bangsa dan negara.
-
-                            Dalam hal ini Pesantren dengan segala keunikannya sangat layak menjadi garda terdepan untuk
-
-                            mewujudkannya.
 
                         </p>
 
@@ -282,12 +285,8 @@
 
                                         <h3>Visi</h3>
 
-                                        <p class="text-dark" style="text-align:justify;">"Terwujudnya lulusan MA
-
-                                            Miftahul Falah yang memiliki kepribadian unggul, berprestasi, berkarakter dan
-
-                                            berwawasan lingkungan"
-
+                                        <p class="text-dark" style="text-align:justify;">Sebaik-baiknya manusia adalah yang
+                                            bermanfaat bagi manusia lainnya
                                         </p>
 
                                     </div>
@@ -308,24 +307,9 @@
 
                                         <ol>
 
-                                            <li>Menyelenggarakan pendidikan yang mendalam terhadap pengetahuan, sikap, dan
-
-                                                perilaku islami.</li>
-
-                                            <li>Meningkatkan profesionalisme pendidik dan tenaga kependidikan madrasah.</li>
-
-                                            <li>Melaksanakan pembelajaran yang efektif, kreatif dan inovatif.</li>
-
-                                            <li>Melaksanakan pembelajaran melalui pendekatan HOTS.</li>
-
-                                            <li>Menciptakan lingkungan madrasah yang berbudaya sehat dan bersih.</li>
-
-                                            <li>Menjalin komunikasi dan koordinasi dengan pendidik, tenaga kependidikan,
-
-                                                orang tua, masyarakat, dan komite madrasah guna meningkatkan kualitas mutu
-
-                                                lulusan.</li>
-
+                                            <li>Mencetak santri rajin beribadah dan berakhlak mulia.</li>
+                                            <li>Mencetak santri gemar membaca dan produktif.</li>
+                                            <li>Mencetak santri hidup mandiri dan sederhana.</li>
                                         </ol>
 
                                         </p>
@@ -374,16 +358,9 @@
 
         </section><!-- End Departments Section -->
 
-
-
-        <!-- ======= Testimonials Section ======= -->
-
-        <section id="testimonials" class="testimonials">
+        <section id="services" class="services ">
 
             <div class="container" data-aos="fade-up">
-
-
-
                 <div class="section-title">
 
                     <h2>Fasilitas Sekolah</h2>
@@ -391,278 +368,71 @@
                     <p>Segala Fasilitas yang Tersedia di PONPES Miftahul Falah</p>
 
                 </div>
+                <div class="d-flex justify-content-center">
+                    <div class="row">
 
+                        <div class="col">
 
+                            <div class="icon-box" data-aos="fade-up">
 
-                <div class="testimonials-slider swiper">
+                                <div class="icon"><i class="bi bi-geo" style="color: #ff689b;"></i></div>
 
-                    <div class="swiper-wrapper">
+                                <h4 class="title"><a>Madrasah Ibtidaiyah</a></h4>
 
-
-
-                        <div class="swiper-slide">
-
-                            <div class="d-flex justify-content-center">
-
-                                <div class="row row-cols-1 row-cols-md-3 g-5 justify-content-center">
-
-                                    <div class="col shadow p-3 mb-1 bg-body rounded mx-5">
-
-                                        <div class="row">
-
-                                            <div class="col-md-1"><i class="fas fa-mosque w-100 mt-2"
-                                                    style="color: #3a5eed; font-size:50px"></i></div>
-
-                                            <div class="col">
-
-                                                <h4 class="mx-5 mt-4"><a class="text-black"
-                                                        href="{{ route('fasilitas') }}">Masjid</a></h4>
-
-                                            </div>
-
-                                        </div>
-
-                                    </div>
-
-                                    <div class="col shadow p-3 mb-1 bg-body rounded mx-5">
-
-                                        <div class="row">
-
-                                            <div class="col-md-1"><i class="fas fa-utensils w-100 mt-2"
-                                                    style="color: #e9bf06; font-size:50px"></i></div>
-
-                                            <div class="col">
-
-                                                <h4 class="mx-5 mt-4"><a class="text-black"
-                                                        href="{{ route('fasilitas') }}">Koperasi</a></h4>
-
-                                            </div>
-
-                                        </div>
-
-                                    </div>
-
-                                </div>
+                                <p class="description">Madrasah Ibtidaiyah memiliki visi membentuk pribadi siswa MI
+                                    Miftahul
+                                    Falah yang berakhlak mulia, kreatif dan berprestasi.</p>
 
                             </div>
 
-                        </div><!-- End testimonial item -->
+                        </div>
 
+                        <div class="col">
 
+                            <div class="icon-box" data-aos="fade-up">
 
-                        <div class="swiper-slide">
+                                <div class="icon"><i class="fas fa-dna" style="color: #e9a906;"></i></div>
 
-                            <div class="d-flex justify-content-center">
+                                <h4 class="title"><a>Madrasah Tsanawiyah</a></h4>
 
-                                <div class="row row-cols-1 row-cols-md-3 g-5 justify-content-center">
-
-                                    <div class="col shadow p-3 mb-1 bg-body rounded mx-5">
-
-                                        <div class="row">
-
-                                            <div class="col-md-1"><i class="fas fa-hotel w-100 mt-3"
-                                                    style="color: #3fcdc7; font-size:50px"></i></div>
-
-                                            <div class="col">
-
-                                                <h4 class="mx-5 mt-3"><a class="text-black"
-                                                        href="{{ route('fasilitas') }}">Gedung Asrama Putra</a></h4>
-
-                                            </div>
-
-                                        </div>
-
-                                    </div>
-
-                                    <div class="col shadow p-3 mb-1 bg-body rounded mx-5">
-
-                                        <div class="row">
-
-                                            <div class="col-md-1"><i class="fas fa-hotel w-100 mt-3"
-                                                    style="color: #41cf2e; font-size:50px"></i></div>
-
-                                            <div class="col">
-
-                                                <h4 class="mx-5 mt-3"><a class="text-black"
-                                                        href="{{ route('fasilitas') }}">Gedung Asrama Putri</a></h4>
-
-                                            </div>
-
-                                        </div>
-
-                                    </div>
-
-                                </div>
+                                <p class="description">Madrasah Tsanawiyah memiliki visi membentuk pribadi siswa MTs.
+                                    Miftahul
+                                    Falah Kota Bandung yang berakhlak mulia, berwawasan luas dan berprestasi.</p>
 
                             </div>
 
-                        </div><!-- End testimonial item -->
-
-
-
-                        <div class="swiper-slide">
-
-                            <div class="d-flex justify-content-center">
-
-                                <div class="row row-cols-1 row-cols-md-3 g-5 justify-content-center">
-
-                                    <div class="col shadow p-3 mb-1 bg-body rounded mx-5">
-
-                                        <div class="row">
-
-                                            <div class="col-md-1"><i class="fas fa-restroom w-100 mt-3"
-                                                    style="color: #f822ff; font-size:50px"></i></div>
-
-                                            <div class="col">
-
-                                                <h4 class="mx-5 mt-4"><a class="text-black"
-                                                        href="{{ route('fasilitas') }}">Toilet</a></h4>
-
-                                            </div>
-
-                                        </div>
-
-                                    </div>
-
-                                    <div class="col shadow p-3 mb-1 bg-body rounded mx-5">
-
-                                        <div class="row">
-
-                                            <div class="col-md-1"><i class="fas fa-hand-holding-usd w-100 mt-3"
-                                                    style="color: #4680ff; font-size:50px"></i></div>
-
-                                            <div class="col">
-
-                                                <h4 class="mx-5 mt-3"><a class="text-black"
-                                                        href="{{ route('fasilitas') }}">Ruang TU</a></h4>
-
-                                            </div>
-
-                                        </div>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                        </div><!-- End testimonial item -->
-
-
-
-                        <div class="swiper-slide">
-
-                            <div class="d-flex justify-content-center">
-
-                                <div class="row row-cols-1 row-cols-md-3 g-5 justify-content-center">
-
-                                    <div class="col shadow p-3 mb-1 bg-body rounded mx-5">
-
-                                        <div class="row">
-
-                                            <div class="col-md-1"><i class="fas fa-desktop w-100 mt-3"
-                                                    style="color: #6c7a00; font-size:50px"></i></div>
-
-                                            <div class="col">
-
-                                                <h4 class="mx-5 mt-4"><a class="text-black"
-                                                        href="{{ route('fasilitas') }}">Lab Komputer</a></h4>
-
-                                            </div>
-
-                                        </div>
-
-                                    </div>
-
-                                    <div class="col shadow p-3 mb-1 bg-body rounded mx-5">
-
-                                        <div class="row">
-
-                                            <div class="col-md-1"><i class="fas fa-briefcase-medical w-100 mt-3"
-                                                    style="color: #ff4646; font-size:50px"></i></div>
-
-                                            <div class="col">
-
-                                                <h4 class="mx-5 mt-4"><a class="text-black"
-                                                        href="{{ route('fasilitas') }}">UKS</a></h4>
-
-                                            </div>
-
-                                        </div>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                        </div><!-- End testimonial item -->
-
-
-
-                        <div class="swiper-slide">
-
-                            <div class="d-flex justify-content-center">
-
-                                <div class="row row-cols-1 row-cols-md-3 g-5 justify-content-center">
-
-                                    <div class="col shadow p-3 mb-1 bg-body rounded mx-5">
-
-                                        <div class="row">
-
-                                            <div class="col-md-1"><i class="fas fa-futbol w-100 mt-3"
-                                                    style="color: #000000; font-size:50px"></i></div>
-
-                                            <div class="col">
-
-                                                <h4 class="mx-5 mt-4"><a class="text-black"
-                                                        href="{{ route('fasilitas') }}">Lapangan</a></h4>
-
-                                            </div>
-
-                                        </div>
-
-                                    </div>
-
-                                    <div class="col shadow p-3 mb-1 bg-body rounded mx-5">
-
-                                        <div class="row">
-
-                                            <div class="col-md-2"><i class="fas fa-book-open w-100 mt-3"
-                                                    style="color: #6df48c; font-size:50px"></i></div>
-
-                                            <div class="col">
-
-                                                <h4 class="mx-3 mt-4"><a class="text-black"
-                                                        href="{{ route('fasilitas') }}">Perpustakaan</a></h4>
-
-                                            </div>
-
-                                        </div>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                        </div><!-- End testimonial item -->
-
-
-
-
+                        </div>
 
                     </div>
-
-                    <div class="swiper-pagination"></div>
-
                 </div>
+
+                <div class="d-flex justify-content-center">
+                    <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+
+                        <div class="icon-box">
+
+                            <div class="icon"><i class="fas fa-campground" style="color: #3fcdc7;"></i></i>
+
+                            </div>
+
+                            <h4 class="title"><a>Madrasah Aliyah</a></h4>
+
+                            <p class="description">MA. Miftahul Falah didirikan thaun 2014 atas prakarsa KH. Drs. Ahmad
+                                Djahid dan KH. Agus Ahmad Syakur, LC, MH. Kurikulum sekolah ini mengintegrasikan kurikulum
+                                kementrian Agama dan Kurikulum Pesantren, yang mana ajaran dan nilai-nilai Islam melekat
+                                dalam semua mata pelajaran dan semua kegiatan sekolah.</p>
+
+                        </div>
+
+                    </div>
+                </div>
+
 
 
 
             </div>
 
-        </section><!-- End Testimonials Section -->
+        </section><!-- End Services Section -->
 
 
 
@@ -684,7 +454,8 @@
 
                         <h5>Mifafarm merupakan kebun Hidroponik Miftahul Falah yang berlokasi di Pondok Pesantren Miftahul
 
-                            Falah JI. Gedebage Selatan No.115, Derwati, Bandung</h5>
+                            Falah Jl. Gedebage Selatan No.115, Rancabolang, Kec. Rancasari, Kota Bandung, Jawa Barat 40296
+                        </h5>
 
                         <div class="text-center">
 
@@ -811,10 +582,10 @@
                             <div class="address">
 
                                 <i class="bi bi-geo-alt"></i>
-
                                 <h4>Location:</h4>
 
-                                <p>Jl. Gedebage Selatan No.115, Derwati, Bandung, Kota Bandung, Jawa Barat 40295</p>
+                                <p>Jl. Gedebage Selatan No.115, Rancabolang, Kec. Rancasari, Kota Bandung, Jawa Barat 40296
+                                </p>
 
                             </div>
 
@@ -826,7 +597,7 @@
 
                                 <h4>Email:</h4>
 
-                                <p>mifa@gmail.com</p>
+                                <p>ponpesmifa.bdg@gmail.com</p>
 
                             </div>
 
@@ -838,7 +609,9 @@
 
                                 <h4>Call:</h4>
 
-                                <p> 0813-2189-7725</p>
+                                <p><a href="https://api.whatsapp.com/send/?phone=6287720036339&text=Hallo.+Saya+ingin+tahu+lebih+tentang+Pondok+Pesantren+Miftahul+Falah+&app_absent=0"
+                                        class="text-black">087720036339</a>
+                                </p>
 
                             </div>
 
