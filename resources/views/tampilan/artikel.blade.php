@@ -41,11 +41,10 @@
 
                         <tr>
 
-                            <th>ID Artikel</th>
+                            <th>Judul artikel</th>
 
                             <th>Gambar Artikel</th>
-
-                            <th>Judul artikel</th>
+                            <th>Kategori Artikel</th>
 
                             <th>Deskripsi</th>
 
@@ -79,8 +78,7 @@
 
                         @foreach ($artikel as $item)
                             <tr>
-
-                                <td style="max-width:20px">{{ $item->id }}</td>
+                                <td>{{ $item->judul }}</td>
 
                                 <td style="max-width:200px">
 
@@ -88,14 +86,14 @@
                                         class="rounded-circle-profile" width="70%">
 
                                 </td>
+                                <td> {{ $item->kategori }}</td>
 
-                                <td>{{ $item->judul }}</td>
 
                                 <td style="max-width:400px"> {!! Str::limit($item->deskripsi, 250) !!}</td>
 
                                 <td>
 
-                                    <a href="{{ route('editartikel', ['id' => $item->id]) }}"
+                                    <a href="{{ route('editartikel', ['slug' => $item->slug]) }}"
                                         class="btn btn-info btn-icon-split">
 
                                         <span class="icon text-white-50">
@@ -125,7 +123,11 @@
                     </tbody>
 
                 </table>
+                <div class="d-flex justify-content-center">
 
+                    {{ $artikel->links() }}
+
+                </div>
             </div>
 
         </div>

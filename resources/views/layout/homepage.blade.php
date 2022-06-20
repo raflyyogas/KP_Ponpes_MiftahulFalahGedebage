@@ -6,12 +6,14 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
     <title>Miftahul Falah</title>
-    <meta content="" name="description">
-    <meta content="" name="keywords">
+    <meta
+        content="Pondok pesantren Miftahul falah ini didirikan sudah sejak tahun 1930 7 hal ini didasarkan pada sebuah piagam berdirinya pondok pesantren ini yang didirikan oleh kyai haji Ahmad Syafii"
+        name="description">
+    <meta content="Pondok, Pesantren, Bandung, Pondok pesantren" name="keywords">
 
     <!-- Favicons -->
-    <link href="assets/img/favicon.png" rel="icon">
-    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="{{ asset('assets/img/logo-pondok.png') }}" rel="icon">
+    <link href="{{ asset('assets/img/logo-pondok.png') }}" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
     <link

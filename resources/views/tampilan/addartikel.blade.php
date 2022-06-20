@@ -4,7 +4,6 @@
     <!-- Page Heading -->
 
     <h1 class="h3 mb-2 text-gray-800">Tambah Artikel</h1>
-
     <p class="mb-4">Jika tidak mengerti dalam pengisian artikel. Silahkan download file ini</a>.</p>
 
 
@@ -13,12 +12,15 @@
 
     <div class="card shadow mb-4">
 
-        <div class="card-header py-3">
-
-            <h6 class="m-0 font-weight-bold text-primary">Artikel</h6>
-
+        <div class="card-header py-2">
+            <div class="d-flex flex-row">
+                <div class="p-2"><a href="{{ route('admartikel') }}" class="btn btn-primary"><i
+                            class="fa fa-backward"></i></a></div>
+                <div class="p-2 mt-2">
+                    <h6 class="m-0 font-weight-bold text-primary">Artikel</h6>
+                </div>
+            </div>
         </div>
-
         <div class="card-body">
 
             <form action="{{ route('store') }}" method="POST" enctype="multipart/form-data">
@@ -57,6 +59,21 @@
 
                     </div>
 
+                </div>
+
+
+                <div class="row mb-3">
+                    <div class="col-md-2">
+                        <label for="Kategori">Kategori</label>
+                    </div>
+                    <div class="col">
+                        <select class="form-select" aria-label="Default select example" id="kategori" name="kategori"
+                            required>
+                            <option name="kategori" value="Madrasah Ibtidaiyah">Madrasah Ibtidaiyah</option>
+                            <option name="kategori" value="Madrasah Tsanawiyah">Madrasah Tsanawiyah</option>
+                            <option name="kategori" value="Madrasah Aliyah">Madrasah Aliyah</option>
+                        </select>
+                    </div>
                 </div>
 
                 <div class="row mb-3">

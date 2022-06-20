@@ -122,6 +122,11 @@
 
                 </table>
 
+                <div class="d-flex justify-content-center">
+
+                    {{ $foto->links() }}
+
+                </div>
             </div>
 
         </div>

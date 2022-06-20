@@ -124,6 +124,16 @@
 
                             </div><!-- End sidebar search formn-->
 
+                            <h3 class="sidebar-title">Kategori</h3>
+
+                            <div class="sidebar-item search-form">
+                                <ul>
+                                    <li>Coffee</li>
+                                    <li>Tea</li>
+                                    <li>Milk</li>
+                                </ul>
+                            </div><!-- End sidebar search formn-->
+
 
 
                             <h3 class="sidebar-title">Recent Posts</h3>

@@ -46,8 +46,9 @@ class DashboardController extends Controller
     //Area Konten
     public function artikel()
     {
-        $artikel = Artikel::all();
-        return view('tampilan.artikel', compact('artikel'));
+        return view('tampilan.artikel', [
+            'artikel' => Artikel::latest()->paginate(3)
+        ]);
     }
     public function addartikel()
     {
@@ -96,6 +97,7 @@ class DashboardController extends Controller
         $data->judul = $request->judul;
         $data->slug = $request->slug;
         $data->penulis = $request->admin;
+        $data->kategori = $request->kategori;
         $data->deskripsi = $content;
         $data->save();
         //   $post = Artikel::create([
@@ -117,9 +119,10 @@ class DashboardController extends Controller
         return redirect()->back()->with('success', 'Artikel berhasil dihapus');
     }
 
-    public function editartikel($id)
+    public function editartikel($slug)
     {
-        $artikel = Artikel::find($id);
+
+        $artikel = Artikel::where('slug', '=', $slug)->first();
         return view('tampilan.editartikel', compact('artikel'));
     }
 
@@ -133,20 +136,18 @@ class DashboardController extends Controller
 
 
         $artikel = Artikel::find($id);
+        $file_path = public_path('upload/thumbnail/' . $artikel->foto);
 
         if ($request->pic) {
-            $file_path = public_path('upload/gallery-foto/' . $artikel->foto);
 
             if (File::exists($file_path)) {
                 File::delete($file_path);
                 // unlink($file_path);
             }
-            Storage::delete($artikel->foto);
-
-            $Name = $request->pic->getClientOriginalName() . '-' . time()
-                . '.' . $request->pic->extension();
-            $request->pic->move(public_path('upload/thumbnail'), $Name);
         }
+        $Name = $request->pic->getClientOriginalName() . '-' . time()
+            . '.' . $request->pic->extension();
+        $request->pic->move(public_path('upload/thumbnail'), $Name);
 
         $content = $request->editordata;
         $dom = new \DomDocument();
@@ -166,12 +167,12 @@ class DashboardController extends Controller
             $image->setAttribute('src', $image_name);
         }
 
-
-
         $content = $dom->saveHTML();
+
         $artikel->judul = $request->judul;
         $artikel->slug = $request->slug;
-        $artikel->pic = $Name;
+        $artikel->foto = $Name;
+        $artikel->kategori = $request->kategori;
         $artikel->penulis = $request->admin;
         $artikel->deskripsi = $content;
         $artikel->save();
@@ -190,7 +191,7 @@ class DashboardController extends Controller
 
     public function foto()
     {
-        $foto = GalleryFoto::latest()->get();
+        $foto = GalleryFoto::latest()->paginate(5);
         return view('tampilan.foto', compact('foto'));
     }
 
@@ -231,7 +232,7 @@ class DashboardController extends Controller
 
     public function video()
     {
-        $video = GalleryVideo::latest()->get();
+        $video = GalleryVideo::latest()->paginate(5);
         return view('tampilan.video', compact('video'));
     }
 
