@@ -86,6 +86,7 @@ Route::get('/blog', [HalamanController::class, 'blog'])->name('blog');
 
 
 Route::get('/blog/artikel/{slug}', [HalamanController::class, 'slug'])->name('slug');
+Route::get('/blog/artikel/find/{kategori}', [HalamanController::class, 'kategori'])->name('ktgri');
 
 
 

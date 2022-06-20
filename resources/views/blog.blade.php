@@ -31,7 +31,7 @@
 
                     <li><a class="text-primary" href="{{ route('home') }}">Home</a></li>
 
-                    <li><a class="text-primary" href="{{ route('blog') }}">Artikel</a></li>
+                    <li>Artikel</li>
 
                 </ol>
 
@@ -86,7 +86,8 @@
                                                 datetime="2020-01-01">{{ \Carbon\Carbon::parse($item->created_at)->format('j F Y') }}</time>
 
                                         </li>
-
+                                        <li class="d-flex align-items-center"><i
+                                                class="bi bi-tags-fill"></i>{{ $item->kategori }}</li>
                                     </ul>
 
                                 </div>
@@ -160,7 +161,21 @@
 
                             </div><!-- End sidebar search formn-->
 
+                            <h3 class="sidebar-title">Kategori</h3>
 
+                            <div class="sidebar-item search-form">
+                                <ul>
+                                    <li><a href="{{ route('ktgri', ['kategori' => 'Madrasah Ibtidaiyah']) }}"
+                                            class="text-black">Madrasah
+                                            Ibtidaiyah</a></li>
+                                    <li><a href="{{ route('ktgri', ['kategori' => 'Madrasah Tsanawiyah']) }}"
+                                            class="text-black">Madrasah
+                                            Tsanawiyah</a></li>
+                                    <li><a href="{{ route('ktgri', ['kategori' => 'Madrasah Aliyah']) }}"
+                                            class="text-black">Madrasah
+                                            Aliyah</a></li>
+                                </ul>
+                            </div>
 
                             <h3 class="sidebar-title">Recent Posts</h3>
 
@@ -210,7 +225,6 @@
 
 
         </div>
-
     </section><!-- End Blog Section -->
 
 
