@@ -84,8 +84,7 @@
 
                     <div class="col">
 
-                        <input type="file" name="pic" id="foto" class="form-control" onchange="previewImg()"
-                            required>
+                        <input type="file" name="pic" id="foto" class="form-control" onchange="previewImg()">
 
                         <div class="d-flex justify-content-center mt-2">
 
@@ -196,29 +195,25 @@
 
 
         $('#summernote').summernote({
+            disableDragAndDrop: true,
 
             placeholder: 'Inputkan artikel',
-
             tabsize: 2,
-
             height: 500,
-
+            minHeight: null,
+            maxHeight: null,
+            focus: true,
+            blockquoteBreakingLevel: 2,
+            codeviewFilter: false,
+            codeviewIframeFilter: true,
             toolbar: [
-
                 ['style', ['style', 'blockqoute']],
-
                 ['font', ['bold', 'underline', 'clear']],
-
                 ['color', ['color']],
-
                 ['para', ['ul', 'ol', 'paragraph']],
-
-                ['insert', ['link', 'picture', 'video']],
-
+                ['insert', ['link', 'video']],
                 ['view', ['fullscreen', 'codeview', 'help']]
-
             ]
-
         });
     </script>
 @endsection

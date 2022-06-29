@@ -82,8 +82,8 @@ class DashboardController extends Controller
             list($type, $data) = explode(';', $data);
             list(, $data)      = explode(',', $data);
             $imgeData = base64_decode($data);
-            $image_name = "/upload/" . time() . $item . '.png';
-            $path = public_path('upload/thumbnail') . $image_name;
+            $image_name = "/upload/thumbnail/" . time() . $item . '.png';
+            $path = public_path() . $image_name;
             file_put_contents($path, $imgeData);
 
             $image->removeAttribute('src');
@@ -130,7 +130,6 @@ class DashboardController extends Controller
     {
         $this->validate($request, [
             'judul' => 'required',
-            'pic' => 'required|image|mimes:jpeg,png,jpg|max:10000',
             'editordata' => 'required'
         ]);
 
@@ -144,10 +143,11 @@ class DashboardController extends Controller
                 File::delete($file_path);
                 // unlink($file_path);
             }
+            $Name = $request->pic->getClientOriginalName() . '-' . time()
+                . '.' . $request->pic->extension();
+            $request->pic->move(public_path('upload/thumbnail'), $Name);
+            $artikel->foto = $Name;
         }
-        $Name = $request->pic->getClientOriginalName() . '-' . time()
-            . '.' . $request->pic->extension();
-        $request->pic->move(public_path('upload/thumbnail'), $Name);
 
         $content = $request->editordata;
         $dom = new \DomDocument();
@@ -159,8 +159,8 @@ class DashboardController extends Controller
             list($type, $data) = explode(';', $data);
             list(, $data)      = explode(',', $data);
             $imgeData = base64_decode($data);
-            $image_name = "/upload/" . time() . $item . '.png';
-            $path = public_path('upload/thumbnail') . $image_name;
+            $image_name = "/upload/thumbnail/" . time() . $item . '.png';
+            $path = public_path() . $image_name;
             file_put_contents($path, $imgeData);
 
             $image->removeAttribute('src');
@@ -171,14 +171,13 @@ class DashboardController extends Controller
 
         $artikel->judul = $request->judul;
         $artikel->slug = $request->slug;
-        $artikel->foto = $Name;
         $artikel->kategori = $request->kategori;
         $artikel->penulis = $request->admin;
         $artikel->deskripsi = $content;
         $artikel->save();
         //   $post = Artikel::create([
         //   ]);
-        return redirect()->route('admartikel')->with('success', 'Artikel berhasil diposting');
+        return redirect()->route('admartikel')->with('success', 'Artikel berhasil diupdate');
     }
 
     //---------------------------------------------------

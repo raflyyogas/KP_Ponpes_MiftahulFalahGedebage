@@ -49,9 +49,9 @@
                     <li class="dropdown"><a href="#"><span>Pendidikan</span> <i
                                 class="bi bi-chevron-down"></i></a>
                         <ul>
-                            <li><a href="{{ route('didik') }}">Madrasah Ibtidaiyah</a></li>
-                            <li><a href="{{ route('fasilitas') }}">Madrasah Tsanawiyah</a></li>
-                            <li><a href="{{ route('kegiatan') }}">Madrasah Aliyah</a></li>
+                            <li><a href="{{ route('mi') }}">Madrasah Ibtidaiyah</a></li>
+                            <li><a href="{{ route('mts') }}">Madrasah Tsanawiyah</a></li>
+                            <li><a href="{{ route('ma') }}">Madrasah Aliyah</a></li>
                         </ul>
                     </li>
                     <li class="dropdown"><a href="#"><span>Dokumentasi</span> <i

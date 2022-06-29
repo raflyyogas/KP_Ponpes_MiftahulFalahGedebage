@@ -36,10 +36,11 @@ class HalamanController extends Controller
 
     public function slug($slug)
     {
+        $count = Artikel::where('slug', '=', $slug)->count();
         $item = Artikel::where('slug', '=', $slug)->first();
         $latest = Artikel::latest()->get();
         $i = 0;
-        return view('artikel', compact('item', 'latest', 'i'));
+        return view('artikel', compact('count', 'item', 'latest', 'i'));
     }
 
     public function kirimpesan(Request $request)

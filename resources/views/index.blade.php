@@ -216,8 +216,8 @@
 
                             <li class="nav-item">
 
-                                <a class="nav-link" data-bs-toggle="tab" href="#tab-4"><span
-                                        class="ms-2">Organisasi</span></a>
+                                <a class="nav-link" data-bs-toggle="tab" href="#tab-4"><span class="ms-2">Karakter
+                                        Santri</span></a>
 
                             </li>
 
@@ -326,19 +326,22 @@
 
                                     <div class="details order-2 order-lg-1">
 
-                                        <h3>IRMA (Ikatan Remaja Masjid)</h3>
+                                        <h3>10 Karakter Santri Pesantren Miftahul Falah</h3>
 
-                                        <p class="text-dark" style="text-align:justify;">Selain membersihkan masjid,
-
-                                            IRMA juga mengadakan acara-acara yang berkaitan di dalam masjid. Seperti
-
-                                            pengajian dan kegiatan Islami lainnya. Irma MA Miftahul Falah dibentuk pada
-
-                                            tanggal 22 November 2017 bertempat di Madrasah, yang dimana terdiri dari
-
-                                            pengurus inti dan sekbid-sekbidnya seperti bidang majelis dan dakwah , bidang
-
-                                            humas, bidang peralatan dan kebersihan.</p>
+                                        <p class="text-dark" style="text-align:justify;">
+                                        <ol>
+                                            <li>Salimul Aqidah (Beraqidah yang bersih)</li>
+                                            <li>Shahihul Ibadah (Beribadah dengan benar)</li>
+                                            <li>Mutsaqoful Fikri (Berwawasan Luas)</li>
+                                            <li>Qowiyul Jismi (Mempunyai fisik yang kuat)</li>
+                                            <li>Matinul Khuluq (Berakhlak tinggi)</li>
+                                            <li>Mujahidu Linafsi (Bersemangat juang tinggi)</li>
+                                            <li>Nafi'un Liqoirihi (Bermanfaat bagi orang lain)</li>
+                                            <li>Qodirun 'Alal Kasbi (Mandiri)</li>
+                                            <li>Haritsun 'Ala Waqtihi (Disiplin waktu)</li>
+                                            <li>Munadzomun Fi Su'unihi (Menata urusannya)</li>
+                                        </ol>
+                                        </p>
 
                                     </div>
 
@@ -363,9 +366,9 @@
             <div class="container" data-aos="fade-up">
                 <div class="section-title">
 
-                    <h2>Fasilitas Sekolah</h2>
+                    <h2>Pendidikan PONPES Miftahul Falah</h2>
 
-                    <p>Segala Fasilitas yang Tersedia di PONPES Miftahul Falah</p>
+                    <p>Pendidikan yang disediakan oleh PONPES Miftahul Falah</p>
 
                 </div>
                 <div class="d-flex justify-content-center">
@@ -377,7 +380,7 @@
 
                                 <div class="icon"><i class="bi bi-geo" style="color: #ff689b;"></i></div>
 
-                                <h4 class="title"><a>Madrasah Ibtidaiyah</a></h4>
+                                <h4 class="title"><a href="{{ route('mi') }}">Madrasah Ibtidaiyah</a></h4>
 
                                 <p class="description">Madrasah Ibtidaiyah memiliki visi membentuk pribadi siswa MI
                                     Miftahul
@@ -393,7 +396,7 @@
 
                                 <div class="icon"><i class="fas fa-dna" style="color: #e9a906;"></i></div>
 
-                                <h4 class="title"><a>Madrasah Tsanawiyah</a></h4>
+                                <h4 class="title"><a href="{{ route('mts') }}">Madrasah Tsanawiyah</a></h4>
 
                                 <p class="description">Madrasah Tsanawiyah memiliki visi membentuk pribadi siswa MTs.
                                     Miftahul
@@ -415,7 +418,7 @@
 
                             </div>
 
-                            <h4 class="title"><a>Madrasah Aliyah</a></h4>
+                            <h4 class="title"><a href="{{ route('ma') }}">Madrasah Aliyah</a></h4>
 
                             <p class="description">MA. Miftahul Falah didirikan thaun 2014 atas prakarsa KH. Drs. Ahmad
                                 Djahid dan KH. Agus Ahmad Syakur, LC, MH. Kurikulum sekolah ini mengintegrasikan kurikulum

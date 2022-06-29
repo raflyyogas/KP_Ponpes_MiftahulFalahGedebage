@@ -42,65 +42,31 @@
 
         @if ($count > 0)
             <section id="blog" class="blog">
-
                 <div class="container" data-aos="fade-up">
-
-
-
                     <div class="row">
-
-
-
                         <div class="col-lg-8 entries">
-
                             @foreach ($blog as $item)
                                 <article class="entry">
-
-
-
                                     <div class="entry-img">
-
                                         <img src="{{ asset('upload/thumbnail/' . $item->foto) }}" alt=""
                                             class="img-fluid" style="min-width:100px">
-
                                     </div>
-
-
-
-                                    <h2 class="entry-title">{{ $item->judul }}
-
-                                    </h2>
-
-
-
+                                    <h2 class="entry-title">{{ $item->judul }}</h2>
                                     <div class="entry-meta">
-
                                         <ul>
-
                                             <li class="d-flex align-items-center"><i
                                                     class="bi bi-person"></i>{{ $item->penulis }}</li>
-
                                             <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <time
                                                     datetime="2020-01-01">{{ \Carbon\Carbon::parse($item->created_at)->format('j F Y') }}</time>
-
                                             </li>
-
                                             <li class="d-flex align-items-center"><i
                                                     class="bi bi-tags-fill"></i>{{ $item->kategori }}</li>
                                         </ul>
-
                                     </div>
-
-
-
                                     <div class="entry-content">
-
                                         {!! Str::limit($item->deskripsi, 250) !!}
-
                                     </div>
-
                                     <div class="text-end">
-
                                         <a href="{{ route('slug', ['slug' => $item->slug]) }}"
                                             style="
 

@@ -45,13 +45,20 @@ Route::get('/video', [galericontroller::class, 'video'])->name('video');
 //Route untuk mengirimkan Contact
 
 Route::get('/contact', function () {
-
     return view('contact');
 })->name('contact');
 
+Route::get('/mi', function () {
+    return view('mi');
+})->name('mi');
+Route::get('/mts', function () {
+    return view('mts');
+})->name('mts');
+Route::get('/ma', function () {
+    return view('ma');
+})->name('ma');
+
 Route::post('/pesan', [HalamanController::class, 'kirimpesan'])->name('pesan');
-
-
 
 Route::get('/fasilitas', function () {
 
