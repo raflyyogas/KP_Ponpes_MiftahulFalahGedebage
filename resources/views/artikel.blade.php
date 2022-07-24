@@ -90,7 +90,7 @@
                                 <div class="sidebar-item recent-posts">
                                     @foreach ($latest as $data)
                                         <div class="post-item clearfix">
-                                            <img src="{{ asset('upload/thumbnail/' . $item->foto) }}"
+                                            <img src="{{ asset('upload/thumbnail/' . $data->foto) }}"
                                                 alt="{{ $data->judul }}">
                                             <h4><a
                                                     href="{{ route('slug', ['slug' => $data->slug]) }}">{{ $data->judul }}</a>
@@ -114,13 +114,9 @@
         <section id="breadcrumbs" class="breadcrumbs">
 
             <div class="container">
-
                 <ol>
-
                     <li><a class="text-primary" href="{{ route('home') }}">Home</a></li>
-
                     <li><a>Artikel</a></li>
-
                 </ol>
 
             </div>

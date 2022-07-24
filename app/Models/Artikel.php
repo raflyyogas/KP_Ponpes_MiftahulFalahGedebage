@@ -26,16 +26,10 @@ class Artikel extends Model
 
     public function scopeFilter($query, array $filters)
     {
-
-
-
         $query->when($filters['search'] ?? false, function ($query, $search) {
-
             return $query->where(function ($query) use ($search) {
-
-                $query->where('judul', 'like', '%' . $search . '%')
-
-                    ->orWhere('deskripsi', 'like', '%' . $search . '%');
+                $query->where('judul', 'like', '%' . $search . '%');
+                // ->orWhere('deskripsi', 'like', '%' . $search . '%');
             });
         });
     }
@@ -43,17 +37,11 @@ class Artikel extends Model
 
 
     public function sluggable(): array
-
     {
-
         return [
-
             'slug' => [
-
                 'source' => 'judul'
-
             ]
-
         ];
     }
 }

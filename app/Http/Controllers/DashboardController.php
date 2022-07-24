@@ -47,7 +47,7 @@ class DashboardController extends Controller
     public function artikel()
     {
         return view('tampilan.artikel', [
-            'artikel' => Artikel::latest()->paginate(3)
+            'artikel' => Artikel::latest()->filter(request(['search']))->paginate(5)
         ]);
     }
     public function addartikel()
@@ -112,7 +112,6 @@ class DashboardController extends Controller
 
         if (File::exists($file_path)) {
             File::delete($file_path);
-            // unlink($file_path);
         }
         Storage::delete($del->foto);
         $del->delete();
@@ -190,8 +189,9 @@ class DashboardController extends Controller
 
     public function foto()
     {
-        $foto = GalleryFoto::latest()->paginate(5);
-        return view('tampilan.foto', compact('foto'));
+        return view('tampilan.foto', [
+            'foto' => GalleryFoto::latest()->paginate(3)
+        ]);
     }
 
     public function storefoto(Request $request)
@@ -215,6 +215,30 @@ class DashboardController extends Controller
         return redirect(route('editfoto'));
     }
 
+    public function updatefoto(Request $request, $id)
+    {
+        $foto = GalleryFoto::find($id);
+        $file_path = public_path('upload/gallery-foto/' . $foto->foto);
+
+        if ($request->foto) {
+
+            if (File::exists($file_path)) {
+                File::delete($file_path);
+                // unlink($file_path);
+            }
+            $Name = $request->foto->getClientOriginalName() . '-' . time()
+                . '.' . $request->foto->extension();
+            $request->foto->move(public_path('upload/gallery-foto'), $Name);
+            $foto->foto = $Name;
+        }
+
+        $foto->judul = $request->judul;
+        $foto->kategori = $request->kategori;
+        $foto->deskripsi = $request->deskripsi;
+        $foto->save();
+        return redirect(route('editfoto'))->with('success', 'Foto berhasil dihapus');
+    }
+
     public function delfoto($id)
     {
         $del = GalleryFoto::find($id);
@@ -231,8 +255,9 @@ class DashboardController extends Controller
 
     public function video()
     {
-        $video = GalleryVideo::latest()->paginate(5);
-        return view('tampilan.video', compact('video'));
+        return view('tampilan.video', [
+            'video' => GalleryVideo::latest()->paginate(3)
+        ]);
     }
 
     public function storevideo(Request $request)
@@ -245,7 +270,20 @@ class DashboardController extends Controller
         $video->deskripsi = $request->deskripsi;
 
         $video->save();
-        return redirect(route('editvideo'));
+        return redirect(route('editvideo'))->with('success', 'Foto berhasil dihapus');
+    }
+
+    public function updatevideo(Request $request, $id)
+    {
+        $updatevid = GalleryVideo::find($id);
+
+        $updatevid->judul = $request->judul;
+        $updatevid->link = $request->link;
+        $updatevid->kategori = $request->kategori;
+        $updatevid->deskripsi = $request->deskripsi;
+
+        $updatevid->save();
+        return redirect(route('editvideo'))->with('success', 'Foto berhasil dihapus');
     }
 
     public function delvideo($id)

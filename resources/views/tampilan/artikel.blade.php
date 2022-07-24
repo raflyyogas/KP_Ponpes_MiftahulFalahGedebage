@@ -3,7 +3,7 @@
 @section('main')
     <!-- Page Heading -->
 
-    <h1 class="h3 mb-2 text-gray-800">Artikel</h1>
+    <h1 class="mb-2 text-gray-800">Artikel</h1>
 
     <p class="mb-4">Jika tidak mengerti dalam pengisian artikel. Silahkan download artikel ini</a>.</p>
 
@@ -14,9 +14,19 @@
     <div class="card shadow mb-4">
 
         <div class="card-header py-3">
-
-            <h6 class="m-0 font-weight-bold text-primary">Artikel</h6>
-
+            <div class="row">
+                <div class="col-8 ms-3 d-flex align-items-end">
+                    <h4 class="m-0 font-weight-bold text-primary align-text-bottom">Artikel</h4>
+                </div>
+                <div class="col text-end">
+                    <div class="searching">
+                        <form action="/admin/dashboard/artikel">
+                            <input type="text" placeholder="Cari artikel" name="search" value="{{ request('search') }}">
+                            <button type="submit"><i class="bi bi-search"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="card-body">
@@ -55,68 +65,40 @@
                     </thead>
 
                     {{-- <tfoot>
-
                         <tr>
-
                             <th>Name</th>
-
                             <th>Position</th>
-
                             <th>Office</th>
-
                             <th>Age</th>
-
                             <th>Start date</th>
-
                             <th>Salary</th>
-
                         </tr>
-
                     </tfoot> --}}
 
                     <tbody>
-
                         @foreach ($artikel as $item)
                             <tr>
                                 <td>{{ $item->judul }}</td>
-
                                 <td style="max-width:200px">
-
                                     <img src="{{ asset('upload/thumbnail/' . $item->foto) }}" alt=""
                                         class="rounded-circle-profile" width="70%">
-
                                 </td>
                                 <td> {{ $item->kategori }}</td>
-
-
-                                <td style="max-width:400px"> {!! Str::limit($item->deskripsi, 250) !!}</td>
-
+                                <td style="max-width:400px"> {!! strip_tags(Str::limit($item->deskripsi, 150)) !!}</td>
                                 <td>
-
                                     <a href="{{ route('editartikel', ['slug' => $item->slug]) }}"
                                         class="btn btn-info btn-icon-split">
-
                                         <span class="icon text-white-50">
-
                                             <i class="fas fa-pencil-alt"></i>
-
                                         </span>
-
                                     </a>
-
                                     <a href="{{ route('delartikel', ['id' => $item->id]) }}"
                                         class="btn btn-danger btn-icon-split">
-
                                         <span class="icon text-white-50">
-
                                             <i class="fas fa-trash"></i>
-
                                         </span>
-
                                     </a>
-
                                 </td>
-
                             </tr>
                         @endforeach
 

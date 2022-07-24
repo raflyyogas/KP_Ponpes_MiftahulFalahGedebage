@@ -6,12 +6,9 @@
     <h1 class="h3 mb-2 text-gray-800">Tambah Artikel</h1>
     <p class="mb-4">Jika tidak mengerti dalam pengisian artikel. Silahkan download file ini</a>.</p>
 
-
-
     <!-- DataTales Example -->
 
     <div class="card shadow mb-4">
-
         <div class="card-header py-2">
             <div class="d-flex flex-row">
                 <div class="p-2"><a href="{{ route('admartikel') }}" class="btn btn-primary"><i
@@ -21,47 +18,27 @@
                 </div>
             </div>
         </div>
+
         <div class="card-body">
-
             <form action="{{ route('store') }}" method="POST" enctype="multipart/form-data">
-
                 @csrf
-
                 <div class="row mb-3">
-
                     <div class="col-md-2">
-
                         <label for="judul" class="form-label">Judul Artikel</label>
-
                     </div>
-
                     <div class="col">
-
                         <input type="text" name="judul" id="judul" class="form-control" required>
-
                     </div>
-
                 </div>
-
                 <div class="row mb-3" hidden>
-
                     <div class="col-md-2">
-
                         <label for="slug" class="form-label">Slug</label>
-
                     </div>
-
                     <div class="col">
-
                         <input type="text" class="form-control" id="slug" name="slug">
-
                         <input type="text" name="admin" id="admin" value="Admin">
-
                     </div>
-
                 </div>
-
-
                 <div class="row mb-3">
                     <div class="col-md-2">
                         <label for="Kategori">Kategori</label>
@@ -69,6 +46,7 @@
                     <div class="col">
                         <select class="form-select" aria-label="Default select example" id="kategori" name="kategori"
                             required>
+                            <option name="kategori" disabled selected>Pilih Kategori</option>
                             <option name="kategori" value="Madrasah Ibtidaiyah">Madrasah Ibtidaiyah</option>
                             <option name="kategori" value="Madrasah Tsanawiyah">Madrasah Tsanawiyah</option>
                             <option name="kategori" value="Madrasah Aliyah">Madrasah Aliyah</option>
@@ -77,61 +55,31 @@
                 </div>
 
                 <div class="row mb-3">
-
                     <div class="col-md-2">
-
                         <label for="foto" class="form-label">Foto Artikel</label>
-
                     </div>
-
                     <div class="col">
-
                         <input type="file" name="pic" id="foto" class="form-control" onchange="previewImg()">
-
                         <div class="d-flex justify-content-center mt-2">
-
                             <img id="preview" style="max-width:50%">
-
                         </div>
-
                     </div>
-
-
-
                 </div>
 
                 <div class="row mb-3">
-
                     <div class="col-md-2">
-
                         <label for="editor">Isi Artikel</label>
-
                     </div>
-
                     <div class="col">
-
                         <textarea id="summernote" name="editordata" required></textarea>
-
                     </div>
-
                 </div>
-
                 <div class="text-end">
-
                     <button type="submit" class="btn btn-success">Post Artikel</button>
-
                 </div>
-
             </form>
-
         </div>
-
     </div>
-
-
-
-
-
     <script>
         const judul = document.querySelector('#judul');
         const slug = document.querySelector('#slug');
@@ -140,7 +88,6 @@
                 .then(response => response.json())
                 .then(data => slug.value = data.slug)
         });
-
 
 
         function previewImg() {
@@ -152,17 +99,10 @@
             oFReader.onload = function(oFREvent) {
                 preview.src = oFREvent.target.result;
             }
-
-
-
-
-
         }
 
-
         $('#summernote').summernote({
-            disableDragAndDrop: true,
-
+            // disableDragAndDrop: true,
             placeholder: 'Inputkan artikel',
             tabsize: 2,
             height: 500,
@@ -178,7 +118,7 @@
                 ['color', ['color']],
                 ['para', ['ul', 'ol', 'paragraph']],
                 ['insert', ['link', 'video']],
-                ['view', ['fullscreen', 'codeview', 'help']]
+                ['view', ['fullscreen', 'codeview']]
             ]
         });
     </script>

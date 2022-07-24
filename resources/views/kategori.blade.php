@@ -64,7 +64,7 @@
                                         </ul>
                                     </div>
                                     <div class="entry-content">
-                                        {!! Str::limit($item->deskripsi, 250) !!}
+                                        {!! strip_tags(Str::limit($item->deskripsi, 150)) !!}
                                     </div>
                                     <div class="text-end">
                                         <a href="{{ route('slug', ['slug' => $item->slug]) }}"

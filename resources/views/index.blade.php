@@ -378,69 +378,43 @@
 
                             <div class="icon-box" data-aos="fade-up">
 
-                                <div class="icon"><i class="bi bi-geo" style="color: #ff689b;"></i></div>
+                                <div class="icon"><i class="bi bi-mortarboard" style="color: #ff689b;"></i></div>
 
                                 <h4 class="title"><a href="{{ route('mi') }}">Madrasah Ibtidaiyah</a></h4>
 
                                 <p class="description">Madrasah Ibtidaiyah memiliki visi membentuk pribadi siswa MI
                                     Miftahul
                                     Falah yang berakhlak mulia, kreatif dan berprestasi.</p>
-
                             </div>
-
                         </div>
-
                         <div class="col">
-
                             <div class="icon-box" data-aos="fade-up">
-
-                                <div class="icon"><i class="fas fa-dna" style="color: #e9a906;"></i></div>
-
+                                <div class="icon"><i class="bi bi-mortarboard" style="color: #e9a906;"></i></div>
                                 <h4 class="title"><a href="{{ route('mts') }}">Madrasah Tsanawiyah</a></h4>
-
                                 <p class="description">Madrasah Tsanawiyah memiliki visi membentuk pribadi siswa MTs.
                                     Miftahul
                                     Falah Kota Bandung yang berakhlak mulia, berwawasan luas dan berprestasi.</p>
-
                             </div>
-
                         </div>
-
                     </div>
                 </div>
-
                 <div class="d-flex justify-content-center">
                     <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
-
                         <div class="icon-box">
-
-                            <div class="icon"><i class="fas fa-campground" style="color: #3fcdc7;"></i></i>
-
+                            <div class="icon"><i class="bi bi-mortarboard"style="color: #3fcdc7;"></i></i>
                             </div>
-
                             <h4 class="title"><a href="{{ route('ma') }}">Madrasah Aliyah</a></h4>
-
                             <p class="description">MA. Miftahul Falah didirikan thaun 2014 atas prakarsa KH. Drs. Ahmad
                                 Djahid dan KH. Agus Ahmad Syakur, LC, MH. Kurikulum sekolah ini mengintegrasikan kurikulum
                                 kementrian Agama dan Kurikulum Pesantren, yang mana ajaran dan nilai-nilai Islam melekat
                                 dalam semua mata pelajaran dan semua kegiatan sekolah.</p>
-
                         </div>
-
                     </div>
                 </div>
-
-
-
-
             </div>
-
         </section><!-- End Services Section -->
 
-
-
         <!-- ======= Hidroponik Section ======= -->
-
         <section class="hidroponik">
 
             <div class="container" data-aos="fade-up">
@@ -497,55 +471,35 @@
 
 
                 <div class="section-title">
-
                     <h2>Berita dan Informasi</h2>
-
                     <p>Informasi & Berita Terbaru PONPES Miftahul Falah</p>
-
                 </div>
 
-
-
                 <div class="row">
-
-
-
                     @foreach ($blog as $item)
-                        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-
+                        <div class="col-sm-4 mb-4" data-aos="fade-up" data-aos-delay="200">
                             <div class="post-box">
-
                                 <div class="post-img"><img src="{{ asset('upload/thumbnail/' . $item->foto) }}"
-                                        alt="{{ $item->judul }}" class=" img-fluid">
-
+                                        alt="{{ $item->judul }}" class=" img-fluid" style="">
                                 </div>
 
                                 <div class="meta">
-
                                     <span
                                         class="post-date">{{ \Carbon\Carbon::parse($item->created_at)->format('j F Y') }}</span>
-
                                 </div>
 
                                 <h3 class="post-title">{{ $item->judul }}</h3>
-
-                                <p>{!! Str::limit($item->deskripsi, 250) !!}</p>
+                                <p>{!! strip_tags(Str::limit($item->deskripsi, 150)) !!}</p>
 
                                 <a href="{{ route('slug', ['slug' => $item->slug]) }}"
-                                    class="readmore stretched-link"><span>Read More</span><i
-                                        class="bi bi-arrow-right"></i></a>
-
+                                    class="readmore stretched-link fixed-bottom">
+                                    <div class=""><span>Read More</span><i class="bi bi-arrow-right"></i>
+                                    </div>
+                                </a>
                             </div>
-
                         </div>
                     @endforeach
-
-
-
                 </div>
-
-
-
             </div>
 
 

@@ -93,7 +93,7 @@ Route::get('/blog', [HalamanController::class, 'blog'])->name('blog');
 
 
 Route::get('/blog/artikel/{slug}', [HalamanController::class, 'slug'])->name('slug');
-Route::get('/blog/artikel/find/{kategori}', [HalamanController::class, 'kategori'])->name('ktgri');
+Route::get('/blog/artikel/kategori/{kategori}', [HalamanController::class, 'kategori'])->name('ktgri');
 
 
 
@@ -113,50 +113,30 @@ Route::post('/admin/login', [DashboardController::class, 'otentikasi'])->name('o
 Route::group(['middleware' => 'auth'], function () {
 
     Route::post('/admin/dashboard/logout', [DashboardController::class, 'logout'])->name('logout');
-
     Route::get('/admin/dashboard', [DashboardController::class, 'index'])->name('ds');
 
-
-
     //Area artikel
-
     Route::get('/admin/dashboard/artikel', [DashboardController::class, 'artikel'])->name('admartikel');
-
     Route::get('/admin/dashboard/addartikel', [DashboardController::class, 'addartikel'])->name('addartikel');
-
     Route::get('/admin/dashboard/addartikel/checkSlug', [DashboardController::class, 'checkSlug']);
-
     Route::post('/admin/dashboard/addartikel', [DashboardController::class, 'storearitkel'])->name('store');
-
     Route::get('/admin/dashboard/hapusartikel/{id}', [DashboardController::class, 'delartikel'])->name('delartikel');
-
     Route::get('/admin/dashboard/editartikel/{slug}', [DashboardController::class, 'editartikel'])->name('editartikel');
-
     Route::post('/admin/dashboard/editartikel/{id}', [DashboardController::class, 'updateartikel'])->name('updateartikel');
 
-
-
-
-
+    //Area Foto
     Route::get('/admin/dashboard/foto', [DashboardController::class, 'foto'])->name('editfoto');
-
     Route::post('/admin/dashboard/foto', [DashboardController::class, 'storefoto'])->name('tambahfoto');
-
     Route::get('/admin/dashboard/hapusfoto/{id}', [DashboardController::class, 'delfoto'])->name('deletefoto');
+    Route::post('/admin/dashboard/editfoto/{id}', [DashboardController::class, 'updatefoto'])->name('updatefoto');
 
-
-
+    //Area Video
     Route::get('/admin/dashboard/video', [DashboardController::class, 'video'])->name('editvideo');
-
     Route::post('/admin/dashboard/video', [DashboardController::class, 'storevideo'])->name('tambahvideo');
-
     Route::get('/admin/dashboard/video/{id}', [DashboardController::class, 'delvideo'])->name('delvid');
-
-
+    Route::post('/admin/dashboard/editvideo/{id}', [DashboardController::class, 'updatevideo'])->name('editvid');
 
     //Kontak Kami Area
-
     Route::get('/admin/dashboard/contact', [DashboardController::class, 'contact'])->name('contacts');
-
-    Route::get('/admin/dashboard/delete/{id}', [DashboardController::class, 'delcontact'])->name('delkon');
+    Route::get('/admin/dashboard/delete/', [DashboardController::class, 'delcontact'])->name('delkon');
 });

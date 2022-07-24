@@ -28,14 +28,18 @@
                         </div>
                         <div class="col">
                             <div class="icon-box" data-aos="fade-up">
-                                <div class="icon"><i class="bi bi-geo" style="color: #ff689b;"></i></div>
+                                <div class="icon"><i class="bx bxs-pyramid" style="color: #ff689b;"></i></div>
                                 <h4 class="title"><a>Pramuka</a></h4>
 
                             </div>
                         </div>
                         <div class="col">
                             <div class="icon-box" data-aos="fade-up">
-                                <div class="icon"><i class="bi bi-geo" style="color: #ff689b;"></i></div>
+                                <div class="icon">
+                                    {{-- <i class="bi bi-geo" style="color: #ff689b;"></i> --}}
+                                    <i class="fa-solid fa-person"></i>
+                                    {{-- <i class="fa-regular fa-person"></i> --}}
+                                </div>
                                 <h4 class="title"><a>Sanpara / Paskibra</a></h4>
 
                             </div>

@@ -10,6 +10,7 @@
         content="Pondok pesantren Miftahul falah ini didirikan sudah sejak tahun 1930 7 hal ini didasarkan pada sebuah piagam berdirinya pondok pesantren ini yang didirikan oleh kyai haji Ahmad Syafii"
         name="description">
     <meta content="Pondok, Pesantren, Bandung, Pondok pesantren" name="keywords">
+    <meta name="author" content="Lolipop Team">
 
     <!-- Favicons -->
     <link href="{{ asset('assets/img/logo-pondok.png') }}" rel="icon">
@@ -26,10 +27,17 @@
     <link href="{{ asset('assets/vendor/boxicons/css/boxicons.min.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
 
     <!-- Template Main CSS File -->
     <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
+    <style type="text/css">
+        .ajax-load {
+            background: #e1e1e1;
+            padding: 10px 0px;
+            width: 100%;
+        }
+    </style>
 </head>
 
 <body>

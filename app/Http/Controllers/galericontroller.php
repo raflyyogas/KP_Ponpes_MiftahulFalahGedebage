@@ -20,10 +20,9 @@ class galericontroller extends Controller
 
     public function foto()
     {
-
-        $foto = GalleryFoto::latest()->get();
-
-        return view('foto', compact('foto'));
+        return view('foto', [
+            'foto' => GalleryFoto::latest()->get()
+        ]);
     }
 
     public function video()
