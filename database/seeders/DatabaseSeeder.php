@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\User;
 use App\Models\Artikel;
+use App\Models\Santri;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
@@ -25,6 +26,22 @@ class DatabaseSeeder extends Seeder
             'name' => 'Admin',
             'email' => 'admin@ponpesbdg.id',
             'password' => Hash::make('123456789')
+        ]);
+        Santri::create([
+            'total' => 0,
+            'tipe' => 'santrimi'
+        ]);
+        Santri::create([
+            'total' => 0,
+            'tipe' => 'santrimts'
+        ]);
+        Santri::create([
+            'total' => 0,
+            'tipe' => 'santrima'
+        ]);
+        Santri::create([
+            'total' => 0,
+            'tipe' => 'prestasi'
         ]);
     }
 }

@@ -138,5 +138,9 @@ Route::group(['middleware' => 'auth'], function () {
 
     //Kontak Kami Area
     Route::get('/admin/dashboard/contact', [DashboardController::class, 'contact'])->name('contacts');
-    Route::get('/admin/dashboard/delete/', [DashboardController::class, 'delcontact'])->name('delkon');
+    Route::post('/admin/dashboard/contact/{id}', [DashboardController::class, 'updatecontact'])->name('simpanpesan');
+    Route::get('/admin/dashboard/delete/{id}', [DashboardController::class, 'delcontact'])->name('delkon');
+
+    //Data Santri
+    Route::post('/admin/dashboard/updatesantri/', [DashboardController::class, 'updateinfo'])->name('santri');
 });

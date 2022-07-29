@@ -31,37 +31,23 @@
 
         <div class="card-body">
 
-
-
             @if (session('success'))
                 {{-- <div class="sent-message">{{ session('success') }}</div> --}}
-
                 <div class="alert alert-success alert-dismissible fade show" role="alert">
-
                     {{ session('success') }}
-
                 </div>
             @endif
 
             <div class="table-responsive">
-
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-
                     <thead>
-
                         <tr>
-
                             <th>Judul artikel</th>
-
                             <th>Gambar Artikel</th>
                             <th>Kategori Artikel</th>
-
                             <th>Deskripsi</th>
-
                             <th>Action</th>
-
                         </tr>
-
                     </thead>
 
                     {{-- <tfoot>
@@ -106,13 +92,9 @@
 
                 </table>
                 <div class="d-flex justify-content-center">
-
                     {{ $artikel->links() }}
-
                 </div>
             </div>
-
         </div>
-
     </div>
 @endsection

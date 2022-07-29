@@ -19,8 +19,14 @@
                         <label for="judul" class="form-label">Judul Artikel</label>
                     </div>
                     <div class="col">
-                        <input type="text" name="judul" id="judul" class="form-control"
-                            value="{{ $artikel->judul }}" required>
+                        <input type="text" name="judul" id="judul"
+                            class="form-control @error('judul') is-invalid @enderror" value="{{ $artikel->judul }}"
+                            required>
+                        @error('judul')
+                            <div id="judul" class="invalid-feedback">
+                                {{ $message }}
+                            </div>
+                        @enderror
                     </div>
                 </div>
                 <div class="row mb-3" hidden>
@@ -37,12 +43,18 @@
                         <label for="Kategori">Kategori</label>
                     </div>
                     <div class="col">
-                        <select class="form-select" aria-label="Default select example" id="kategori" name="kategori"
-                            required>
+                        <select class="form-select @error('kategori') is-invalid @enderror"
+                            aria-label="Default select example" id="kategori" name="kategori" required>
+                            <option name="kategori" disabled selected>Pilih Kategori</option>
                             <option name="kategori" value="Madrasah Ibtidaiyah">Madrasah Ibtidaiyah</option>
                             <option name="kategori" value="Madrasah Tsanawiyah">Madrasah Tsanawiyah</option>
                             <option name="kategori" value="Madrasah Aliyah">Madrasah Aliyah</option>
                         </select>
+                        @error('kategori')
+                            <div id="kategori" class="invalid-feedback">
+                                {{ $message }}
+                            </div>
+                        @enderror
                     </div>
                 </div>
 
@@ -64,11 +76,16 @@
                         <label for="editor">Isi Artikel</label>
                     </div>
                     <div class="col">
+                        @error('editordata')
+                            <p class="text-danger">
+                                {{ $message }}
+                            </p>
+                        @enderror
                         <textarea id="summernote" name="editordata">{{ $artikel->deskripsi }}</textarea>
                     </div>
                 </div>
                 <div class="text-end">
-                    <button type="submit" class="btn btn-success">Post Artikel</button>
+                    <button type="submit" class="btn btn-success">Update Artikel</button>
                 </div>
             </form>
         </div>

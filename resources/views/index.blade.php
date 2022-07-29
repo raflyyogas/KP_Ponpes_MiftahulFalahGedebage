@@ -4,103 +4,58 @@
     <!-- ======= Hero Section ======= -->
 
     <section id="hero">
-
         <div class="hero-container" data-aos="fade-up">
-
             <h1>Welcome to Pondok Pesantren Miftahul Falah </h1>
-
         </div>
-
     </section><!-- End Hero -->
 
 
 
     <main id="main">
-
-
-
         <!-- ======= About Section ======= -->
-
         <section id="about" class="about">
-
             <div class="container" data-aos="fade-up">
-
-
-
                 <div class="row justify-content-end">
-
                     <div class="col-lg-11">
-
                         <div class="row justify-content-end">
-
-
-
                             <div class="col-lg-3 col-md-5 col-6 d-md-flex align-items-md-stretch">
-
                                 <div class="count-box py-5">
-
                                     <i class="bi bi-people"></i>
-
-                                    <span data-purecounter-start="0" data-purecounter-end="65" class="purecounter">0</span>
-
+                                    <span data-purecounter-start="0" data-purecounter-end="{{ $mi->total }}"
+                                        class="purecounter">0</span>
                                     <p>Santri MI</p>
-
                                 </div>
-
                             </div>
 
                             <div class="col-lg-3 col-md-5 col-6 d-md-flex align-items-md-stretch">
-
                                 <div class="count-box py-5">
-
                                     <i class="bi bi-people"></i>
-
-                                    <span data-purecounter-start="0" data-purecounter-end="65" class="purecounter">0</span>
-
+                                    <span data-purecounter-start="0" data-purecounter-end="{{ $mts->total }}"
+                                        class="purecounter">0</span>
                                     <p>Santri MTs</p>
-
                                 </div>
-
                             </div>
 
                             <div class="col-lg-3 col-md-5 col-6 d-md-flex align-items-md-stretch">
-
                                 <div class="count-box py-5">
-
                                     <i class="bi bi-people"></i>
-
-                                    <span data-purecounter-start="0" data-purecounter-end="65" class="purecounter">0</span>
-
+                                    <span data-purecounter-start="0" data-purecounter-end="{{ $ma->total }}"
+                                        class="purecounter">0</span>
                                     <p>Santri MA</p>
-
                                 </div>
-
                             </div>
 
                             <div class="col-lg-3 col-md-5 col-6 d-md-flex align-items-md-stretch">
-
                                 <div class="count-box pb-5 pt-0 pt-lg-5">
-
                                     <i class="bi bi-award"></i>
-
-                                    <span data-purecounter-start="0" data-purecounter-end="22" class="purecounter">0</span>
-
+                                    <span data-purecounter-start="0" data-purecounter-end="{{ $prestasi->total }}"
+                                        class="purecounter">0</span>
                                     <p>Total Prestasi</p>
-
                                 </div>
-
                             </div>
-
-
-
                         </div>
-
                     </div>
-
                 </div>
-
-
-
                 <div class="row">
 
 
@@ -501,9 +456,6 @@
                     @endforeach
                 </div>
             </div>
-
-
-
         </section><!-- End Recent Blog Posts Section -->
 
 
@@ -513,155 +465,80 @@
         <!-- ======= Contact Section ======= -->
 
         <section id="contact" class="contact">
-
             <div class="container" data-aos="fade-up">
-
-
-
                 <div class="section-title">
-
                     <h2>Kontak</h2>
-
                     <p>Silahkan hubungi kami</p>
-
                 </div>
 
-
-
                 <div class="row">
-
-
-
                     <div class="col-lg-6 d-flex align-items-stretch mt-3">
-
                         <div class="info">
-
                             <div class="address">
-
                                 <i class="bi bi-geo-alt"></i>
                                 <h4>Location:</h4>
-
                                 <p>Jl. Gedebage Selatan No.115, Rancabolang, Kec. Rancasari, Kota Bandung, Jawa Barat 40296
                                 </p>
-
                             </div>
-
-
-
                             <div class="email">
-
                                 <i class="bi bi-envelope"></i>
-
                                 <h4>Email:</h4>
-
                                 <p>ponpesmifa.bdg@gmail.com</p>
-
                             </div>
-
-
-
                             <div class="phone">
-
                                 <i class="bi bi-phone"></i>
-
                                 <h4>Call:</h4>
-
                                 <p><a href="https://api.whatsapp.com/send/?phone=6287720036339&text=Hallo.+Saya+ingin+tahu+lebih+tentang+Pondok+Pesantren+Miftahul+Falah+&app_absent=0"
                                         class="text-black">087720036339</a>
                                 </p>
-
                             </div>
-
-
-
                             <iframe
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.4420253251965!2d107.6834124145591!3d-6.957070594973759!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68c28de0e8a8eb%3A0x740126b1aa5580c0!2sYayasan%20Pondok%20Pesantren%20Miftahul%20Falah!5e0!3m2!1sid!2sid!4v1653589909015!5m2!1sid!2sid"
                                 frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
-
                         </div>
-
-
-
                     </div>
 
-
-
                     <div class="col-xl-6 mt-3">
-
                         @if (session('success'))
                             {{-- <div class="sent-message">{{ session('success') }}</div> --}}
-
                             <div class="alert alert-success alert-dismissible fade show" role="alert">
-
                                 {{ session('success') }}
-
                                 <div type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></div>
-
                             </div>
                         @endif
 
                         <form action="{{ route('pesan') }}" method="POST">
-
                             @csrf
-
                             <div class="row">
-
                                 <div class="form-group col-md-6">
-
                                     <label for="name">Nama Lengkap</label>
-
                                     <input type="text" name="name" class="form-control" id="name" required>
-
                                 </div>
 
                                 <div class="form-group col-md-6">
-
                                     <label for="name">NO HP</label>
-
                                     <input type="number" class="form-control" name="nohp" id="nohp" required>
-
                                 </div>
-
                             </div>
 
                             <div class="form-group mt-4 mb-4">
-
                                 <label for="name">Subjek</label>
-
                                 <input type="text" class="form-control" name="subject" id="subject" required>
-
                             </div>
 
                             <div class="form-group mt-4 mb-4">
-
                                 <label for="name">Pesan</label>
-
                                 <textarea class="form-control" name="message" rows="10" required></textarea>
-
                             </div>
 
                             <div class="text-center mt-2">
-
                                 <button type="submit" class="btn text-white rounded-pill mx-5"
                                     style="background:#6c7ba1;">Send Message</button>
-
                             </div>
-
                         </form>
-
                     </div>
-
-
-
                 </div>
-
-
-
             </div>
-
         </section><!-- End Contact Section -->
-
-
-
     </main><!-- End #main -->
 @endsection

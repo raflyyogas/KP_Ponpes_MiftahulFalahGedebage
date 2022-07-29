@@ -27,7 +27,13 @@
                         <label for="judul" class="form-label">Judul Artikel</label>
                     </div>
                     <div class="col">
-                        <input type="text" name="judul" id="judul" class="form-control" required>
+                        <input type="text" name="judul" id="judul"
+                            class="form-control @error('judul') is-invalid @enderror" value="{{ old('judul') }}" required>
+                        @error('judul')
+                            <div id="judul" class="invalid-feedback">
+                                {{ $message }}
+                            </div>
+                        @enderror
                     </div>
                 </div>
                 <div class="row mb-3" hidden>
@@ -44,13 +50,18 @@
                         <label for="Kategori">Kategori</label>
                     </div>
                     <div class="col">
-                        <select class="form-select" aria-label="Default select example" id="kategori" name="kategori"
-                            required>
+                        <select class="form-select @error('kategori') is-invalid @enderror"
+                            aria-label="Default select example" id="kategori" name="kategori" required>
                             <option name="kategori" disabled selected>Pilih Kategori</option>
                             <option name="kategori" value="Madrasah Ibtidaiyah">Madrasah Ibtidaiyah</option>
                             <option name="kategori" value="Madrasah Tsanawiyah">Madrasah Tsanawiyah</option>
                             <option name="kategori" value="Madrasah Aliyah">Madrasah Aliyah</option>
                         </select>
+                        @error('kategori')
+                            <div id="kategori" class="invalid-feedback">
+                                {{ $message }}
+                            </div>
+                        @enderror
                     </div>
                 </div>
 
@@ -59,10 +70,16 @@
                         <label for="foto" class="form-label">Foto Artikel</label>
                     </div>
                     <div class="col">
-                        <input type="file" name="pic" id="foto" class="form-control" onchange="previewImg()">
+                        <input type="file" name="pic" id="foto"
+                            class="form-control @error('pic') is-invalid @enderror" onchange="previewImg()">
                         <div class="d-flex justify-content-center mt-2">
                             <img id="preview" style="max-width:50%">
                         </div>
+                        @error('pic')
+                            <div id="pic" class="invalid-feedback">
+                                {{ $message }}
+                            </div>
+                        @enderror
                     </div>
                 </div>
 
@@ -71,7 +88,12 @@
                         <label for="editor">Isi Artikel</label>
                     </div>
                     <div class="col">
-                        <textarea id="summernote" name="editordata" required></textarea>
+                        @error('editordata')
+                            <p class="text-danger">
+                                {{ $message }}
+                            </p>
+                        @enderror
+                        <textarea id="summernote" name="editordata" value="{{ old('editordata') }}" required></textarea>
                     </div>
                 </div>
                 <div class="text-end">

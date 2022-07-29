@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use App\Models\Artikel;
 use App\Models\GalleryFoto;
 use App\Models\GalleryVideo;
+use App\Models\Santri;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
@@ -40,7 +41,41 @@ class DashboardController extends Controller
         $artikel = Artikel::all()->count();
         $foto = GalleryFoto::all()->count();
         $video = GalleryVideo::all()->count();
-        return view('tampilan.home', compact('artikel', 'foto', 'video'));
+        $mi = Santri::where('tipe', '=', 'santrimi')->first();
+        $mts = Santri::where('tipe', '=', 'santrimts')->first();
+        $ma = Santri::where('tipe', '=', 'santrima')->first();
+        $prestasi = Santri::where('tipe', '=', 'prestasi')->first();
+        return view('tampilan.home', compact('artikel', 'foto', 'video', 'mi', 'mts', 'ma', 'prestasi'));
+    }
+
+    public function updateinfo(Request $request)
+    {
+        $this->validate($request, [
+            'jumlah' => 'required|digits_between:1,5',
+            'tipe' => 'required'
+        ]);
+
+        if ($request->tipe == 'santrimi') {
+            $santri = Santri::where('tipe', '=', 'santrimi');
+            $santri->update(['total' => $request->jumlah], ['tipe' => $request->tipe]);
+
+            return back()->with('success', 'Sukses menyimpan data informasi');
+        } elseif ($request->tipe == 'santrimts') {
+            $santri = Santri::where('tipe', '=', 'santrimts');
+            $santri->update(['total' => $request->jumlah], ['tipe' => $request->tipe]);
+
+            return back()->with('success', 'Sukses menyimpan data informasi');
+        } elseif ($request->tipe == 'santrima') {
+            $santri = Santri::where('tipe', '=', 'santrima');
+            $santri->update(['total' => $request->jumlah], ['tipe' => $request->tipe]);
+
+            return back()->with('success', 'Sukses menyimpan data informasi');
+        } elseif ($request->tipe == 'prestasi') {
+            $santri = Santri::where('tipe', '=', 'prestasi');
+            $santri->update(['total' => $request->jumlah], ['tipe' => $request->tipe]);
+
+            return back()->with('success', 'Sukses menyimpan data informasi');
+        }
     }
 
     //Area Konten
@@ -63,9 +98,10 @@ class DashboardController extends Controller
     public function storearitkel(Request $request)
     {
         $this->validate($request, [
-            'judul' => 'required',
-            'pic' => 'required|image|mimes:jpeg,png,jpg|max:10000',
-            'editordata' => 'required'
+            'judul' => 'required|min:5',
+            'kategori' => 'required',
+            'pic' => 'required|image|mimes:jpeg,png,jpg|max:8500',
+            'editordata' => 'min:20|required'
         ]);
 
         $Name = $request->pic->getClientOriginalName() . '-' . time()
@@ -128,8 +164,10 @@ class DashboardController extends Controller
     public function updateartikel(Request $request, $id)
     {
         $this->validate($request, [
-            'judul' => 'required',
-            'editordata' => 'required'
+
+            'judul' => 'required|min:5',
+            'kategori' => 'required',
+            'editordata' => 'min:20|required'
         ]);
 
 
@@ -197,9 +235,10 @@ class DashboardController extends Controller
     public function storefoto(Request $request)
     {
         $this->validate($request, [
-            'judul' => 'required',
+            'judul' => 'min:5|required',
             'foto' => 'required|image|mimes:jpeg,png,jpg',
-            'deskripsi' => 'required'
+            'kategori' => 'required',
+            'deskripsi' => 'min:5|required'
         ]);
         $Name = $request->foto->getClientOriginalName() . '-' . time()
             . '.' . $request->foto->extension();
@@ -212,7 +251,7 @@ class DashboardController extends Controller
         $foto->deskripsi = $request->deskripsi;
         $foto->save();
 
-        return redirect(route('editfoto'));
+        return redirect(route('editfoto'))->with('success', 'Foto berhasil disimpan');
     }
 
     public function updatefoto(Request $request, $id)
@@ -236,7 +275,7 @@ class DashboardController extends Controller
         $foto->kategori = $request->kategori;
         $foto->deskripsi = $request->deskripsi;
         $foto->save();
-        return redirect(route('editfoto'))->with('success', 'Foto berhasil dihapus');
+        return redirect(route('editfoto'))->with('success', 'Foto berhasil diupdate');
     }
 
     public function delfoto($id)
@@ -262,45 +301,64 @@ class DashboardController extends Controller
 
     public function storevideo(Request $request)
     {
-        $video = new GalleryVideo();
+        $this->validate($request, [
+            'judul' => 'min:5|required',
+            'link' => 'min:10|required',
+            'kategori' => 'required',
+            'deskripsi' => 'min:5|required'
+        ]);
 
+        $video = new GalleryVideo();
         $video->judul = $request->judul;
         $video->link = $request->link;
         $video->kategori = $request->kategori;
         $video->deskripsi = $request->deskripsi;
 
         $video->save();
-        return redirect(route('editvideo'))->with('success', 'Foto berhasil dihapus');
+        return redirect(route('editvideo'))->with('success', 'Video berhasil disimpan');
     }
 
     public function updatevideo(Request $request, $id)
     {
-        $updatevid = GalleryVideo::find($id);
+        $this->validate($request, [
+            'judul' => 'min:5|required',
+            'link' => 'min:10|required',
+            'kategori' => 'required',
+            'deskripsi' => 'min:5|required'
+        ]);
 
+        $updatevid = GalleryVideo::find($id);
         $updatevid->judul = $request->judul;
         $updatevid->link = $request->link;
         $updatevid->kategori = $request->kategori;
         $updatevid->deskripsi = $request->deskripsi;
 
         $updatevid->save();
-        return redirect(route('editvideo'))->with('success', 'Foto berhasil dihapus');
+        return redirect(route('editvideo'))->with('success', 'Videp berhasil diupdate');
     }
 
     public function delvideo($id)
     {
         $video = GalleryVideo::find($id);
         $video->delete();
-        return redirect(route('editvideo'));
+        return redirect(route('editvideo'))->with('success', 'Videp berhasil dihapus');
     }
     public function contact()
     {
-        $kontak = Contact::all();
+        $kontak = Contact::latest()->get();
         return view('tampilan.contact', compact('kontak'));
+    }
+    public function updatecontact(Request $request, $id)
+    {
+        $kontak = Contact::find($id);
+        $kontak->status = $request->status;
+        $kontak->save();
+        return redirect()->back()->with('success', 'Kontak berhasil diupdate');
     }
     public function delcontact($id)
     {
         $del = Contact::find($id);
         $del->delete();
-        return redirect()->back()->with('success', 'Informasi berhasil dihapus');
+        return redirect()->back()->with('success', 'Kontak berhasil dihapus');
     }
 }

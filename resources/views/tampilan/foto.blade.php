@@ -4,52 +4,37 @@
     <!-- Page Heading -->
 
     <h1 class="h3 mb-2 text-gray-800">Foto</h1>
-
     <p class="mb-4">Jika tidak mengerti dalam pengisian foto. Silahkan download instruksi ini</a>.</p>
-
-
 
     <!-- DataTales Example -->
 
     <div class="card shadow mb-4">
-
         <div class="card-header py-3">
-
             <div class="row">
-
                 <div class="col">
-
                     <h6 class="m-0 font-weight-bold text-primary">Foto</h6>
-
                 </div>
-
                 <div class="col text-end">
-
                     <button type="button" href="#" class="btn btn-primary btn-icon-split" data-bs-toggle="modal"
                         data-bs-target="#fotoModal">
-
                         <span class="icon text-white-50">
-
                             <i class="bi bi-plus-square-fill"></i>
-
                         </span>
-
                         <span class="text">Tambah Foto</span>
-
                     </button>
-
                 </div>
-
             </div>
-
         </div>
 
         <div class="card-body">
-
+            @if (session('success'))
+                {{-- <div class="sent-message">{{ session('success') }}</div> --}}
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    {{ session('success') }}
+                </div>
+            @endif
             <div class="table-responsive">
-
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-
                     <thead>
                         <tr>
                             <th>Gambar Foto</th>
@@ -74,8 +59,8 @@
                         @foreach ($foto as $data)
                             <tr>
 
-                                <td><img src="{{ asset('upload/gallery-foto/' . $data->foto) }}"
-                                        alt="{{ $data->judul }}" class="rounded-circle-profile" width="300px"></td>
+                                <td><img src="{{ asset('upload/gallery-foto/' . $data->foto) }}" alt="{{ $data->judul }}"
+                                        class="rounded-circle-profile" width="300px"></td>
 
                                 <td>{{ $data->judul }}</td>
                                 <td>{{ $data->deskripsi }}</td>
@@ -161,41 +146,24 @@
                                 </div>
                             </form>
                         @endforeach
-
                     </tbody>
-
                 </table>
-
                 <div class="d-flex justify-content-center">
-
                     {{ $foto->links() }}
-
                 </div>
             </div>
-
         </div>
-
     </div>
 
-
-
-
-
     <!-- Modal -->
-
     <div class="modal fade" id="fotoModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
         aria-labelledby="staticBackdropLabel" aria-hidden="true">
 
         <div class="modal-dialog modal-dialog-centered">
-
             <div class="modal-content">
-
                 <div class="modal-header">
-
                     <h5 class="modal-title" id="staticBackdropLabel">Tambah Foto</h5>
-
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-
                 </div>
 
                 <form action="{{ route('tambahfoto') }}" method="post" enctype="multipart/form-data">
@@ -203,16 +171,28 @@
                     <div class="modal-body">
                         <div class="mb-3">
                             <label for="judul">Judul Foto</label>
-                            <input type="text" name="judul" id="judul" class="form-control" required>
+                            <input type="text" name="judul" id="judul"
+                                class="form-control @error('judul') is-invalid @enderror" value="{{ old('judul') }}"
+                                required>
+                            @error('judul')
+                                <div id="judul" class="invalid-feedback">
+                                    {{ $message }}
+                                </div>
+                            @enderror
                         </div>
-
                         <div class="mb-3">
                             <label for="link">Pilih Foto</label>
-                            <input type="file" name="foto" id="foto" class="form-control mb-2"
-                                onchange="previewImg()" required>
+                            <input type="file" name="foto" id="foto"
+                                class="form-control mb-2 @error('foto') is-invalid @enderror" onchange="previewImg()"
+                                required>
                             <div class="d-flex justify-content-center">
                                 <img id="preview" style="width: 300px">
                             </div>
+                            @error('foto')
+                                <div id="foto" class="invalid-feedback">
+                                    {{ $message }}
+                                </div>
+                            @enderror
                         </div>
 
                         <div class="mb-3">
@@ -221,19 +201,32 @@
                                     <label for="Kategori">Pilih pendidikan</label>
                                 </div>
                                 <div class="col">
-                                    <select class="form-select" aria-label="Default select example" id="kategori"
-                                        name="kategori" required>
+                                    <select class="form-select @error('kategori') is-invalid @enderror"
+                                        aria-label="Default select example" id="kategori" name="kategori" required>
+                                        <option name="kategori" disabled selected>Pilih Kategori</option>
                                         <option name="kategori" value="Madrasah Ibtidaiyah">Madrasah Ibtidaiyah</option>
                                         <option name="kategori" value="Madrasah Tsanawiyah">Madrasah Tsanawiyah</option>
                                         <option name="kategori" value="Madrasah Aliyah">Madrasah Aliyah</option>
                                     </select>
+                                    @error('kategori')
+                                        <div id="kategori" class="invalid-feedback">
+                                            {{ $message }}
+                                        </div>
+                                    @enderror
                                 </div>
                             </div>
                         </div>
 
                         <div class="mb-3">
                             <label for="deskripsi">Deskripsi Foto</label>
-                            <textarea name="deskripsi" id="deskripsi" rows="5" class="form-control" required></textarea>
+                            <textarea name="deskripsi" id="deskripsi" rows="5"
+                                class="form-control  @error('deskripsi') is-invalid @enderror" value="{{ old('deskripsi') }}" required></textarea>
+                            @error('deskripsi')
+                                <div id="kategori" class="invalid-feedback">
+                                    {{ $message }}
+                                </div>
+                            @enderror
+
                         </div>
                     </div>
 
@@ -257,4 +250,11 @@
             }
         }
     </script>
+    @if (count($errors) > 0)
+        <script>
+            $(document).ready(function() {
+                $('#fotoModal').modal('show');
+            });
+        </script>
+    @endif
 @endsection
