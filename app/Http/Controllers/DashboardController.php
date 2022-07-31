@@ -75,6 +75,8 @@ class DashboardController extends Controller
             $santri->update(['total' => $request->jumlah], ['tipe' => $request->tipe]);
 
             return back()->with('success', 'Sukses menyimpan data informasi');
+        } else {
+            return back()->with('error', 'Kamu melakukan kegaitan yang mencurigakan');
         }
     }
 
