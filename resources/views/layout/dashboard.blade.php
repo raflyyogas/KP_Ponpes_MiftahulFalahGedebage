@@ -88,7 +88,7 @@
 
                 <div id="artikel" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Galeri:</h6>
+                        <h6 class="collapse-header">Opsi:</h6>
                         <a class="collapse-item" href="{{ route('admartikel') }}">Data Artikel</a>
                         <a class="collapse-item" href="{{ route('addartikel') }}">Tambah Artikel</a>
                     </div>
@@ -105,7 +105,7 @@
 
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Galeri:</h6>
+                        <h6 class="collapse-header">Opsi:</h6>
                         <a class="collapse-item" href="{{ route('editfoto') }}">Data Foto</a>
                         <a class="collapse-item" href="{{ route('editvideo') }}">Data Video</a>
                     </div>
