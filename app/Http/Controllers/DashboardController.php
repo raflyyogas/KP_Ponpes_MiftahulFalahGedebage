@@ -306,15 +306,13 @@ class DashboardController extends Controller
         $this->validate($request, [
             'judul' => 'min:5|required',
             'link' => 'min:10|required',
-            'kategori' => 'required',
-            'deskripsi' => 'min:5|required'
+            'kategori' => 'required'
         ]);
 
         $video = new GalleryVideo();
         $video->judul = $request->judul;
         $video->link = $request->link;
         $video->kategori = $request->kategori;
-        $video->deskripsi = $request->deskripsi;
 
         $video->save();
         return redirect(route('editvideo'))->with('success', 'Video berhasil disimpan');
@@ -325,15 +323,13 @@ class DashboardController extends Controller
         $this->validate($request, [
             'judul' => 'min:5|required',
             'link' => 'min:10|required',
-            'kategori' => 'required',
-            'deskripsi' => 'min:5|required'
+            'kategori' => 'required'
         ]);
 
         $updatevid = GalleryVideo::find($id);
         $updatevid->judul = $request->judul;
         $updatevid->link = $request->link;
         $updatevid->kategori = $request->kategori;
-        $updatevid->deskripsi = $request->deskripsi;
 
         $updatevid->save();
         return redirect(route('editvideo'))->with('success', 'Videp berhasil diupdate');

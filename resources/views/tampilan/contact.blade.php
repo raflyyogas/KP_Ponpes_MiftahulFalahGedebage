@@ -82,7 +82,7 @@
                                                         <textarea class="form-control" id="isipesan" rows="7" disabled>{{ $item->message }}</textarea>
                                                     </div>
                                                     <div class="mb-3 text-center">
-                                                        <a target="_blank"href="https://wa.me/62{{ $item->nohp }}?text=Hallo Bpk/Ibu {{ $item->nama }}..."
+                                                        <a target="_blank"href="https://wa.me/62{{ $item->nohp }}?text=Assalamu'alaikum, Hallo Bpk/Ibu {{ $item->nama }}..."
                                                             class="btn btn-primary"> Bales pesan </a>
                                                     </div>
                                                     <div class="mb-3">

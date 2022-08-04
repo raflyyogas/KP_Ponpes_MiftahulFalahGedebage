@@ -40,7 +40,6 @@
                             <th>Gambar Video</th>
                             <th>Judul Video</th>
                             <th>Pendidikan</th>
-                            <th>Deskripsi</th>
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -68,7 +67,6 @@
                                 </td>
                                 <td>{{ $data->judul }}</td>
                                 <td>{{ $data->kategori }}</td>
-                                <td>{{ $data->deskripsi }}</td>
                                 <td>
                                     <a href="#" class="btn btn-primary" data-bs-toggle="modal"
                                         data-bs-target="#updatefoto{{ $data->id }}">
@@ -151,17 +149,7 @@
                                                             @enderror
                                                         </div>
                                                     </div>
-                                                </div>
-                                                <div class="mb-3">
-                                                    <label for="deskripsi">Deskripsi Video</label>
-                                                    <textarea name="deskripsi" id="deskripsi" rows="5"
-                                                        class="form-control @error('deskripsi') is-invalid @enderror" required>{{ $data->deskripsi }}</textarea>
-                                                    @error('deskripsi')
-                                                        <div id="deskripsi" class="invalid-feedback">
-                                                            {{ $message }}
-                                                        </div>
-                                                    @enderror
-                                                </div>
+                                                </div>                                               
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-secondary"
@@ -243,17 +231,6 @@
                                     @enderror
                                 </div>
                             </div>
-                        </div>
-                        <div class="mb-3">
-                            <label for="deskripsi">Deskripsi Video</label>
-
-                            <textarea name="deskripsi" id="deskripsi" rows="5"
-                                class="form-control @error('deskripsi') is-invalid @enderror" value="{{ old('deskripsi') }}" required></textarea>
-                            @error('deskripsi')
-                                <div id="kategori" class="invalid-feedback">
-                                    {{ $message }}
-                                </div>
-                            @enderror
                         </div>
                     </div>
                     <div class="modal-footer">

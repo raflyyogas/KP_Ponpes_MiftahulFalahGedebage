@@ -37,7 +37,6 @@ return new class extends Migration
             $table->string('link');
             $table->string('kategori');
 
-            $table->string('deskripsi');
 
             $table->timestamps();
         });
