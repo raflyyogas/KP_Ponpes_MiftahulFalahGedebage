@@ -293,11 +293,11 @@
                                 </h3>
                                 <p style="word-wrap: break-word;"> {!! strip_tags(Str::limit($item->deskripsi, 150)) !!}</p>
 
-                                <a href="{{ route('slug', ['slug' => $item->slug]) }}"
-                                    class="readmore stretched-link fixed-bottom">
-                                    <div class=""><span>Read More</span><i class="bi bi-arrow-right"></i>
-                                    </div>
-                                </a>
+                                <div class="readmore stretched-link fixed-bottom">
+                                    <a href="{{ route('slug', ['slug' => $item->slug]) }}">
+                                        <span>Read More</span><i class="bi bi-arrow-right"></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     @endforeach
