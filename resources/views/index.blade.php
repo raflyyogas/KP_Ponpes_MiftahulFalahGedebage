@@ -289,8 +289,9 @@
                                         class="post-date">{{ \Carbon\Carbon::parse($item->created_at)->format('j F Y') }}</span>
                                 </div>
 
-                                <h3 class="post-title">{{ $item->judul }}</h3>
-                                <p>{!! strip_tags(Str::limit($item->deskripsi, 150)) !!}</p>
+                                <h3 class="post-title" style="word-wrap: break-word;">{{ Str::limit($item->judul, 50) }}
+                                </h3>
+                                <p style="word-wrap: break-word;"> {!! strip_tags(Str::limit($item->deskripsi, 150)) !!}</p>
 
                                 <a href="{{ route('slug', ['slug' => $item->slug]) }}"
                                     class="readmore stretched-link fixed-bottom">
@@ -329,7 +330,7 @@
                             <div class="phone">
                                 <i class="bi bi-phone"></i>
                                 <h4>Call:</h4>
-                                <p><a href="https://api.whatsapp.com/send/?phone=6287720036339&text=Hallo.+Saya+ingin+tahu+lebih+tentang+Pondok+Pesantren+Miftahul+Falah+&app_absent=0"
+                                <p><a href="https://api.whatsapp.com/send/?phone=6287720036339&text=Assalamualaikum.+Saya+ingin+tahu+lebih+tentang+Pondok+Pesantren+Miftahul+Falah+&app_absent=0"
                                         class="text-black">087720036339</a>
                                 </p>
                             </div>

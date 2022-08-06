@@ -37,7 +37,7 @@
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                         <tr>
-                            <th>Gambar Video</th>
+                            <th>Video</th>
                             <th>Judul Video</th>
                             <th>Pendidikan</th>
                             <th>Action</th>
@@ -149,7 +149,7 @@
                                                             @enderror
                                                         </div>
                                                     </div>
-                                                </div>                                               
+                                                </div>
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-secondary"

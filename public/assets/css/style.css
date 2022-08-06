@@ -1684,6 +1684,13 @@ section {
 .blog .entry .entry-content p {
     line-height: 24px;
 }
+.blog .entry .entry-content a {
+    color: black;
+    transition: 0.3s;
+}
+.blog .entry .entry-content a:hover {
+    color: blue;
+}
 .blog .entry .entry-content .read-more {
     -moz-text-align-last: right;
     text-align-last: right;
@@ -1708,7 +1715,7 @@ section {
 .blog .entry .entry-content blockquote {
     overflow: hidden;
     background-color: #fafafa;
-    padding: 60px;
+    padding: 50px;
     position: relative;
     text-align: center;
     margin: 20px 0;

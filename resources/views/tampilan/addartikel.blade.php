@@ -140,7 +140,7 @@
                 ['color', ['color']],
                 ['para', ['ul', 'ol', 'paragraph']],
                 ['insert', ['link', 'video']],
-                ['view', ['fullscreen', 'codeview']]
+                ['view', ['codeview']]
             ]
         });
     </script>

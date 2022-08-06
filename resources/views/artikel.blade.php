@@ -3,30 +3,17 @@
 @section('data')
     <main id="main">
 
-
-
         @if ($count > 0)
             <!-- ======= Breadcrumbs ======= -->
-
             <section id="breadcrumbs" class="breadcrumbs">
-
                 <div class="container">
-
                     <ol>
-
                         <li><a class="text-primary" href="{{ route('home') }}">Home</a></li>
-
                         <li><a class="text-primary" href="{{ route('blog') }}">Artikel</a></li>
-
                         <li>{{ $item->judul }}</li>
-
                     </ol>
-
                 </div>
-
             </section><!-- End Breadcrumbs -->
-
-
 
             <!-- ======= Blog Single Section ======= -->
             <section id="blog" class="blog">
@@ -39,7 +26,7 @@
                                         class="img-fluid" style="min-width:100px">
                                 </div>
                                 <h2 class="entry-title">
-                                    <a href="#">{{ $item->judul }}</a>
+                                    <a href="#" style="word-wrap: break-word;">{{ $item->judul }}</a>
                                 </h2>
                                 <div class="entry-meta">
                                     <ul>
@@ -57,7 +44,7 @@
                                                 class="bi bi-tags-fill"></i>{{ $item->kategori }}</li>
                                     </ul>
                                 </div>
-                                <div class="entry-content">
+                                <div class="entry-content" style="word-wrap: break-word;">
                                     {!! $item->deskripsi !!}
                                 </div>
                             </article><!-- End blog entry -->
@@ -92,8 +79,8 @@
                                         <div class="post-item clearfix">
                                             <img src="{{ asset('upload/thumbnail/' . $data->foto) }}"
                                                 alt="{{ $data->judul }}">
-                                            <h4><a
-                                                    href="{{ route('slug', ['slug' => $data->slug]) }}">{{ $data->judul }}</a>
+                                            <h4><a href="{{ route('slug', ['slug' => $data->slug]) }}"
+                                                    style="word-wrap: break-word;">{{ Str::limit($data->judul, 50) }}</a>
                                             </h4>
                                             <time
                                                 datetime="2020-01-01">{{ \Carbon\Carbon::parse($data->created_at)->format('j F Y') }}</time>
@@ -124,8 +111,8 @@
         </section><!-- End Breadcrumbs -->
         <section id="blog" class="blog">
             <div class="container" data-aos="fade-up">
-                <p> Data Not found. Please go back into <a href="{{ route('blog') }}"
-                        class="text-primary">Artikel</a></p>
+                <p> Data Not found. Please go back into <a href="{{ route('blog') }}" class="text-primary">Artikel</a>
+                </p>
             </div>
         </section>
     @endif

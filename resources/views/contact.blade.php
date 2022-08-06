@@ -41,7 +41,7 @@
                             <div class="phone">
                                 <i class="bi bi-phone"></i>
                                 <h4>Call:</h4>
-                                <p><a href="https://api.whatsapp.com/send/?phone=6287720036339&text=Hallo.+Saya+ingin+tahu+lebih+tentang+Pondok+Pesantren+Miftahul+Falah+&app_absent=0"
+                                <p><a href="https://api.whatsapp.com/send/?phone=6287720036339&text=Assalamualaikum.+Saya+ingin+tahu+lebih+tentang+Pondok+Pesantren+Miftahul+Falah+&app_absent=0"
                                         class="text-black">087720036339</a></p>
                             </div>
                         </div>

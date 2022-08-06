@@ -39,7 +39,7 @@
             @endif
 
             <div class="table-responsive">
-                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <table class="table table-bordered" id="dataTable" width="50%" cellspacing="0">
                     <thead>
                         <tr>
                             <th>Judul artikel</th>
@@ -64,8 +64,8 @@
                     <tbody>
                         @foreach ($artikel as $item)
                             <tr>
-                                <td>{{ $item->judul }}</td>
-                                <td style="max-width:200px">
+                                <td style="max-width:500px">{{ $item->judul }}</td>
+                                <td style="max-width:400px">
                                     <img src="{{ asset('upload/thumbnail/' . $item->foto) }}" alt=""
                                         class="rounded-circle-profile" width="70%">
                                 </td>

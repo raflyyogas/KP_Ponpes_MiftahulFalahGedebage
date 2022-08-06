@@ -1,49 +1,26 @@
 <?php
 
-
-
 use Illuminate\Support\Facades\Route;
-
 use App\Http\Controllers\galericontroller;
-
 use App\Http\Controllers\DashboardController;
-
 use App\Http\Controllers\HalamanController;
 
 /*
-
 |--------------------------------------------------------------------------
-
 | Web Routes
-
 |--------------------------------------------------------------------------
-
 |
-
 | Here is where you can register web routes for your application. These
-
 | routes are loaded by the RouteServiceProvider within a group which
-
 | contains the "web" middleware group. Now create something great!
-
 |
-
 */
 
-
-
 Route::get('/', [HalamanController::class, 'index'])->name('home');
-
-
-
 Route::get('/foto', [galericontroller::class, 'foto'])->name('foto');
-
 Route::get('/video', [galericontroller::class, 'video'])->name('video');
 
-
-
 //Route untuk mengirimkan Contact
-
 Route::get('/contact', function () {
     return view('contact');
 })->name('contact');
@@ -59,59 +36,33 @@ Route::get('/ma', function () {
 })->name('ma');
 
 Route::post('/pesan', [HalamanController::class, 'kirimpesan'])->name('pesan');
-
 Route::get('/fasilitas', function () {
-
     return view('fasilitas');
 })->name('fasilitas');
-
-
-
 Route::get('/kegiatan', function () {
-
     return view('kegiatan');
 })->name('kegiatan');
 
-
-
 Route::get('/pendidikan', function () {
-
     return view('pendidikan');
 })->name('didik');
 
-
-
 Route::get('/hidroponik', function () {
-
     return view('shopping');
 })->name('hidroponik');
 
-
-
 Route::get('/blog', [HalamanController::class, 'blog'])->name('blog');
-
-
-
 Route::get('/blog/artikel/{slug}', [HalamanController::class, 'slug'])->name('slug');
 Route::get('/blog/artikel/kategori/{kategori}', [HalamanController::class, 'kategori'])->name('ktgri');
 
-
-
 //Admin area
-
 // lOGIN AREA AND REGIST AREA
-
 Route::get('/admin', function () {
-
     return view('tampilan.login');
 })->name('login')->middleware('guest');
-
 Route::post('/admin/login', [DashboardController::class, 'otentikasi'])->name('oten');
 
-
-
 Route::group(['middleware' => 'auth'], function () {
-
     Route::post('/admin/dashboard/logout', [DashboardController::class, 'logout'])->name('logout');
     Route::get('/admin/dashboard', [DashboardController::class, 'index'])->name('ds');
 

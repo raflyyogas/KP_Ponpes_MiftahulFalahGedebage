@@ -39,7 +39,7 @@
                                     <img src="{{ asset('upload/thumbnail/' . $item->foto) }}" alt=""
                                         class="img-fluid" style="min-width:100px">
                                 </div>
-                                <h2 class="entry-title">{{ $item->judul }}
+                                <h2 class="entry-title" style="word-wrap: break-word;">{{ $item->judul }}
                                 </h2>
                                 <div class="entry-meta">
                                     <ul>
@@ -52,8 +52,8 @@
                                                 class="bi bi-tags-fill"></i>{{ $item->kategori }}</li>
                                     </ul>
                                 </div>
-                                <div class="entry-content">
-                                    {!! strip_tags(Str::limit($item->deskripsi, 250)) !!}
+                                <div class="entry-content" style="word-wrap: break-word;">
+                                    {!! strip_tags(Str::limit($item->deskripsi, 150)) !!}
                                 </div>
                                 <div class="text-end mt-3">
                                     <a href="{{ route('slug', ['slug' => $item->slug]) }}"
@@ -117,7 +117,8 @@
                                     <div class="post-item clearfix">
                                         <img src="{{ asset('upload/thumbnail/' . $data->foto) }}"
                                             alt="{{ $data->judul }}">
-                                        <h4><a href="{{ route('slug', ['slug' => $data->slug]) }}">{{ $data->judul }}</a>
+                                        <h4><a href="{{ route('slug', ['slug' => $data->slug]) }}"
+                                                style="word-wrap: break-word;">{{ Str::limit($data->judul, 50) }}</a>
                                         </h4>
                                         <time
                                             datetime="2020-01-01">{{ \Carbon\Carbon::parse($data->created_at)->format('j F Y') }}</time>

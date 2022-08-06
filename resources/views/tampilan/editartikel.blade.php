@@ -81,7 +81,7 @@
                                 {{ $message }}
                             </p>
                         @enderror
-                        <textarea id="summernote" name="editordata">{{ $artikel->deskripsi }}</textarea>
+                        <textarea id="summernote" name="editordata" value="{{ old('judul') }}">{{ $artikel->deskripsi }}</textarea>
                     </div>
                 </div>
                 <div class="text-end">
@@ -128,7 +128,7 @@
                 ['color', ['color']],
                 ['para', ['ul', 'ol', 'paragraph']],
                 ['insert', ['link', 'video']],
-                ['view', ['fullscreen', 'codeview']]
+                ['view', ['codeview']]
             ]
         });
     </script>
