@@ -38,9 +38,9 @@ class DashboardController extends Controller
 
     public function index()
     {
-        $artikel = Artikel::all()->count();
-        $foto = GalleryFoto::all()->count();
-        $video = GalleryVideo::all()->count();
+        $artikel = Artikel::count();
+        $foto = GalleryFoto::count();
+        $video = GalleryVideo::count();
         $mi = Santri::where('tipe', '=', 'santrimi')->first();
         $mts = Santri::where('tipe', '=', 'santrimts')->first();
         $ma = Santri::where('tipe', '=', 'santrima')->first();
