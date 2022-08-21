@@ -22,26 +22,35 @@
                     <div class="row">
                         <div class="col">
                             <div class="icon-box" data-aos="fade-up">
-                                <div class="icon"><i class="bi bi-geo" style="color: #ff689b;"></i></div>
+                                <div class="icon">
+                                    <i class="fa-solid fa-book-quran" style="color: #5ebbe0;"></i>
+                                </div>
                                 <h4 class="title"><a>Tahfid</a></h4>
                             </div>
                         </div>
                         <div class="col">
                             <div class="icon-box" data-aos="fade-up">
-                                <div class="icon"><i class="bi bi-geo" style="color: #ff689b;"></i></div>
-                                <h4 class="title"><a>Hadlroh</a></h4>
+                                <div class="icon">
+                                    {{-- <i class="bi bi-geo" style="color: #ff689b;"></i> --}}
+                                    <i class="fa-solid fa-drum-steelpan" style="color: #867359;"></i>
+                                </div>
+                                <h4 class="title"><a>Hadroh</a></h4>
                             </div>
                         </div>
                         <div class="col">
                             <div class="icon-box" data-aos="fade-up">
-                                <div class="icon"><i class="bi bi-geo" style="color: #ff689b;"></i></div>
+                                <div class="icon">
+                                    <img src="https://cdn-icons.flaticon.com/png/128/1894/premium/1894836.png?token=exp=1661099269~hmac=1c6d515319bddabae4a4de008b90e914" width="64" height="64">
+                                </div>
                                 <h4 class="title"><a>Marawis</a></h4>
 
                             </div>
                         </div>
                         <div class="col">
                             <div class="icon-box" data-aos="fade-up">
-                                <div class="icon"><i class="bi bi-geo" style="color: #ff689b;"></i></div>
+                                <div class="icon">
+                                    <img src="https://cdn-icons-png.flaticon.com/128/2884/2884518.png" width="64" height="64">
+                                </div>
                                 <h4 class="title"><a>Qosidah</a></h4>
 
                             </div>
@@ -50,26 +59,33 @@
                     <div class="row">
                         <div class="col">
                             <div class="icon-box" data-aos="fade-up">
-                                <div class="icon"><i class="bi bi-geo" style="color: #ff689b;"></i></div>
+                                <div class="icon">
+                                    <a href="https://www.flaticon.com/free-icon/arabic-language_7325574" class="view link-icon-detail" title="Arabic language" data-id="7325574" data-src="?term=arabian&amp;page=1&amp;position=3">
+                                        <img src="https://cdn-icons-png.flaticon.com/128/7325/7325574.png" data-src="https://cdn-icons-png.flaticon.com/128/7325/7325574.png" alt="Arabic language " title="Arabic language " width="64" height="64" class="lzy lazyload--done" srcset="https://cdn-icons-png.flaticon.com/128/7325/7325574.png 4x">
+                                      </a>                                </div>
                                 <h4 class="title"><a>Bahasa Arab</a></h4>
                             </div>
                         </div>
                         <div class="col">
                             <div class="icon-box" data-aos="fade-up">
-                                <div class="icon"><i class="bi bi-geo" style="color: #ff689b;"></i></div>
+                                <div class="icon">
+                                    <img src="https://cdn-icons-png.flaticon.com/128/197/197374.png" width="64" height="64">                                
+                                </div>
                                 <h4 class="title"><a>English Club</a></h4>
                             </div>
                         </div>
                         <div class="col">
                             <div class="icon-box" data-aos="fade-up">
-                                <div class="icon"><i class="bi bi-geo" style="color: #ff689b;"></i></div>
+                                <div class="icon">
+                                    <img src="https://cdn-icons-png.flaticon.com/128/4268/4268769.png" width="64" height="64">                                
+                                </div>                                
                                 <h4 class="title"><a>Paduan Suara</a></h4>
 
                             </div>
                         </div>
                         <div class="col">
                             <div class="icon-box" data-aos="fade-up">
-                                <div class="icon"><i class="bi bi-geo" style="color: #ff689b;"></i></div>
+                                <div class="icon"><i class="fa-solid fa-futbol" style="color: #000000;"></i></div>
                                 <h4 class="title"><a>Futsal</a></h4>
 
                             </div>
@@ -78,19 +94,23 @@
                     <div class="row">
                         <div class="col">
                             <div class="icon-box" data-aos="fade-up">
-                                <div class="icon"><i class="bi bi-geo" style="color: #ff689b;"></i></div>
+                                <div class="icon">
+                                    <img src="https://cdn-icons.flaticon.com/png/128/1880/premium/1880745.png?token=exp=1661099770~hmac=c8455c62e8cb3380f3e776afba6edf01" width="64" height="64">                                
+                                </div>
                                 <h4 class="title"><a>Bulutangkis</a></h4>
                             </div>
                         </div>
                         <div class="col">
                             <div class="icon-box" data-aos="fade-up">
-                                <div class="icon"><i class="bi bi-geo" style="color: #ff689b;"></i></div>
+                                <div class="icon">
+                                    <img src="https://cdn-icons.flaticon.com/png/128/3396/premium/3396051.png?token=exp=1661100743~hmac=0c19fafae3083904b59f3e916bd57b6e" width="64" height="64" >                                
+                                </div>
                                 <h4 class="title"><a>Drum Band</a></h4>
                             </div>
                         </div>
                         <div class="col">
                             <div class="icon-box" data-aos="fade-up">
-                                <div class="icon"><i class="bi bi-geo" style="color: #ff689b;"></i></div>
+                                <div class="icon"><i class="bx bxs-pyramid" style="color: hsl(32, 58%, 38%);"></i></div>
                                 <h4 class="title"><a>Pramuka</a></h4>
 
                             </div>

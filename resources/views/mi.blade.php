@@ -22,13 +22,13 @@
                     <div class="row">
                         <div class="col">
                             <div class="icon-box" data-aos="fade-up">
-                                <div class="icon"><i class="bi bi-geo" style="color: #ff689b;"></i></div>
+                                <div class="icon"><i class="bi bi-brush" style="color: #3fa24c;"></i></div>
                                 <h4 class="title"><a>Seni Kaligrafi</a></h4>
                             </div>
                         </div>
                         <div class="col">
                             <div class="icon-box" data-aos="fade-up">
-                                <div class="icon"><i class="bx bxs-pyramid" style="color: #ff689b;"></i></div>
+                                <div class="icon"><i class="bx bxs-pyramid" style="color: hsl(32, 58%, 38%);"></i></div>
                                 <h4 class="title"><a>Pramuka</a></h4>
 
                             </div>
@@ -36,8 +36,8 @@
                         <div class="col">
                             <div class="icon-box" data-aos="fade-up">
                                 <div class="icon">
-                                    {{-- <i class="bi bi-geo" style="color: #ff689b;"></i> --}}
-                                    <i class="fa-solid fa-person"></i>
+                                    {{-- <i class="bi bi-geo" style="color: #eac646;"></i> --}}
+                                    <i class="fa-solid fa-person" style="color: #bea342;"></i>
                                     {{-- <i class="fa-regular fa-person"></i> --}}
                                 </div>
                                 <h4 class="title"><a>Sanpara / Paskibra</a></h4>
@@ -49,20 +49,22 @@
 
                         <div class="col">
                             <div class="icon-box" data-aos="fade-up">
-                                <div class="icon"><i class="bi bi-geo" style="color: #ff689b;"></i></div>
+                                <div class="icon"><i class="fas fa-star-and-crescent" style="color: #5ebbe0;"></i></div>
                                 <h4 class="title"><a>Kesenian Islami</a></h4>
                             </div>
                         </div>
                         <div class="col">
                             <div class="icon-box" data-aos="fade-up">
-                                <div class="icon"><i class="bi bi-geo" style="color: #ff689b;"></i></div>
+                                <div class="icon">
+                                    <img src="https://cdn-icons-png.flaticon.com/128/4268/4268769.png" width="64" height="64">                                
+                                </div>
                                 <h4 class="title"><a>Paduan Suara</a></h4>
 
                             </div>
                         </div>
                         <div class="col">
                             <div class="icon-box" data-aos="fade-up">
-                                <div class="icon"><i class="bi bi-geo" style="color: #ff689b;"></i></div>
+                                <div class="icon"><i class="fa-solid fa-futbol" style="color: #000000;"></i></div>
                                 <h4 class="title"><a>Futsal</a></h4>
 
                             </div>
