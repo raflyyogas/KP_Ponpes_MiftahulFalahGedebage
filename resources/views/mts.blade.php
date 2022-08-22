@@ -40,7 +40,7 @@
                         <div class="col">
                             <div class="icon-box" data-aos="fade-up">
                                 <div class="icon">
-                                    <img src="https://cdn-icons.flaticon.com/png/128/1894/premium/1894836.png?token=exp=1661099269~hmac=1c6d515319bddabae4a4de008b90e914" width="64" height="64">
+                                    <img src="https://cdn-icons-png.flaticon.com/128/8243/8243987.png" width="64" height="64">                                
                                 </div>
                                 <h4 class="title"><a>Marawis</a></h4>
 
@@ -95,7 +95,7 @@
                         <div class="col">
                             <div class="icon-box" data-aos="fade-up">
                                 <div class="icon">
-                                    <img src="https://cdn-icons.flaticon.com/png/128/1880/premium/1880745.png?token=exp=1661099770~hmac=c8455c62e8cb3380f3e776afba6edf01" width="64" height="64">                                
+                                    <img src="https://cdn-icons-png.flaticon.com/128/1099/1099674.png" width="64" height="64">                                
                                 </div>
                                 <h4 class="title"><a>Bulutangkis</a></h4>
                             </div>
@@ -103,7 +103,7 @@
                         <div class="col">
                             <div class="icon-box" data-aos="fade-up">
                                 <div class="icon">
-                                    <img src="https://cdn-icons.flaticon.com/png/128/3396/premium/3396051.png?token=exp=1661100743~hmac=0c19fafae3083904b59f3e916bd57b6e" width="64" height="64" >                                
+                                    <img src="https://cdn-icons-png.flaticon.com/128/3393/3393910.png" width="64" height="64">                                
                                 </div>
                                 <h4 class="title"><a>Drum Band</a></h4>
                             </div>
