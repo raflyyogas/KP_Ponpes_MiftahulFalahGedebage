@@ -1,6 +1,58 @@
 # Release Notes for 9.x
 
-## [Unreleased](https://github.com/laravel/framework/compare/v9.22.1...9.x)
+## [Unreleased](https://github.com/laravel/framework/compare/v9.24.0...9.x)
+
+
+## [v9.24.0](https://github.com/laravel/framework/compare/v9.23.0...v9.24.0) - 2022-08-09
+
+### Added
+- New db:show, db:table and db:monitor commands ([#43367](https://github.com/laravel/framework/pull/43367))
+- Added validation doesnt_end_with rule ([#43518](https://github.com/laravel/framework/pull/43518))
+- Added `Illuminate/Database/Eloquent/SoftDeletes::restoreQuietly()` ([#43550](https://github.com/laravel/framework/pull/43550))
+- Added mergeUnless to resource ConditionallyLoadsAttributes trait ([#43567](https://github.com/laravel/framework/pull/43567))
+- Added `Illuminate/Support/Testing/Fakes/NotificationFake::sentNotifications()` ([#43558](https://github.com/laravel/framework/pull/43558))
+- Added `implode` to `Passthru` in `Illuminate/Database/Eloquent/Builder.php` ([#43574](https://github.com/laravel/framework/pull/43574))
+- Make Config repository macroable ([#43598](https://github.com/laravel/framework/pull/43598))
+- Add whenNull to ConditionallyLoadsAtrribute trait ([#43600](https://github.com/laravel/framework/pull/43600))
+- Extract child route model relationship name into a method ([#43597](https://github.com/laravel/framework/pull/43597))
+
+### Revert
+- Reverted [Added `whereIn` to  `Illuminate/Routing/RouteRegistrar::allowedAttributes`](https://github.com/laravel/framework/pull/43509) ([#43523](https://github.com/laravel/framework/pull/43523))
+
+### Fixed
+- Fix unique locking on broadcast events ([#43516](https://github.com/laravel/framework/pull/43516))
+- Fixes the issue of running docs command on windows ([#43566](https://github.com/laravel/framework/pull/43566), [#43585](https://github.com/laravel/framework/pull/43585))
+- Fixes output when running db:seed or using --seed in migrate commands ([#43593](https://github.com/laravel/framework/pull/43593))
+
+### Changed
+- Gracefully fail when unable to locate expected binary on the system for artisan docs command ([#43521](https://github.com/laravel/framework/pull/43521))
+- Improve output for some Artisan commands ([#43547](https://github.com/laravel/framework/pull/43547))
+- Alternative database name in Postgres DSN, allow pgbouncer aliased databases to continue working on 9.x ([#43542](https://github.com/laravel/framework/pull/43542))
+- Allow @class() for component tags ([#43140](https://github.com/laravel/framework/pull/43140))
+- Attribute Cast Performance Improvements ([#43554](https://github.com/laravel/framework/pull/43554))
+- Queue worker daemon should also listen for SIGQUIT ([#43607](https://github.com/laravel/framework/pull/43607))
+- Keep original keys when using Collection->sortBy() with an array of sort operations ([#43609](https://github.com/laravel/framework/pull/43609))
+
+
+## [v9.23.0](https://github.com/laravel/framework/compare/v9.22.1...v9.23.0) - 2022-08-02
+
+### Added
+- Added whereNot method to Fluent JSON testing matchers ([#43383](https://github.com/laravel/framework/pull/43383))
+- Added deleteQuietly method to Model and use arrow func for related methods ([#43447](https://github.com/laravel/framework/pull/43447))
+- Added conditionable trait to Filesystem adapters ([#43450](https://github.com/laravel/framework/pull/43450))
+- Introduce artisan docs command ([#43357](https://github.com/laravel/framework/pull/43357))
+- Added Support CSP nonce, SRI, and arbitrary attributes with Vite ([#43442](https://github.com/laravel/framework/pull/43442))
+- Support conditionables that get condition from target object ([#43449](https://github.com/laravel/framework/pull/43449))
+- Added `whereIn` to  `Illuminate/Routing/RouteRegistrar::allowedAttributes` ([#43509](https://github.com/laravel/framework/pull/43509))
+
+### Fixed
+- Prevent redis crash when large number of jobs are scheduled for a specific time ([#43310](https://github.com/laravel/framework/pull/43310))
+
+### Changed
+- Make Command components Factory extensible ([#43439](https://github.com/laravel/framework/pull/43439))
+- Solve Blade component showing quote formatted for the console ([#43446](https://github.com/laravel/framework/pull/43446))
+- Improves output capture from serve command ([#43461](https://github.com/laravel/framework/pull/43461))
+- Allow terser singleton bindings ([#43469](https://github.com/laravel/framework/pull/43469))
 
 
 ## [v9.22.1](https://github.com/laravel/framework/compare/v9.22.0...v9.22.1) - 2022-07-26
