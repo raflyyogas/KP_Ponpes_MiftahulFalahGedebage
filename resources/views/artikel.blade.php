@@ -78,7 +78,7 @@
                                     @foreach ($latest as $data)
                                         <div class="post-item clearfix">
                                             <img src="{{ asset('upload/thumbnail/' . $data->foto) }}"
-                                                alt="{{ $data->judul }}">
+                                                alt="{{ Str::limit($data->judul, 50) }}" style="word-wrap: break-word;">
                                             <h4><a href="{{ route('slug', ['slug' => $data->slug]) }}"
                                                     style="word-wrap: break-word;">{{ Str::limit($data->judul, 50) }}</a>
                                             </h4>
